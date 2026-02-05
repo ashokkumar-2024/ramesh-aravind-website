@@ -94,7 +94,7 @@ export function AboutSection() {
     <section
       id="about"
       ref={sectionRef}
-      className="relative pt-0 sm:pt-2 md:pt-4 lg:pt-6 pb-12 sm:pb-16 md:pb-20 lg:pb-24 overflow-hidden"
+      className="relative pt-0 pb-12 sm:pb-16 md:pb-20 lg:pb-24 overflow-hidden"
       style={{ perspective: "2000px" }}
     >
       <div className="absolute inset-0 pointer-events-none">
@@ -141,10 +141,6 @@ export function AboutSection() {
           </div>
           <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold gold-text relative inline-block leading-tight px-4">
             From Silver Screen to Stage: Inspiring Every Step of the Way
-            <div
-              className="absolute -inset-8 -z-10 blur-3xl opacity-20"
-              style={{ background: "radial-gradient(ellipse, oklch(0.58 0.11 50), transparent 70%)" }}
-            />
           </h3>
         </div>
 

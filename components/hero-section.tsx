@@ -76,7 +76,7 @@ export function HeroSection() {
   const dollyOpacity = Math.max(0, 1 - scrollY * 0.0018)
 
   return (
-    <section ref={sectionRef} className="relative min-h-[72vh] md:min-h-[78vh] lg:min-h-[82vh] flex items-center justify-center overflow-hidden vignette-cream dolly-container">
+    <section ref={sectionRef} className="relative min-h-[68vh] md:min-h-[72vh] lg:min-h-[76vh] flex items-center justify-center overflow-hidden vignette-cream dolly-container">
       <div className="absolute inset-0 gpu-accelerate" style={{background: `radial-gradient(ellipse 100% 100% at 50% 50%, oklch(0.965 0.018 75), oklch(0.94 0.028 68)), radial-gradient(ellipse 70% 50% at 50% 100%, oklch(0.25 0.04 25 / 0.08), transparent)`}} />
       <div className="stage-spotlight" />
       <div className="absolute inset-0 gpu-accelerate" style={{background: `radial-gradient(circle 700px at ${50 + mousePosition.x * 0.7}% ${45 + mousePosition.y * 0.4}%, oklch(0.58 0.11 50 / 0.05) 0%, transparent 55%)`, transition: "background 0.4s ease-out"}} />

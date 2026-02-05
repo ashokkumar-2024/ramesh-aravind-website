@@ -124,6 +124,8 @@ html::-webkit-scrollbar {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  line-height: 1.1;
+  padding: 0.1em 0;
 }
 
 /* 3D depth emergence animation */
