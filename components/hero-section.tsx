@@ -73,7 +73,6 @@ export function HeroSection() {
   }, [handleMouseMove])
 
   const dollyScale = 1 + scrollY * 0.00025
-  const dollyOpacity = Math.max(0, 1 - scrollY * 0.0018)
 
   return (
     <section ref={sectionRef} className="relative min-h-[68vh] md:min-h-[72vh] lg:min-h-[76vh] flex items-center justify-center overflow-hidden vignette-cream dolly-container">
@@ -83,12 +82,12 @@ export function HeroSection() {
       <div className="absolute inset-0 gpu-accelerate" style={{background: `radial-gradient(ellipse 55% 35% at 25% 75%, oklch(0.78 0.045 25 / 0.06), transparent 50%)`}} />
       <VolumetricLights mousePosition={mousePosition} />
       <DustParticles />
-      <div className="relative z-10 container mx-auto px-6 text-center gpu-accelerate" style={{transform: `scale(${dollyScale}) translateZ(${scrollY * -0.4}px)`, opacity: dollyOpacity}}>
+      <div className="relative z-10 container mx-auto px-6 text-center gpu-accelerate" style={{transform: `scale(${dollyScale}) translateZ(${scrollY * -0.4}px)`}}>
         <div className={`transition-all duration-1000 ease-out ${isLoaded ? "opacity-100" : "opacity-0"}`} style={{transform: `translate3d(${mousePosition.x * 0.15}px, ${mousePosition.y * 0.15}px, 50px) rotateX(${mousePosition.y * -0.008}deg) rotateY(${mousePosition.x * 0.008}deg)`, transformStyle: "preserve-3d"}}>
           <p className={`text-[oklch(0.58_0.11_50)] text-sm md:text-base tracking-[0.5em] uppercase mb-4 font-[var(--font-body)] transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transform: "translateZ(30px)" }}>Actor &bull; Director &bull; Author &bull; Speaker</p>
           <h1 className={`text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[9rem] font-bold mb-4 gold-text leading-none tracking-tight transition-all duration-1200 ${isLoaded ? "text-emerge" : "opacity-0"}`} style={{transform: "translateZ(80px)"}}>Ramesh Aravind</h1>
           <div className={`transition-all duration-1000 delay-600 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transform: "translateZ(40px)" }}>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[oklch(0.35_0.04_30/0.85)] max-w-4xl mx-auto mb-2 font-[var(--font-body)] italic light-wave-text px-4">"From Silver Screen to Stage —</p>
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[oklch(0.35_0.04_30/0.85)] max-w-4xl mx-auto mb-2 font-[var(--font-body)] italic px-4">"From Silver Screen to Stage —</p>
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[oklch(0.35_0.04_30/0.85)] max-w-4xl mx-auto mb-8 font-[var(--font-body)] italic px-4">Inspiring Every Step of the Way"</p>
           </div>
           <div className={`flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4 transition-all duration-1000 delay-800 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transform: "translateZ(20px)" }}>
