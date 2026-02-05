@@ -140,12 +140,10 @@ html::-webkit-scrollbar {
   0% {
     opacity: 0;
     transform: translateZ(-150px) scale(0.85);
-    filter: blur(15px);
   }
   100% {
     opacity: 1;
     transform: translateZ(0) scale(1);
-    filter: blur(0);
   }
 }
 
