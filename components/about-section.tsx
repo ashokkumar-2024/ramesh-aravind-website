@@ -139,7 +139,7 @@ export function AboutSection() {
             </span>
             <span className="w-16 h-px bg-gradient-to-r from-transparent via-[oklch(0.58_0.11_50/0.5)] to-transparent" />
           </div>
-          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold gold-text relative inline-block leading-tight px-4">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#f7c548] relative inline-block leading-tight px-4">
             From Silver Screen to Stage: Inspiring Every Step of the Way
           </h3>
         </div>
