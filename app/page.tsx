@@ -20,7 +20,7 @@ const ContactSection = dynamic(() => import("@/components/contact-section").then
 
 export default function Home() {
   return (
-    <main className="bg-background film-grain dolly-container">
+    <main className="bg-background film-grain">
       <Navigation />
       <HeroSection />
       <AboutSection />

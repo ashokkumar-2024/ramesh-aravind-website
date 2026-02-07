@@ -60,27 +60,27 @@ export function TimelineSection() {
   }
 
   return (
-    <section ref={sectionRef} className="relative h-[300vh]" style={{background: `linear-gradient(180deg, oklch(0.96 0.018 75), oklch(0.88 0.03 65) 50%, oklch(0.82 0.04 55))`}}>
+    <section ref={sectionRef} className="relative h-[220vh]" style={{ background: `linear-gradient(180deg, oklch(0.96 0.018 75), oklch(0.88 0.03 65) 50%, oklch(0.82 0.04 55))` }}>
       <div className="fixed inset-0 pointer-events-none">
         {[...Array(8)].map((_, i) => (
-          <div key={i} className="absolute w-1 h-1 bg-white/20 rounded-full" style={{left: `${20 + i * 5}%`, top: `${10 + (i % 3) * 30}%`, animation: `float ${6 + i}s ease-in-out infinite`, animationDelay: `${i * 0.5}s`}} />
+          <div key={i} className="absolute w-1 h-1 bg-white/20 rounded-full" style={{ left: `${20 + i * 5}%`, top: `${10 + (i % 3) * 30}%`, animation: `float ${6 + i}s ease-in-out infinite`, animationDelay: `${i * 0.5}s` }} />
         ))}
       </div>
 
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden px-4" style={{ perspective: '1500px' }}>
-        <div className="absolute w-[400px] md:w-[650px] h-[400px] md:h-[650px] rounded-full pointer-events-none" style={{...getClockTransform(), transformStyle: 'preserve-3d', zIndex: 5, boxShadow: `0 0 60px rgba(0, 0, 0, 0.2), inset 0 2px 3px rgba(255, 255, 255, 0.03), inset 0 -2px 3px rgba(0, 0, 0, 0.4)`, background: `radial-gradient(circle at 50% 50%, transparent 49%, rgba(20, 20, 20, 0.85) 49.5%, rgba(30, 30, 30, 0.9) 50%, rgba(20, 20, 20, 0.85) 50.5%, transparent 51%)`, filter: `drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3))`}}>
+        <div className="absolute w-[400px] md:w-[650px] h-[400px] md:h-[650px] rounded-full pointer-events-none" style={{ ...getClockTransform(), transformStyle: 'preserve-3d', zIndex: 5, boxShadow: `0 0 60px rgba(0, 0, 0, 0.2), inset 0 2px 3px rgba(255, 255, 255, 0.03), inset 0 -2px 3px rgba(0, 0, 0, 0.4)`, background: `radial-gradient(circle at 50% 50%, transparent 49%, rgba(20, 20, 20, 0.85) 49.5%, rgba(30, 30, 30, 0.9) 50%, rgba(20, 20, 20, 0.85) 50.5%, transparent 51%)`, filter: `drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3))` }}>
           {[...Array(12)].map((_, i) => {
             const angle = (i * 30) - 90
             const radius = 310
             const x = Math.cos(angle * Math.PI / 180) * radius
             const y = Math.sin(angle * Math.PI / 180) * radius
             return (
-              <div key={i} className="absolute" style={{left: '50%', top: '50%', width: '2.5px', height: '16px', background: 'linear-gradient(180deg, rgba(212, 175, 55, 0.6), rgba(184, 134, 11, 0.4))', transform: `translate(${x}px, ${y}px) translate(-50%, -50%) rotate(${angle + 90}deg)`, transformStyle: 'preserve-3d', boxShadow: '0 0 3px rgba(212, 175, 55, 0.2)'}} />
+              <div key={i} className="absolute" style={{ left: '50%', top: '50%', width: '2.5px', height: '16px', background: 'linear-gradient(180deg, rgba(212, 175, 55, 0.6), rgba(184, 134, 11, 0.4))', transform: `translate(${x}px, ${y}px) translate(-50%, -50%) rotate(${angle + 90}deg)`, transformStyle: 'preserve-3d', boxShadow: '0 0 3px rgba(212, 175, 55, 0.2)' }} />
             )
           })}
-          <div className="absolute inset-0 rounded-full opacity-10" style={{background: `linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.08) 25%, transparent 45%, rgba(255, 255, 255, 0.04) 75%, transparent 100%)`, transform: `rotate(${scrollProgress * 30}deg)`, transition: 'transform 0.5s ease-out'}} />
+          <div className="absolute inset-0 rounded-full opacity-10" style={{ background: `linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.08) 25%, transparent 45%, rgba(255, 255, 255, 0.04) 75%, transparent 100%)`, transform: `rotate(${scrollProgress * 30}deg)`, transition: 'transform 0.5s ease-out' }} />
         </div>
-        
+
         <div className="absolute top-4 md:top-6 lg:top-8 left-1/2 transform -translate-x-1/2 lg:-translate-y-4 text-center z-20 px-4 mb-4">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold gold-text mb-1 md:mb-2 lg:mb-4">Journey Through Time</h1>
           <p className="text-sm sm:text-base md:text-lg text-[oklch(0.4_0.04_30)] max-w-2xl mx-auto mb-6 md:mb-8 lg:mb-12 px-4">Witness the evolution of a legend through cinematic moments</p>
@@ -99,27 +99,27 @@ export function TimelineSection() {
             const opacity = isVisible ? 1 : 0
             const scale = 0.7 + itemProgress * 0.3
             const blur = isVisible ? 0 : 8
-            
+
             return (
-              <div key={moment.year} className="absolute transition-all duration-500" style={{transform: `translate3d(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px), ${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale})`, left: '50%', top: '50%', opacity, transformStyle: 'preserve-3d', pointerEvents: isVisible ? 'auto' : 'none'}}>
+              <div key={moment.year} className="absolute transition-all duration-500" style={{ transform: `translate3d(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px), ${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale})`, left: '50%', top: '50%', opacity, transformStyle: 'preserve-3d', pointerEvents: isVisible ? 'auto' : 'none' }}>
                 {/* Container for entire card layout */}
                 <div className="relative w-[320px] sm:w-[380px] md:w-[480px] lg:w-[560px]">
                   {/* Title - Top Left */}
                   <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 md:mb-6">{moment.title}</h2>
-                  
+
                   {/* Main layout with content box and year sidebar */}
                   <div className="flex items-center gap-4 md:gap-6">
                     {/* Main Content Box */}
-                    <div className="relative flex-1 bg-[oklch(0.25_0.04_25)] rounded-2xl overflow-hidden p-6 md:p-8 min-h-[200px] md:min-h-[240px]" style={{boxShadow: '0 20px 60px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05)'}}>
+                    <div className="relative flex-1 bg-[oklch(0.25_0.04_25)] rounded-2xl overflow-hidden p-6 md:p-8 min-h-[200px] md:min-h-[240px]" style={{ boxShadow: '0 20px 60px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05)' }}>
                       {/* Text - Left Side */}
                       <div className="max-w-[55%] md:max-w-[50%] relative z-10">
                         <p className="text-sm md:text-base leading-relaxed text-white font-normal">"{descriptions[index]}"</p>
                       </div>
-                      
+
                       {/* Visual - Right Side (Decorative Element / Image Placeholder) */}
                       <div className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 w-28 h-28 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-xl overflow-hidden  shadow-lg">
-                        <img 
-                          src={`/timeline/${moment.year}.png`} 
+                        <img
+                          src={`/timeline/${moment.year}.png`}
                           alt={moment.title}
                           className="w-full h-full object-cover"
                           onError={(e) => {
@@ -132,10 +132,10 @@ export function TimelineSection() {
                         <div className="hidden w-full h-full bg-gradient-to-br from-red-400 via-blue-400 to-yellow-400 opacity-90" />
                       </div>
                     </div>
-                    
+
                     {/* Year Sidebar - Middle Right */}
                     <div className="flex items-center justify-center">
-                      <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-400 tabular-nums writing-mode-vertical-rl rotate-180" style={{writingMode: 'vertical-rl'}}>{moment.year}</span>
+                      <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-400 tabular-nums writing-mode-vertical-rl rotate-180" style={{ writingMode: 'vertical-rl' }}>{moment.year}</span>
                     </div>
                   </div>
                 </div>
