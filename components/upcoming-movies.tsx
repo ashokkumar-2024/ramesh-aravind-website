@@ -1,124 +1,43 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-
 export function UpcomingMovies() {
-  const [isVisible, setIsVisible] = useState(false)
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.2 },
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
-
-  // Auto-advance carousel
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % 3)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % 3)
-  }
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + 3) % 3)
-  }
-
   return (
-    <section ref={sectionRef} className="py-8 md:py-12 relative overflow-hidden">
+    <section className="py-16 md:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-background to-background" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-8">
-          <h2 className="text-sm text-primary tracking-[0.3em] uppercase mb-2 font-[var(--font-inter)]">
-            Upcoming Movies
-          </h2>
-          <h3 className="text-4xl md:text-5xl font-bold gold-text mb-2">Coming Soon</h3>
-          <p className="text-muted-foreground font-[var(--font-inter)] max-w-2xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-sm text-primary tracking-[0.3em] uppercase mb-3 font-[var(--font-inter)]">
             Exciting new projects on the horizon
-          </p>
+          </h2>
+          <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold gold-text mb-4">Coming Soon</h3>
         </div>
 
-        {/* Carousel - Shows 3 cards at once */}
-        <div className="relative max-w-5xl mx-auto">
-          <div className="overflow-hidden">
-            <div 
-              className="flex gap-6 transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              {/* Each slide contains 3 visible cards */}
-              {[0, 1, 2].map((slideIndex) => (
-                <div key={slideIndex} className="flex-shrink-0 w-full flex gap-6 justify-center">
-                  {[1, 2, 3].map((num) => (
-                    <div
-                      key={num}
-                      className="flex-shrink-0 w-48 md:w-56"
-                    >
-                      <div className="rounded-xl overflow-hidden shadow-xl">
-                        <div className="aspect-[2/3] max-h-[280px] md:max-h-[320px]">
-                          <img
-                            src={`/upcoming/${((slideIndex * 3 + num - 1) % 3) + 1}.jpg`}
-                            alt={`Upcoming Movie ${((slideIndex * 3 + num - 1) % 3) + 1}`}
-                            className="w-full h-full object-cover"
-                            onError={(e) => {
-                              e.currentTarget.src = "/generic-placeholder-icon.png"
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ))}
+        {/* Static Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {[1, 2, 3].map((num) => (
+            <div key={num} className="group relative">
+              <div className="aspect-[2/3] overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_-15px_rgba(212,175,55,0.3)]">
+                <img
+                  src={`/upcoming/${num}.jpg`}
+                  alt={`Upcoming Movie ${num}`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  onError={(e) => {
+                    // Fallback placeholder if image missing
+                    e.currentTarget.src = "/placeholder-movie.jpg" // Using a generic placeholder name, or could use the one from before
+                    e.currentTarget.style.backgroundColor = "#1a1a1a" // Dark bg fallback
+                    e.currentTarget.style.display = "grid" // Center text/icon if we were using one, but for img tag this is basic. 
+                    // Better fallback visual potentially:
+                    e.currentTarget.onerror = null; // prevent loop
+                    e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 1200'%3E%3Crect fill='%231a1a1a' width='800' height='1200'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='%23333'%3EMovie %23${num}%3C/text%3E%3C/svg%3E";
+                  }}
+                />
+
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
+              </div>
             </div>
-          </div>
-
-          {/* Navigation Buttons */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all z-10"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all z-10"
-            aria-label="Next slide"
-          >
-            <ChevronRight className="h-6 w-6" />
-          </button>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-6">
-            {[0, 1, 2].map((index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`h-2 rounded-full transition-all ${
-                  currentIndex === index ? "bg-primary w-8" : "bg-gray-400 w-2"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>

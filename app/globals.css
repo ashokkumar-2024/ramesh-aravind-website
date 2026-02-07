@@ -122,6 +122,14 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  overscroll-behavior-y: none;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow-x: hidden;
 }
 
 html::-webkit-scrollbar {

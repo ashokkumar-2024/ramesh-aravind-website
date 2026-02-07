@@ -2,7 +2,7 @@ import { Film, Mail, Instagram, Twitter, Youtube, Facebook } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="py-8 border-t border-border/50 relative">
+    <footer className="py-8 border-t border-border/50 relative z-50 bg-background">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">

@@ -77,7 +77,7 @@ export function HeroSection() {
   return (
     <section ref={sectionRef} className="relative min-h-screen flex items-end justify-center overflow-hidden dolly-container pb-32">
       <video
-        src="/hero-background.mp4"
+        src="/hero.mp4"
         className="absolute inset-0 w-full h-full object-cover"
         autoPlay
         muted

@@ -15,13 +15,6 @@ const brands = [
 export function EndorsementsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [isArrowHovered, setIsArrowHovered] = useState(false)
-  const [scrollY, setScrollY] = useState(0)
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   const nextSlide = () => {
     setActiveIndex((prev) => (prev + 1) % brands.length)
@@ -32,7 +25,7 @@ export function EndorsementsSection() {
   }
 
   return (
-    <section 
+    <section
       id="endorsements"
       className="relative py-8 overflow-hidden"
       style={{
@@ -41,7 +34,7 @@ export function EndorsementsSection() {
       }}
     >
       <div className="max-w-6xl mx-auto px-6">
-        
+
         {/* Header */}
         <div className="text-center mb-8">
           <h3 className="text-5xl md:text-6xl lg:text-8xl font-light text-white tracking-wide">
@@ -50,7 +43,7 @@ export function EndorsementsSection() {
         </div>
 
         {/* 3D Slider Container */}
-        <div 
+        <div
           className="relative h-[280px] flex items-center justify-center transition-all duration-700 ease-out"
           style={{
             transformStyle: 'preserve-3d',
@@ -61,11 +54,11 @@ export function EndorsementsSection() {
             const isActive = index === activeIndex
             const offset = index - activeIndex
             const absOffset = Math.abs(offset)
-            
+
             let transform = ''
             let zIndex = 0
             let opacity = 0.3
-            
+
             if (isActive) {
               transform = 'translateX(0px) translateZ(150px) rotateY(0deg) rotateX(0deg) scale(1.1)'
               zIndex = 10
@@ -81,7 +74,7 @@ export function EndorsementsSection() {
               zIndex = 1
               opacity = 0.3
             }
-            
+
             return (
               <div
                 key={brand.name}
@@ -94,7 +87,7 @@ export function EndorsementsSection() {
                   transitionTimingFunction: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
                 }}
               >
-                <div 
+                <div
                   className="relative cursor-pointer"
                   style={{
                     width: '380px',
@@ -103,7 +96,7 @@ export function EndorsementsSection() {
                   }}
                 >
                   {/* Main Card */}
-                  <div 
+                  <div
                     className="w-full h-full rounded-2xl overflow-hidden flex flex-col items-center justify-center p-6 relative"
                     style={{
                       background: `linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(212, 175, 55, 0.1) 50%, rgba(0, 0, 0, 0.3) 100%)`,
@@ -119,14 +112,14 @@ export function EndorsementsSection() {
                     }}
                   >
                     {/* Glass Reflection */}
-                    <div 
+                    <div
                       className="absolute inset-0 rounded-2xl opacity-30"
                       style={{
                         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%)',
                         animation: isActive ? 'shimmer 2s ease-in-out infinite' : 'none'
                       }}
                     />
-                    
+
                     <Image
                       src={brand.image}
                       alt={brand.name}
@@ -142,7 +135,7 @@ export function EndorsementsSection() {
               </div>
             )
           })}
-          
+
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -158,7 +151,7 @@ export function EndorsementsSection() {
           >
             <span className="text-white text-2xl">‹</span>
           </button>
-          
+
           <button
             onClick={nextSlide}
             onMouseEnter={() => setIsArrowHovered(true)}
