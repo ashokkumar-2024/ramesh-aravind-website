@@ -102,7 +102,7 @@ export function FilmographySection() {
               style={{ transitionDelay: `${300 + index * 80}ms` }}
             >
               <div className="relative overflow-hidden rounded-xl depth-shadow">
-                <div className="aspect-[2/3] relative">
+                <div className="aspect-[4/3] relative">
                   <img
                     src={film.image}
                     alt={film.title}
