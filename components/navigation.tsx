@@ -45,20 +45,17 @@ export function Navigation() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-700",
+        "fixed top-0 left-0 right-0 z-[100] transition-all duration-700",
         isScrolled
-          ? "bg-[oklch(0.965_0.018_75/0.92)] backdrop-blur-xl border-b border-[oklch(0.25_0.04_25/0.08)] py-2"
-          : "bg-transparent py-3",
+          ? "bg-[oklch(0.965_0.018_75/0.95)] backdrop-blur-xl border-b border-[oklch(0.25_0.04_25/0.08)] py-2 shadow-sm"
+          : "bg-[oklch(0.965_0.018_75/0.95)] backdrop-blur-xl border-b border-[oklch(0.25_0.04_25/0.08)] py-3",
       )}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           <a
             href="/"
-            className={cn(
-              "text-2xl font-bold gold-text font-sans tracking-wide transition-all duration-500",
-              isScrolled ? "text-xl" : "text-2xl",
-            )}
+            className="text-2xl font-bold gold-text font-sans tracking-wide transition-all duration-500"
           >
             Ramesh Aravind
           </a>
@@ -72,7 +69,7 @@ export function Navigation() {
                   "relative px-4 py-2 text-sm font-medium transition-all duration-300 font-[var(--font-body)] rounded-full",
                   activeSection === item.targetId
                     ? "text-[oklch(0.58_0.11_50)]"
-                    : "text-[oklch(0.45_0.04_30)] hover:text-foreground",
+                    : "text-[oklch(0.45_0.04_30)] hover:text-foreground"
                 )}
               >
                 {item.label}

@@ -130,17 +130,17 @@ export function AboutSection() {
         ))}
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 top-10">
         <div className={`text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20 transition-all duration-1200 gpu-accelerate ${isVisible ? "opacity-100" : "opacity-0"}`} style={{transform: `perspective(1500px) rotateX(${isVisible ? 0 : 15}deg) translateY(${isVisible ? 0 : 50}px) translateZ(${isVisible ? 0 : -100}px)`}}>
-          <div className="inline-flex items-center gap-4 mb-6">
+          <div className="flex items-center justify-center gap-4 mb-6">
             <span className="w-16 h-px bg-gradient-to-r from-transparent via-[oklch(0.58_0.11_50/0.5)] to-transparent" />
             <span className="text-sm text-[oklch(0.58_0.11_50)] tracking-[0.4em] uppercase font-[var(--font-body)]">
               Legacy
             </span>
             <span className="w-16 h-px bg-gradient-to-r from-transparent via-[oklch(0.58_0.11_50/0.5)] to-transparent" />
           </div>
-          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#f7c548] relative inline-block leading-tight px-4">
-            From Silver Screen to Stage: Inspiring Every Step of the Way
+          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold gold-text relative inline-block leading-tight px-4">
+            From Silver Screen to Stage<br></br> Inspiring Every Step of the Way
           </h3>
         </div>
 

@@ -12,6 +12,7 @@ const BooksSection = dynamic(() => import("@/components/books-section").then(mod
 const KDSongsSection = dynamic(() => import("@/components/kd-songs-section").then(mod => ({ default: mod.KDSongsSection })))
 const TVShowsSection = dynamic(() => import("@/components/tv-shows-section").then(mod => ({ default: mod.TVShowsSection })))
 const AwardsSection = dynamic(() => import("@/components/awards-section").then(mod => ({ default: mod.AwardsSection })))
+const MotivationalVideosSection = dynamic(() => import("@/components/motivational-videos-section").then(mod => ({ default: mod.MotivationalVideosSection })))
 const UpcomingMovies = dynamic(() => import("@/components/upcoming-movies").then(mod => ({ default: mod.UpcomingMovies })))
 const GallerySection = dynamic(() => import("@/components/gallery-section").then(mod => ({ default: mod.GallerySection })))
 const EndorsementsSection = dynamic(() => import("@/components/endorsements-section").then(mod => ({ default: mod.EndorsementsSection })))
@@ -19,7 +20,7 @@ const ContactSection = dynamic(() => import("@/components/contact-section").then
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background film-grain dolly-container">
+    <main className="bg-background film-grain dolly-container">
       <Navigation />
       <HeroSection />
       <AboutSection />
@@ -31,6 +32,7 @@ export default function Home() {
       <KDSongsSection />
       <TVShowsSection />
       <AwardsSection />
+      <MotivationalVideosSection />
       <UpcomingMovies />
       <GallerySection />
       <EndorsementsSection />

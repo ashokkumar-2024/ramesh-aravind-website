@@ -111,10 +111,22 @@
 }
 
 /* Hide scrollbar for immersive spatial experience */
-html {
-  scroll-behavior: smooth;
+html, body {
   scrollbar-width: none;
   -ms-overflow-style: none;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+html {
+  overflow-y: auto;
+  height: 100%;
+}
+
+body {
+  overflow-y: visible;
+  min-height: 100%;
+  position: relative;
 }
 
 html::-webkit-scrollbar {
@@ -408,10 +420,7 @@ html::-webkit-scrollbar {
   outline-offset: 2px;
 }
 
-/* Smooth scrolling for all elements */
-* {
-  scroll-behavior: smooth;
-}
+/* Removed duplicate scroll-behavior to prevent scroll jumping */
 
 /* Mobile-first responsive grid improvements */
 @media (max-width: 640px) {

@@ -1,16 +1,11 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Calendar, Film } from "lucide-react"
-
-const upcomingMovies = [
-  { title: "KD - The Devil", subtitle: "KD - The Devil", language: "Kannada", role: "Actor", image: "/kd.webp" },
-  { title: "Daiji", subtitle: "Daiji", language: "Kannada", role: "Actor", image: "/daiji.jpg" },
-  { title: "Butterfly", subtitle: "Butterfly", language: "Kannada", role: "Actor", image: "/butterfly.webp" },
-]
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export function UpcomingMovies() {
   const [isVisible, setIsVisible] = useState(false)
+  const [currentIndex, setCurrentIndex] = useState(0)
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -30,6 +25,22 @@ export function UpcomingMovies() {
     return () => observer.disconnect()
   }, [])
 
+  // Auto-advance carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % 3)
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % 3)
+  }
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + 3) % 3)
+  }
+
   return (
     <section ref={sectionRef} className="py-8 md:py-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-background to-background" />
@@ -45,42 +56,69 @@ export function UpcomingMovies() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {upcomingMovies.map((movie, index) => (
-            <div
-              key={movie.title}
-              className={`glass-card rounded-xl overflow-hidden group hover:border-primary/50 transition-all duration-500 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+        {/* Carousel - Shows 3 cards at once */}
+        <div className="relative max-w-5xl mx-auto">
+          <div className="overflow-hidden">
+            <div 
+              className="flex gap-6 transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              <div className="aspect-[2/3] relative overflow-hidden">
-                <img
-                  src={movie.image}
-                  alt={movie.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/80 to-transparent" />
-
-                {/* Coming Soon Badge */}
-                <div className="absolute top-4 right-4">
-                  <span className="inline-flex items-center gap-1 px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full animate-pulse font-[var(--font-inter)]">
-                    <Calendar className="h-3 w-3" />
-                    Coming Soon
-                  </span>
+              {/* Each slide contains 3 visible cards */}
+              {[0, 1, 2].map((slideIndex) => (
+                <div key={slideIndex} className="flex-shrink-0 w-full flex gap-6 justify-center">
+                  {[1, 2, 3].map((num) => (
+                    <div
+                      key={num}
+                      className="flex-shrink-0 w-48 md:w-56"
+                    >
+                      <div className="rounded-xl overflow-hidden shadow-xl">
+                        <div className="aspect-[2/3] max-h-[280px] md:max-h-[320px]">
+                          <img
+                            src={`/upcoming/${((slideIndex * 3 + num - 1) % 3) + 1}.jpg`}
+                            alt={`Upcoming Movie ${((slideIndex * 3 + num - 1) % 3) + 1}`}
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              e.currentTarget.src = "/generic-placeholder-icon.png"
+                            }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-
-                <div className="absolute bottom-0 left-0 right-0 p-3">
-                  <div className="flex items-center gap-2 mb-1">
-                    <Film className="h-4 w-4 text-primary" />
-                    <span className="text-primary text-xs font-[var(--font-inter)]">{movie.language}</span>
-                  </div>
-                  <h4 className="text-xl font-bold text-foreground">{movie.title}</h4>
-                  <p className="text-muted-foreground text-sm font-[var(--font-inter)]">{movie.role}</p>
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Navigation Buttons */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all z-10"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all z-10"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center gap-2 mt-6">
+            {[0, 1, 2].map((index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`h-2 rounded-full transition-all ${
+                  currentIndex === index ? "bg-primary w-8" : "bg-gray-400 w-2"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

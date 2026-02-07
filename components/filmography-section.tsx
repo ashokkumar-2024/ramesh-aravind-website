@@ -7,11 +7,14 @@ const languages = ["All", "Kannada", "Tamil", "Telugu", "Hindi"]
 
 const films = [
   { title: "Sundara Swapnagalu", year: "1986", language: "Kannada", role: "Debut", image: "/Sundara_Swapnagalu.jpg" },
+  { title: "Rudraveena", year: "1988", language: "Telugu", role: "Supporting", image: "/Rudraveena.jpg" },
   { title: "America America", year: "1995", language: "Kannada", role: "Lead", image: "/America_America_.jpg" },
   { title: "Amrutha Varshini", year: "1997", language: "Kannada", role: "Lead", image: "/Amruthavarshini_poster.jpg" },
   { title: "O Mallige", year: "1997", language: "Kannada", role: "Lead", image: "/O Mallige.jpg" },
   { title: "Hoomale", year: "1998", language: "Kannada", role: "Actor/Writer", image: "/Hoomale.jpg" },
   { title: "Rama Shama Bhama", year: "2005", language: "Kannada", role: "Director", image: "/rama shama bhama.avif" },
+  { title: "Mumbai Xpress", year: "2005", language: "Hindi", role: "Supporting", image: "/Mumbai_Xpress.jpg" },
+  { title: "Mumbai Xpress", year: "2005", language: "Telugu", role: "Supporting", image: "/Mumbai_Xpress.jpg" },
   { title: "Sathi Leelavathi", year: "1995", language: "Tamil", role: "Lead", image: "/Sathi Leelavathi.jpg" },
   { title: "Uttama Villain", year: "2015", language: "Tamil", role: "Director", image: "/VW.jpg" },
   { title: "100", year: "2019", language: "Kannada", role: "Director/Actor", image: "/100.jpg" },

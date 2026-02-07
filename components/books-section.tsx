@@ -11,7 +11,7 @@ const books = [
     description: "Inspirational stories and life lessons",
     awards: [],
     hasTrailer: false,
-    image: "/Its No Fun with u.jpg"
+    image: "/Its-no-Fun.png"
   },
   {
     title: "Kushiyinda Ramesh",
@@ -27,7 +27,7 @@ const books = [
     description: "A collection of inspiring quotes",
     awards: [],
     hasTrailer: false,
-    image: "/success.webp"
+    image: "Art-of-Success.png"
   },
   {
     title: "Preetiyinda Ramesh",

@@ -101,23 +101,43 @@ export function TimelineSection() {
             const blur = isVisible ? 0 : 8
             
             return (
-              <div key={moment.year} className="absolute transition-all duration-500" style={{transform: `translate3d(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px), ${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale})`, left: '50%', top: '50%', opacity, filter: `blur(${blur}px)`, transformStyle: 'preserve-3d', pointerEvents: isVisible ? 'auto' : 'none'}}>
-                <div className="absolute text-[15rem] font-black select-none pointer-events-none" style={{transform: 'translate(-50%, -50%) translateZ(-100px)', left: '50%', top: '50%', color: `oklch(0.5 0.04 30 / ${opacity * 0.5})`}}>{moment.year}</div>
-                <div className="relative p-4 sm:p-6 md:p-8 rounded-3xl backdrop-blur-xl w-[280px] sm:w-[320px] md:w-[500px]" style={{background: 'linear-gradient(135deg, oklch(0.99 0.005 78 / 0.98), oklch(0.97 0.01 70 / 0.95))', boxShadow: '0 30px 80px oklch(0.15 0.02 25 / 0.5), 0 0 0 3px oklch(0.1 0.02 25 / 0.8)', border: '3px solid oklch(0.1 0.02 25 / 0.9)'}}>
-                  <div className="absolute inset-0 rounded-3xl" style={{background: 'linear-gradient(135deg, oklch(0.995 0.002 78 / 0.95), oklch(0.98 0.005 70 / 0.9))', zIndex: 1}} />
-                  <div className="relative z-10">
-                    <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
-                      <div className="px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-bold" style={{background: 'linear-gradient(135deg, oklch(0.1 0.02 25), oklch(0.15 0.03 30))', color: 'white', boxShadow: '0 4px 15px oklch(0.1 0.02 25 / 0.6)'}}>{moment.year}</div>
-                      <div className="w-8 md:w-12 h-px bg-gradient-to-r from-[oklch(0.1_0.02_25)] to-transparent" />
+              <div key={moment.year} className="absolute transition-all duration-500" style={{transform: `translate3d(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px), ${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale})`, left: '50%', top: '50%', opacity, transformStyle: 'preserve-3d', pointerEvents: isVisible ? 'auto' : 'none'}}>
+                {/* Container for entire card layout */}
+                <div className="relative w-[320px] sm:w-[380px] md:w-[480px] lg:w-[560px]">
+                  {/* Title - Top Left */}
+                  <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 md:mb-6">{moment.title}</h2>
+                  
+                  {/* Main layout with content box and year sidebar */}
+                  <div className="flex items-center gap-4 md:gap-6">
+                    {/* Main Content Box */}
+                    <div className="relative flex-1 bg-[oklch(0.25_0.04_25)] rounded-2xl overflow-hidden p-6 md:p-8 min-h-[200px] md:min-h-[240px]" style={{boxShadow: '0 20px 60px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05)'}}>
+                      {/* Text - Left Side */}
+                      <div className="max-w-[55%] md:max-w-[50%] relative z-10">
+                        <p className="text-sm md:text-base leading-relaxed text-white font-normal">"{descriptions[index]}"</p>
+                      </div>
+                      
+                      {/* Visual - Right Side (Decorative Element / Image Placeholder) */}
+                      <div className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 w-28 h-28 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-xl overflow-hidden  shadow-lg">
+                        <img 
+                          src={`/timeline/${moment.year}.png`} 
+                          alt={moment.title}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            // Fallback to gradient if image not found
+                            e.currentTarget.style.display = 'none'
+                            const fallback = e.currentTarget.nextElementSibling as HTMLElement
+                            if (fallback) fallback.classList.remove('hidden')
+                          }}
+                        />
+                        <div className="hidden w-full h-full bg-gradient-to-br from-red-400 via-blue-400 to-yellow-400 opacity-90" />
+                      </div>
                     </div>
-                    <h2 className="text-2xl md:text-3xl font-black mb-2 md:mb-3" style={{color: 'oklch(0.05 0.01 25)', letterSpacing: '-0.02em'}}>{moment.title}</h2>
-                    <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3" style={{color: 'oklch(0.08 0.015 25)'}}>{moment.subtitle}</h3>
-                    <p className="text-base md:text-lg font-semibold leading-relaxed" style={{color: 'oklch(0.1 0.02 25)'}}>{moment.detail}</p>
-                    <div className="mt-2 md:mt-3 pt-2 md:pt-3 border-t-2 border-[oklch(0.1_0.02_25)]">
-                      <p className="text-sm md:text-base font-semibold" style={{color: 'oklch(0.12 0.025 25)'}}>{descriptions[index]}</p>
+                    
+                    {/* Year Sidebar - Middle Right */}
+                    <div className="flex items-center justify-center">
+                      <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-400 tabular-nums writing-mode-vertical-rl rotate-180" style={{writingMode: 'vertical-rl'}}>{moment.year}</span>
                     </div>
                   </div>
-                  <div className="absolute top-3 md:top-4 right-3 md:right-4 w-3 md:w-4 h-3 md:h-4 bg-[oklch(0.1_0.02_25)] rounded-full animate-pulse z-20" />
                 </div>
               </div>
             )
