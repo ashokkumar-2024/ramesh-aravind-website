@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react"
 
 const videos = [
-  { id: "BbfrdhAzQBU", title: "Motivational Talk 1" },
-  { id: "DNIIyoj5YxM", title: "Motivational Talk 2" },
+  { id: "6aRZVQQiReA", title: "Motivational Talk 1" },
+  { id: "v4o7SJqxaPo", title: "Motivational Talk 2" },
   { id: "WgQBA-eAn6Y", title: "Motivational Talk 3" },
   { id: "3BnNFlTFWLo", title: "Motivational Talk 4" },
   { id: "IFf5Jih3-zk", title: "Motivational Talk 5" },

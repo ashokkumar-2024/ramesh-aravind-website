@@ -47,17 +47,21 @@ export function Navigation() {
       className={cn(
         "fixed top-0 left-0 right-0 z-[100] transition-all duration-700",
         isScrolled
-          ? "bg-[oklch(0.965_0.018_75/0.95)] backdrop-blur-xl border-b border-[oklch(0.25_0.04_25/0.08)] py-2 shadow-sm"
-          : "bg-[oklch(0.965_0.018_75/0.95)] backdrop-blur-xl border-b border-[oklch(0.25_0.04_25/0.08)] py-3",
+          ? "bg-[oklch(0.965_0.018_75/0.95)] backdrop-blur-xl border-b border-[oklch(0.25_0.04_25/0.08)] py-0.5 shadow-sm"
+          : "bg-[oklch(0.965_0.018_75/0.95)] backdrop-blur-xl border-b border-[oklch(0.25_0.04_25/0.08)] py-0.5",
       )}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           <a
             href="/"
-            className="text-2xl font-bold gold-text font-sans tracking-wide transition-all duration-500"
+            className="transition-all duration-500"
           >
-            Ramesh Aravind
+            <img 
+              src="/Black BG_RA.png.png" 
+              alt="Ramesh Aravind" 
+              className="h-32 md:h-36 w-auto object-contain"
+            />
           </a>
 
           <div className="hidden lg:flex items-center gap-1">
@@ -66,7 +70,7 @@ export function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "relative px-4 py-2 text-sm font-medium transition-all duration-300 font-[var(--font-body)] rounded-full",
+                  "relative px-5 py-2.5 text-base font-semibold transition-all duration-300 font-[var(--font-body)] rounded-full",
                   activeSection === item.targetId
                     ? "text-[oklch(0.58_0.11_50)]"
                     : "text-[oklch(0.45_0.04_30)] hover:text-foreground"
