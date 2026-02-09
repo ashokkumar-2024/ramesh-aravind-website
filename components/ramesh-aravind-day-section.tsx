@@ -11,6 +11,10 @@ export function RameshAravindDaySection() {
             Celebrating a special occasion
           </h2>
           <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold gold-text mb-4">Ramesh Aravind's Day</h3>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-[var(--font-inter)]">
+            On August 23rd, the City of Austin, Texas, USA officially declared it "Dr. Ramesh Aravind Day"! 
+            They gave me the honor when I went there to be the keynote speaker at the Day of Gratitude Gala 2025.
+          </p>
         </div>
 
         {/* Static Grid Layout */}
