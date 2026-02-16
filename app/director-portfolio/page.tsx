@@ -78,7 +78,7 @@ export default function DirectorPortfolio() {
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY)
-      
+
       // Calculate active film based on scroll position
       const filmHeight = 400
       const headerHeight = 200
@@ -102,10 +102,10 @@ export default function DirectorPortfolio() {
   }, [scrollY])
 
   return (
-    <div className="min-h-screen text-white" style={{backgroundColor: 'lab(12.6155% 12.4569 6.947)'}}>
+    <div className="min-h-screen text-white" style={{ backgroundColor: 'lab(12.6155% 12.4569 6.947)' }}>
       <Navigation />
       {/* Studio Lighting */}
-      <div 
+      <div
         className="fixed inset-0 pointer-events-none opacity-20"
         style={{
           background: `radial-gradient(ellipse at ${20 + mousePos.x * 10}% ${10 + mousePos.y * 10}%, rgba(255, 255, 255, 0.1) 0%, transparent 60%)`
@@ -123,17 +123,16 @@ export default function DirectorPortfolio() {
               const targetScroll = headerHeight + (index * filmHeight)
               window.scrollTo({ top: targetScroll, behavior: 'smooth' })
             }}
-            className={`block w-2 h-8 rounded-full transition-all duration-300 ${
-              activeFilm === index 
-                ? 'bg-white shadow-lg' 
+            className={`block w-2 h-8 rounded-full transition-all duration-300 ${activeFilm === index
+                ? 'bg-white shadow-lg'
                 : 'bg-gray-600 hover:bg-gray-500'
-            }`}
+              }`}
           />
         ))}
       </div>
 
       {/* Intro Strip */}
-      <div 
+      <div
         className="sticky top-0 z-30 bg-gradient-to-r from-gray-900/95 via-gray-800/95 to-gray-900/95 backdrop-blur-sm border-b border-gray-700/30"
         style={{
           transform: `translateY(${Math.min(0, -scrollY * 0.3)}px)`,
@@ -143,7 +142,7 @@ export default function DirectorPortfolio() {
         <div className="container mx-auto px-8 py-6">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold tracking-tight">Ramesh Aravind</h1>
+              <h1 className="text-3xl font-bold tracking-tight">Dr Ramesh Aravind</h1>
               <p className="text-gray-400 text-lg font-medium">Director</p>
             </div>
             <div className="text-right">
@@ -165,7 +164,7 @@ export default function DirectorPortfolio() {
         {films.map((film, index) => {
           const isActive = activeFilm === index
           const lightShift = (mousePos.x - 0.5) * 20
-          
+
           return (
             <div
               key={film.title}
@@ -176,10 +175,10 @@ export default function DirectorPortfolio() {
               }}
               onMouseEnter={() => setActiveFilm(index)}
             >
-              <div 
+              <div
                 className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl overflow-hidden border border-gray-700/50 transition-all duration-500"
                 style={{
-                  boxShadow: isActive 
+                  boxShadow: isActive
                     ? `0 25px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1), ${lightShift}px ${lightShift * 0.5}px 30px rgba(255, 255, 255, 0.05)`
                     : '0 8px 25px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.05)',
                   transform: `translateZ(${isActive ? '10px' : '0px'})`,
@@ -189,7 +188,7 @@ export default function DirectorPortfolio() {
                 <div className="grid md:grid-cols-5 gap-8 p-8">
                   {/* Poster */}
                   <div className="md:col-span-2">
-                    <div 
+                    <div
                       className="relative overflow-hidden rounded-xl"
                       style={{
                         transform: `perspective(1000px) rotateY(${isActive ? '2deg' : '0deg'}) translateZ(${isActive ? '15px' : '0px'})`,
@@ -205,7 +204,7 @@ export default function DirectorPortfolio() {
                           transform: `scale(${isActive ? '1.02' : '1'})`
                         }}
                       />
-                      <div 
+                      <div
                         className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20"
                         style={{
                           opacity: isActive ? 0.3 : 0.1
@@ -233,14 +232,14 @@ export default function DirectorPortfolio() {
                         </h4>
                         <p className="text-white font-medium">{film.director}</p>
                       </div>
-                      
+
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">
                           Writers
                         </h4>
                         <p className="text-white font-medium">{film.writers.join(', ')}</p>
                       </div>
-                      
+
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">
                           Stars

@@ -33,7 +33,7 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
       const steps = 60
       const increment = value / steps
       let current = 0
-      
+
       const timer = setInterval(() => {
         current += increment
         if (current >= value) {
@@ -43,7 +43,7 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
           setCount(Math.floor(current))
         }
       }, duration / steps)
-      
+
       return () => clearInterval(timer)
     }
   }, [isVisible, value])
@@ -131,7 +131,7 @@ export function AboutSection() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10 top-10">
-        <div className={`text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20 transition-all duration-1200 gpu-accelerate ${isVisible ? "opacity-100" : "opacity-0"}`} style={{transform: `perspective(1500px) rotateX(${isVisible ? 0 : 15}deg) translateY(${isVisible ? 0 : 50}px) translateZ(${isVisible ? 0 : -100}px)`}}>
+        <div className={`text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20 transition-all duration-1200 gpu-accelerate ${isVisible ? "opacity-100" : "opacity-0"}`} style={{ transform: `perspective(1500px) rotateX(${isVisible ? 0 : 15}deg) translateY(${isVisible ? 0 : 50}px) translateZ(${isVisible ? 0 : -100}px)` }}>
           <div className="flex items-center justify-center gap-4 mb-6">
             <span className="w-16 h-px bg-gradient-to-r from-transparent via-[oklch(0.58_0.11_50/0.5)] to-transparent" />
             <span className="text-sm text-[oklch(0.58_0.11_50)] tracking-[0.4em] uppercase font-[var(--font-body)]">
@@ -147,9 +147,8 @@ export function AboutSection() {
         <div className="grid lg:grid-cols-12 gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-20 items-start">
           {/* Portrait with 3D frame effect */}
           <div
-            className={`lg:col-span-5 relative transition-all duration-1500 gpu-accelerate ${
-              isVisible ? "opacity-100" : "opacity-0"
-            }`}
+            className={`lg:col-span-5 relative transition-all duration-1500 gpu-accelerate ${isVisible ? "opacity-100" : "opacity-0"
+              }`}
             style={{
               transform: `
                 perspective(2000px) 
@@ -213,7 +212,7 @@ export function AboutSection() {
                 </p>
                 <div className="mt-2 sm:mt-3 flex items-center gap-2 sm:gap-3">
                   <span className="w-6 sm:w-8 h-px bg-[oklch(0.58_0.11_50/0.6)]" />
-                  <span className="text-xs sm:text-sm text-[oklch(0.58_0.11_50)] font-medium">Ramesh Aravind</span>
+                  <span className="text-xs sm:text-sm text-[oklch(0.58_0.11_50)] font-medium">Dr Ramesh Aravind</span>
                 </div>
               </div>
 
@@ -260,9 +259,8 @@ export function AboutSection() {
                 ].map((text, index) => (
                   <p
                     key={index}
-                    className={`transition-all duration-700 ${
-                      isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                    }`}
+                    className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                      }`}
                     style={{ transitionDelay: `${400 + index * 150}ms` }}
                   >
                     {text}

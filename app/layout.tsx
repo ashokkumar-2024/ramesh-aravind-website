@@ -5,23 +5,23 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import "./critical.css"
 
-const playfair = Playfair_Display({ 
-  subsets: ["latin"], 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
   variable: "--font-playfair",
   display: 'swap'
 })
-const inter = Inter({ 
-  subsets: ["latin"], 
+const inter = Inter({
+  subsets: ["latin"],
   variable: "--font-inter",
   display: 'swap'
 })
 
 export const metadata: Metadata = {
-  title: "Ramesh Aravind | Actor • Director • Author • Motivational Speaker",
+  title: "Dr Ramesh Aravind | Actor • Director • Author • Motivational Speaker",
   description:
-    "Official website of Ramesh Aravind - Legendary Indian actor, acclaimed director, bestselling author, and inspirational motivational speaker with over 140 films across Kannada, Tamil, Telugu, and Hindi cinema.",
+    "Official website of Dr Ramesh Aravind - Legendary Indian actor, acclaimed director, bestselling author, and inspirational motivational speaker with over 140 films across Kannada, Tamil, Telugu, and Hindi cinema.",
   keywords: [
-    "Ramesh Aravind",
+    "Dr Ramesh Aravind",
     "Indian Actor",
     "Kannada Cinema",
     "Motivational Speaker",
@@ -29,13 +29,13 @@ export const metadata: Metadata = {
     "Author",
     "Weekend With Ramesh",
   ],
-  authors: [{ name: "Ramesh Aravind" }],
+  authors: [{ name: "Dr Ramesh Aravind" }],
   openGraph: {
-    title: "Ramesh Aravind | Actor • Director • Author • Motivational Speaker",
+    title: "Dr Ramesh Aravind | Actor • Director • Author • Motivational Speaker",
     description: "From Silver Screen to Stage – Inspiring Every Step of the Way",
     type: "website",
   },
-    generator: 'v0.app'
+  generator: 'v0.app'
 }
 
 export const viewport: Viewport = {

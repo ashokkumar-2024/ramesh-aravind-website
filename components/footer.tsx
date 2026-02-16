@@ -6,9 +6,9 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img 
-              src="/Black BG_RA.png.png" 
-              alt="Ramesh Aravind" 
+            <img
+              src="/Black BG_RA.png.png"
+              alt="Ramesh Aravind"
               className="h-32 w-auto object-contain"
             />
           </div>
@@ -36,7 +36,7 @@ export function Footer() {
           </div>
 
           <p className="text-muted-foreground text-sm font-[var(--font-inter)]">
-            © {new Date().getFullYear()} Ramesh Aravind. All rights reserved.
+            © {new Date().getFullYear()} Dr Ramesh Aravind. All rights reserved.
           </p>
         </div>
       </div>

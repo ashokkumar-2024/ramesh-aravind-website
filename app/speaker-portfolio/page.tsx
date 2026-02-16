@@ -46,12 +46,12 @@ const speeches = [
     videoId: "CsgEiP11a6c"
   },
   {
-    title: "Priya Shreya with Ramesh Aravind",
+    title: "Priya Shreya with Dr Ramesh Aravind",
     context: "Interview & Conversation",
     videoId: "IFf5Jih3-zk"
   },
   {
-    title: "Ramesh Aravind reveals how to make 2018 the best year of your life",
+    title: "Dr Ramesh Aravind reveals how to make 2018 the best year of your life",
     context: "Life Transformation",
     videoId: "46aMbOiwkh0"
   }
@@ -102,7 +102,7 @@ export default function SpeakerPortfolio() {
           {speeches.map((speech, index) => {
             const isVisible = visibleItems.has(index)
             const isHovered = hoveredItem === index
-            
+
             return (
               <div
                 key={speech.videoId}
@@ -119,10 +119,10 @@ export default function SpeakerPortfolio() {
                 onMouseLeave={() => setHoveredItem(null)}
               >
                 {/* Video Row */}
-                <div 
+                <div
                   className="bg-white rounded-lg overflow-hidden transition-all duration-500 hover:scale-[1.02]"
                   style={{
-                    boxShadow: isHovered 
+                    boxShadow: isHovered
                       ? '0 20px 40px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(0, 0, 0, 0.1)'
                       : '0 8px 25px rgba(0, 0, 0, 0.08), 0 3px 10px rgba(0, 0, 0, 0.04)',
                     transform: `translateY(${isHovered ? '-2px' : '0px'})`
@@ -138,9 +138,9 @@ export default function SpeakerPortfolio() {
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
                         />
-                        
+
                         {/* Play Overlay */}
-                        <div 
+                        <div
                           className="absolute inset-0 flex items-center justify-center bg-black/10 opacity-0 group-hover:opacity-100 transition-all duration-500 cursor-pointer"
                           onClick={() => window.open(`https://www.youtube.com/watch?v=${speech.videoId}`, '_blank')}
                         >

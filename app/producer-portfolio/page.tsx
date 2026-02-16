@@ -16,7 +16,7 @@ const shows = [
     title: "Sundari",
     image: "/sundari.jpg",
     genre: "Family Drama",
-    channel: "Udaya TV", 
+    channel: "Udaya TV",
     years: "2021–2023",
     description: "A heartwarming family drama that explored relationships, values, and the complexities of modern family life."
   },
@@ -31,7 +31,7 @@ const shows = [
   {
     title: "Aase",
     image: "/aase.jpg",
-    genre: "Drama Series", 
+    genre: "Drama Series",
     channel: "Star Suvarna",
     years: "2023–present",
     description: "A contemporary drama series exploring modern relationships and societal themes with depth and authenticity."
@@ -46,7 +46,7 @@ export default function ProducerPortfolio() {
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY)
-      
+
       // Calculate active show based on scroll position
       const showHeight = 300
       const headerHeight = 250
@@ -73,7 +73,7 @@ export default function ProducerPortfolio() {
     <div className="min-h-screen bg-gradient-to-br from-gray-700 via-slate-800 to-gray-900 text-white overflow-x-hidden">
       <Navigation />
       {/* Studio Lighting */}
-      <div 
+      <div
         className="fixed inset-0 pointer-events-none opacity-15"
         style={{
           background: `radial-gradient(ellipse at ${30 + mousePos.x * 20}% ${20 + mousePos.y * 20}%, rgba(255, 255, 255, 0.1) 0%, transparent 70%)`
@@ -84,7 +84,7 @@ export default function ProducerPortfolio() {
       <div className="container mx-auto px-8 pt-24 pb-16">
         <div className="max-w-4xl">
           <div className="mb-8">
-            <h1 className="text-5xl font-bold mb-4 tracking-tight">Ramesh Aravind</h1>
+            <h1 className="text-5xl font-bold mb-4 tracking-tight">Dr Ramesh Aravind</h1>
             <p className="text-2xl text-slate-300 font-medium">Producer</p>
           </div>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-400 to-slate-500 mb-8"></div>
@@ -101,7 +101,7 @@ export default function ProducerPortfolio() {
           const isPrevious = index < activeShow
           const isNext = index > activeShow
           const lightShift = (mousePos.x - 0.5) * 15
-          
+
           return (
             <div
               key={show.title}
@@ -114,11 +114,11 @@ export default function ProducerPortfolio() {
               }}
             >
               {/* Show Band */}
-              <div 
+              <div
                 className="relative h-80 overflow-hidden"
                 style={{
                   background: `linear-gradient(135deg, rgba(51, 65, 85, 0.4) 0%, rgba(30, 41, 59, 0.6) 100%)`,
-                  boxShadow: isActive 
+                  boxShadow: isActive
                     ? `0 20px 40px rgba(0, 0, 0, 0.3), ${lightShift}px ${lightShift * 0.3}px 20px rgba(255, 255, 255, 0.03)`
                     : '0 8px 20px rgba(0, 0, 0, 0.2)',
                   backdropFilter: 'blur(8px)',
@@ -127,7 +127,7 @@ export default function ProducerPortfolio() {
                 }}
               >
                 {/* Background Poster Blend */}
-                <div 
+                <div
                   className="absolute inset-0 opacity-20"
                   style={{
                     background: `url(${show.image}) right center/cover`,
@@ -142,7 +142,7 @@ export default function ProducerPortfolio() {
                     <div className="grid md:grid-cols-5 gap-12 items-center">
                       {/* Poster with Depth */}
                       <div className="md:col-span-2">
-                        <div 
+                        <div
                           className="relative max-w-sm"
                           style={{
                             transform: `perspective(1000px) translateZ(${isActive ? '25px' : '10px'}) rotateY(${isActive ? '1deg' : '0deg'})`,
@@ -155,7 +155,7 @@ export default function ProducerPortfolio() {
                             className="w-full h-auto rounded-lg shadow-2xl transition-all duration-700"
                             style={{
                               filter: `brightness(${isActive ? '1.1' : '0.9'}) contrast(${isActive ? '1.1' : '1'})`,
-                              boxShadow: isActive 
+                              boxShadow: isActive
                                 ? '0 25px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1)'
                                 : '0 15px 30px rgba(0, 0, 0, 0.3)'
                             }}
@@ -164,7 +164,7 @@ export default function ProducerPortfolio() {
                       </div>
 
                       {/* Content Layer */}
-                      <div 
+                      <div
                         className="md:col-span-3 space-y-6"
                         style={{
                           transform: `translateZ(${isActive ? '15px' : '5px'})`,
@@ -175,7 +175,7 @@ export default function ProducerPortfolio() {
                           <h2 className="text-4xl font-bold mb-4 text-white transition-all duration-500">
                             {show.title}
                           </h2>
-                          
+
                           {/* Broadcast Info */}
                           <div className="flex flex-wrap items-center gap-4 mb-6">
                             <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium border border-blue-400/30">
@@ -188,7 +188,7 @@ export default function ProducerPortfolio() {
                               {show.years}
                             </span>
                           </div>
-                          
+
                           <p className="text-lg text-slate-200 leading-relaxed">
                             {show.description}
                           </p>
@@ -201,7 +201,7 @@ export default function ProducerPortfolio() {
                               <h4 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">
                                 Producer
                               </h4>
-                              <p className="text-white font-medium">Ramesh Aravind</p>
+                              <p className="text-white font-medium">Dr Ramesh Aravind</p>
                             </div>
                             <div>
                               <h4 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-1">
@@ -217,10 +217,10 @@ export default function ProducerPortfolio() {
                 </div>
 
                 {/* Subtle Overlay for Depth */}
-                <div 
+                <div
                   className="absolute inset-0 pointer-events-none"
                   style={{
-                    background: isActive 
+                    background: isActive
                       ? 'linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, transparent 50%, rgba(148, 163, 184, 0.05) 100%)'
                       : 'transparent',
                     transition: 'background 0.7s ease-out'
@@ -240,7 +240,7 @@ export default function ProducerPortfolio() {
             "Producing stories that live with audiences every day."
           </h3>
           <p className="text-lg text-slate-400 leading-relaxed">
-            Television production is about consistency, trust, and understanding that every episode becomes part of someone's routine. 
+            Television production is about consistency, trust, and understanding that every episode becomes part of someone's routine.
             It's the art of long-form storytelling that builds lasting connections.
           </p>
           <div className="w-40 h-px bg-gradient-to-r from-transparent via-slate-400 to-transparent mx-auto mt-12"></div>
