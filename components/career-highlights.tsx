@@ -17,7 +17,7 @@ const careers = [
     title: "Director",
     subtitle: "10 Films",
     description: "Directed critically acclaimed films including Rama Shama Bhama and 100.",
-    mood: "cool",
+    mood: "warm",
   },
   {
     icon: Users,

@@ -43,7 +43,7 @@ export function FilmographySection() {
   const filteredFilms = activeFilter === "All" ? films : films.filter((film) => film.language === activeFilter)
 
   return (
-    <section id="filmography" ref={sectionRef} className="relative py-8 md:py-12 overflow-hidden">
+    <section id="filmography" ref={sectionRef} className="relative py-8 sm:py-10 md:py-12 overflow-hidden">
       <div
         className="absolute inset-0"
         style={{
@@ -54,23 +54,23 @@ export function FilmographySection() {
         }}
       />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div
-          className={`text-center mb-6 transition-all duration-1000 ${
+          className={`text-center mb-6 sm:mb-8 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-sm text-[oklch(0.58_0.11_50)] tracking-[0.5em] uppercase mb-3 font-[var(--font-body)]">
+          <h2 className="text-xs sm:text-sm text-[oklch(0.58_0.11_50)] tracking-[0.3em] sm:tracking-[0.5em] uppercase mb-2 sm:mb-3 font-[var(--font-body)]">
             Filmography
           </h2>
-          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold gold-text mb-4">A Cinematic Journey</h3>
-          <p className="text-[oklch(0.58_0.11_50)] font-[var(--font-body)] max-w-2xl mx-auto text-lg">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold gold-text mb-3 sm:mb-4">A Cinematic Journey</h3>
+          <p className="text-[oklch(0.58_0.11_50)] font-[var(--font-body)] max-w-2xl mx-auto text-base sm:text-lg">
             Over 140 films across Kannada, Tamil, Telugu, and Hindi cinema
           </p>
         </div>
 
         <div
-          className={`flex flex-wrap justify-center gap-4 mb-6 transition-all duration-700 delay-200 ${
+          className={`flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 transition-all duration-700 delay-200 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
@@ -79,7 +79,7 @@ export function FilmographySection() {
               key={lang}
               onClick={() => setActiveFilter(lang)}
               className={cn(
-                "relative px-8 py-3 rounded-full text-sm font-medium transition-all duration-500 font-[var(--font-body)] neuro-highlight",
+                "relative px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-medium transition-all duration-500 font-[var(--font-body)] neuro-highlight",
                 activeFilter === lang
                   ? "bg-[oklch(0.25_0.04_25)] text-[oklch(0.97_0.01_75)]"
                   : "bg-transparent text-[oklch(0.45_0.04_30)] hover:text-foreground border border-[oklch(0.25_0.04_25/0.15)] hover:border-[oklch(0.25_0.04_25/0.35)]",
@@ -93,7 +93,7 @@ export function FilmographySection() {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
           {filteredFilms.map((film, index) => (
             <div
               key={`${film.title}-${index}`}
@@ -126,9 +126,9 @@ export function FilmographySection() {
 
                   <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[oklch(0.965_0.018_75)] via-[oklch(0.965_0.018_75/0.8)] to-transparent" />
 
-                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                  <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3">
                     <span
-                      className={`inline-block px-3 py-1.5 text-xs rounded-full mb-2 font-[var(--font-body)] transition-all duration-300 ${
+                      className={`inline-block px-2 sm:px-3 py-1 sm:py-1.5 text-xs rounded-full mb-1.5 sm:mb-2 font-[var(--font-body)] transition-all duration-300 ${
                         hoveredFilm === index
                           ? "bg-[oklch(0.25_0.04_25)] text-[oklch(0.97_0.01_75)]"
                           : "bg-[oklch(0.58_0.11_50/0.15)] text-[oklch(0.25_0.04_25)]"
@@ -136,8 +136,8 @@ export function FilmographySection() {
                     >
                       {film.language}
                     </span>
-                    <h4 className="text-lg font-bold text-amber-900 mb-0.5">{film.title}</h4>
-                    <p className="text-amber-800 text-sm font-[var(--font-body)]">
+                    <h4 className="text-base sm:text-lg font-bold text-amber-900 mb-0.5">{film.title}</h4>
+                    <p className="text-amber-800 text-xs sm:text-sm font-[var(--font-body)]">
                       {film.year} &bull; {film.role}
                     </p>
                   </div>

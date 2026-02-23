@@ -8,12 +8,14 @@ import "./critical.css"
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
-  display: 'swap'
+  display: 'swap',
+  preload: true,
 })
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: 'swap'
+  display: 'swap',
+  preload: true,
 })
 
 export const metadata: Metadata = {
@@ -35,7 +37,11 @@ export const metadata: Metadata = {
     description: "From Silver Screen to Stage – Inspiring Every Step of the Way",
     type: "website",
   },
-  generator: 'v0.app'
+  generator: 'v0.app',
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export const viewport: Viewport = {

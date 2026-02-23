@@ -71,7 +71,7 @@ export function TimelineSection() {
     const translateZ = Math.sin(scrollProgress * Math.PI) * 40
     const rotateX = Math.sin(scrollProgress * Math.PI) * 4
     return {
-      transform: `translate3d(0, 0, ${translateZ}px) rotateZ(${totalRotation}deg) rotateX(${rotateX}deg)`,
+      transform: `translate(-50%, -50%) translate3d(0, 0, ${translateZ}px) rotateZ(${totalRotation}deg) rotateX(${rotateX}deg)`,
       transition: 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
     }
   }
@@ -86,7 +86,7 @@ export function TimelineSection() {
         </div>
 
         <div className="relative h-full flex items-center justify-center overflow-hidden px-4" style={{ perspective: '1500px' }}>
-          <div className="absolute w-[400px] md:w-[650px] h-[400px] md:h-[650px] rounded-full pointer-events-none" style={{ ...getClockTransform(), transformStyle: 'preserve-3d', zIndex: 5, boxShadow: `0 0 60px rgba(0, 0, 0, 0.2), inset 0 2px 3px rgba(255, 255, 255, 0.03), inset 0 -2px 3px rgba(0, 0, 0, 0.4)`, background: `radial-gradient(circle at 50% 50%, transparent 49%, rgba(20, 20, 20, 0.85) 49.5%, rgba(30, 30, 30, 0.9) 50%, rgba(20, 20, 20, 0.85) 50.5%, transparent 51%)`, filter: `drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3))` }}>
+          <div className="absolute left-1/2 w-[400px] md:w-[650px] h-[400px] md:h-[650px] rounded-full pointer-events-none" style={{ top: '60%', ...getClockTransform(), transformStyle: 'preserve-3d', zIndex: 5, boxShadow: `0 0 60px rgba(0, 0, 0, 0.2), inset 0 2px 3px rgba(255, 255, 255, 0.03), inset 0 -2px 3px rgba(0, 0, 0, 0.4)`, background: `radial-gradient(circle at 50% 50%, transparent 49%, rgba(20, 20, 20, 0.85) 49.5%, rgba(30, 30, 30, 0.9) 50%, rgba(20, 20, 20, 0.85) 50.5%, transparent 51%)`, filter: `drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3))` }}>
             {[...Array(12)].map((_, i) => {
               const angle = (i * 30) - 90
               const radius = 310
@@ -99,9 +99,8 @@ export function TimelineSection() {
             <div className="absolute inset-0 rounded-full opacity-10" style={{ background: `linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.08) 25%, transparent 45%, rgba(255, 255, 255, 0.04) 75%, transparent 100%)`, transform: `rotate(${scrollProgress * 30}deg)`, transition: 'transform 0.5s ease-out' }} />
           </div>
 
-          <div className="absolute top-4 md:top-6 lg:top-8 left-1/2 transform -translate-x-1/2 lg:-translate-y-4 text-center z-20 px-4 mb-4">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold gold-text mb-1 md:mb-2 lg:mb-4">Journey Through Time</h1>
-            <p className="text-sm sm:text-base md:text-lg text-[oklch(0.4_0.04_30)] max-w-2xl mx-auto mb-6 md:mb-8 lg:mb-12 px-4">Witness the evolution of a legend through cinematic moments</p>
+          <div className="absolute left-1/2 top-[3%] md:top-[5%] lg:top-[6%] transform -translate-x-1/2 text-center z-20 px-4 mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold gold-text mb-1 md:mb-2 lg:mb-4 whitespace-nowrap leading-none">Journey Through Time</h1>
           </div>
 
           <div className="relative w-full h-full flex items-center justify-center z-10">

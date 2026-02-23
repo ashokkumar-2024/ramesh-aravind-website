@@ -8,15 +8,18 @@ function DustParticles() {
   const [particles, setParticles] = useState<Array<{ left: number, top: number, width: number, height: number, opacity: number, duration: number, delay: number }>>([])
 
   useEffect(() => {
-    setParticles([...Array(15)].map(() => ({
-      left: Math.random() * 100,
-      top: 100 + Math.random() * 20,
-      width: 1.5 + Math.random() * 2.5,
-      height: 1.5 + Math.random() * 2.5,
-      opacity: 0.25 + Math.random() * 0.35,
-      duration: 12 + Math.random() * 18,
-      delay: Math.random() * 12
-    })))
+    // Only show particles on desktop for performance
+    if (typeof window !== 'undefined' && window.innerWidth > 1024) {
+      setParticles([...Array(8)].map(() => ({
+        left: Math.random() * 100,
+        top: 100 + Math.random() * 20,
+        width: 1.5 + Math.random() * 2,
+        height: 1.5 + Math.random() * 2,
+        opacity: 0.2 + Math.random() * 0.3,
+        duration: 12 + Math.random() * 12,
+        delay: Math.random() * 8
+      })))
+    }
   }, [])
 
   return (
@@ -75,7 +78,7 @@ export function HeroSection() {
   const dollyScale = 1 + scrollY * 0.00025
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen flex items-end justify-center overflow-hidden dolly-container pb-32">
+    <section ref={sectionRef} className="relative min-h-screen flex items-end justify-center overflow-hidden dolly-container pb-20 sm:pb-24 md:pb-32">
       <video
         src="/hero.mp4"
         className="absolute inset-0 w-full h-full object-cover"
@@ -83,32 +86,35 @@ export function HeroSection() {
         muted
         loop
         playsInline
+        preload="none"
+        poster="/Ra1.jpg"
         style={{ pointerEvents: 'none' }}
       />
       <div className="absolute inset-0 bg-black/30" />
-      <div className="relative z-10 container mx-auto px-6 text-center gpu-accelerate" style={{ transform: `scale(${dollyScale}) translateZ(${scrollY * -0.4}px)` }}>
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center gpu-accelerate" style={{ transform: `scale(${dollyScale}) translateZ(${scrollY * -0.4}px)` }}>
         <div className={`transition-all duration-1000 ease-out ${isLoaded ? "opacity-100" : "opacity-0"}`} style={{ transform: `translate3d(${mousePosition.x * 0.15}px, ${mousePosition.y * 0.15}px, 50px) rotateX(${mousePosition.y * -0.008}deg) rotateY(${mousePosition.x * 0.008}deg)`, transformStyle: "preserve-3d" }}>
-          <p className={`text-white text-sm md:text-base tracking-[0.5em] uppercase mb-4 font-[var(--font-body)] transition-all duration-1000 delay-300 drop-shadow-lg ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transform: "translateZ(30px)", textShadow: "0 2px 10px rgba(0,0,0,0.5)" }}>Actor &bull; Director &bull; Author &bull; Speaker</p>
-          <h1 className={`text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[9rem] font-bold mb-4 text-white leading-none tracking-tight transition-all duration-1200 drop-shadow-2xl ${isLoaded ? "text-emerge" : "opacity-0"}`} style={{ transform: "translateZ(80px)", textShadow: "0 4px 20px rgba(0,0,0,0.7)" }}>Dr Ramesh Aravind</h1>
+          <p className={`text-white text-xs sm:text-sm md:text-base tracking-[0.3em] sm:tracking-[0.5em] uppercase mb-3 sm:mb-4 font-[var(--font-body)] transition-all duration-1000 delay-300 drop-shadow-lg ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transform: "translateZ(30px)", textShadow: "0 2px 10px rgba(0,0,0,0.5)" }}>Actor &bull; Director &bull; Author &bull; Speaker</p>
+          <h1 className={`text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[9rem] font-bold mb-3 sm:mb-4 text-white leading-none tracking-tight transition-all duration-1200 drop-shadow-2xl ${isLoaded ? "text-emerge" : "opacity-0"}`} style={{ transform: "translateZ(80px)", textShadow: "0 4px 20px rgba(0,0,0,0.7)" }}>Dr Ramesh Aravind</h1>
           <div className={`transition-all duration-1000 delay-600 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transform: "translateZ(40px)" }}>
-            <div className="text-white max-w-4xl mx-auto mb-8 px-4 drop-shadow-lg leading-tight text-center whitespace-pre-line" style={{
+            <div className="text-white max-w-4xl mx-auto mb-6 sm:mb-8 px-4 drop-shadow-lg leading-tight text-center" style={{
               textShadow: "0 2px 10px rgba(0,0,0,0.6)",
-              fontSize: "clamp(1rem, 3.5vw, 1.75rem)"
+              fontSize: "clamp(0.875rem, 3.5vw, 1.75rem)"
             }}>
-              {"\"From Silver Screen to Stage:\nInspiring Every Step of the Way\""}
+              <span className="hidden sm:inline">{"\"From Silver Screen to Stage:\nInspiring Every Step of the Way\""}</span>
+              <span className="sm:hidden">{"\"From Silver Screen to Stage: Inspiring Every Step of the Way\""}</span>
             </div>
           </div>
-          <div className={`flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4 transition-all duration-1000 delay-800 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transform: "translateZ(20px)" }}>
-            <Button size="lg" className="relative bg-white/90 text-black hover:bg-white px-8 sm:px-12 py-6 sm:py-8 text-base sm:text-lg group font-[var(--font-body)] overflow-hidden w-full sm:w-auto shadow-xl" asChild>
-              <a href="#contact"><span className="relative z-10 flex items-center justify-center"><Mic className="mr-3 h-5 w-5 transition-transform duration-500 group-hover:scale-110" />Book for Speaking</span><span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" /></a>
+          <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center px-4 transition-all duration-1000 delay-800 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transform: "translateZ(20px)" }}>
+            <Button size="lg" className="relative bg-white/90 text-black hover:bg-white px-6 sm:px-8 md:px-12 py-5 sm:py-6 md:py-8 text-sm sm:text-base md:text-lg group font-[var(--font-body)] overflow-hidden w-full sm:w-auto shadow-xl" asChild>
+              <a href="#contact"><span className="relative z-10 flex items-center justify-center"><Mic className="mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-500 group-hover:scale-110" />Book for Speaking</span><span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" /></a>
             </Button>
-            <Button size="lg" variant="outline" className="relative border-white/60 text-white hover:border-white hover:bg-white/10 px-8 sm:px-12 py-6 sm:py-8 text-base sm:text-lg font-[var(--font-body)] bg-transparent backdrop-blur-sm w-full sm:w-auto shadow-xl" asChild>
+            <Button size="lg" variant="outline" className="relative border-white/60 text-white hover:border-white hover:bg-white/10 px-6 sm:px-8 md:px-12 py-5 sm:py-6 md:py-8 text-sm sm:text-base md:text-lg font-[var(--font-body)] bg-transparent backdrop-blur-sm w-full sm:w-auto shadow-xl" asChild>
               <a href="#about">Explore His Journey</a>
             </Button>
           </div>
         </div>
-        <div className={`absolute bottom-12 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-1200 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
-          <a href="#about" aria-label="Scroll to explore" className="block group"><div className="relative"><ChevronDown className="h-8 w-8 text-white/80 animate-bounce group-hover:text-white transition-colors duration-300 drop-shadow-lg" style={{ filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.5))" }} /><div className="absolute inset-0 blur-xl bg-white/20 animate-pulse" /></div></a>
+        <div className={`absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-1200 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+          <a href="#about" aria-label="Scroll to explore" className="block group"><div className="relative"><ChevronDown className="h-6 w-6 sm:h-8 sm:w-8 text-white/80 animate-bounce group-hover:text-white transition-colors duration-300 drop-shadow-lg" style={{ filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.5))" }} /><div className="absolute inset-0 blur-xl bg-white/20 animate-pulse" /></div></a>
         </div>
       </div>
     </section>

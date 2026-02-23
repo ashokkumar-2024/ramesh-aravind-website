@@ -49,21 +49,21 @@ export function GallerySection() {
   }, [])
 
   return (
-    <section id="gallery" ref={sectionRef} className="py-28 md:py-40 relative">
+    <section id="gallery" ref={sectionRef} className="py-12 sm:py-16 md:py-20 lg:py-28 xl:py-40 relative">
       <div className="absolute inset-0 spotlight opacity-20" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div
-          className={`text-center mb-20 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`text-center mb-12 sm:mb-16 md:mb-20 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <h2 className="text-sm text-primary tracking-[0.4em] uppercase mb-4 font-[var(--font-body)]">Gallery</h2>
-          <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold gold-text mb-6">Capturing Moments</h3>
-          <p className="text-muted-foreground font-[var(--font-body)] max-w-2xl mx-auto text-lg">
+          <h2 className="text-xs sm:text-sm text-primary tracking-[0.3em] sm:tracking-[0.4em] uppercase mb-3 sm:mb-4 font-[var(--font-body)]">Gallery</h2>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold gold-text mb-4 sm:mb-6">Capturing Moments</h3>
+          <p className="text-muted-foreground font-[var(--font-body)] max-w-2xl mx-auto text-base sm:text-lg">
             A visual journey through memorable moments
           </p>
         </div>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 sm:gap-5 md:gap-6 space-y-4 sm:space-y-5 md:space-y-6">
           {galleryImages.map((image, index) => (
             <div
               key={index}
@@ -80,7 +80,7 @@ export function GallerySection() {
             >
               {/* Photo frame container */}
               <div
-                className={`glass-card rounded-xl overflow-hidden p-2 transition-all duration-500 ${
+                className={`glass-card rounded-xl overflow-hidden p-1.5 sm:p-2 transition-all duration-500 ${
                   hoveredImage === index ? "shadow-xl shadow-primary/10" : ""
                 }`}
               >
@@ -100,8 +100,8 @@ export function GallerySection() {
                       hoveredImage === index ? "opacity-100" : "opacity-0"
                     }`}
                   >
-                    <div className="w-14 h-14 rounded-full bg-primary/20 backdrop-blur-sm flex items-center justify-center border border-primary/30">
-                      <ZoomIn className="h-7 w-7 text-primary" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-primary/20 backdrop-blur-sm flex items-center justify-center border border-primary/30">
+                      <ZoomIn className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-primary" />
                     </div>
                   </div>
 
@@ -121,14 +121,14 @@ export function GallerySection() {
 
         {selectedImage !== null && (
           <div
-            className="fixed inset-0 z-50 bg-black flex items-center justify-center"
+            className="fixed inset-0 z-50 bg-black flex items-center justify-center p-4"
             onClick={() => setSelectedImage(null)}
           >
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 p-2 bg-white/20 text-white rounded-full z-10"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 p-2 bg-white/20 text-white rounded-full z-10"
             >
-              <X className="h-6 w-6" />
+              <X className="h-5 w-5 sm:h-6 sm:w-6" />
             </button>
 
             <img

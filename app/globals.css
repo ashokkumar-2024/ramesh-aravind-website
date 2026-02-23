@@ -115,6 +115,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  content-visibility: auto;
 }
 
 html::-webkit-scrollbar {
@@ -332,6 +333,7 @@ html::-webkit-scrollbar {
   transform: translateZ(0);
   will-change: transform, opacity;
   backface-visibility: hidden;
+  contain: layout style paint;
 }
 
 /* Responsive utilities */
@@ -343,12 +345,18 @@ html::-webkit-scrollbar {
   
   /* Reduce 3D effects on mobile for performance */
   .dolly-container {
-    perspective: 1200px;
+    perspective: 1000px;
   }
   
   /* Simplify animations on mobile */
   .neuro-highlight {
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
+  }
+  
+  /* Disable heavy effects on mobile */
+  .dust-particle,
+  .film-grain::after {
+    display: none;
   }
   
   /* Better touch targets */
@@ -365,6 +373,17 @@ html::-webkit-scrollbar {
   .space-y-6 > * + * { margin-top: 1rem; }
   .space-y-8 > * + * { margin-top: 1.25rem; }
   .space-y-12 > * + * { margin-top: 1.5rem; }
+  
+  /* Mobile padding adjustments */
+  section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  
+  /* Mobile video adjustments */
+  video {
+    object-position: center;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 768px) {
@@ -422,6 +441,11 @@ html::-webkit-scrollbar {
   .gap-4 { gap: 0.75rem; }
   .gap-6 { gap: 1rem; }
   .gap-8 { gap: 1.25rem; }
+  
+  /* Force single column on mobile */
+  .columns-2, .columns-3, .columns-4 {
+    columns: 1 !important;
+  }
 }
 
 /* Tablet grid adjustments */

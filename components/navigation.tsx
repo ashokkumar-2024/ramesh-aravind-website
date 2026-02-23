@@ -51,7 +51,7 @@ export function Navigation() {
           : "bg-[oklch(0.965_0.018_75/0.95)] backdrop-blur-xl border-b border-[oklch(0.25_0.04_25/0.08)] py-0.5",
       )}
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between">
           <a
             href="/"
@@ -60,7 +60,7 @@ export function Navigation() {
             <img 
               src="/Black BG_RA.png.png" 
               alt="Ramesh Aravind" 
-              className="h-32 md:h-36 w-auto object-contain"
+              className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto object-contain"
             />
           </a>
 
@@ -70,7 +70,7 @@ export function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "relative px-5 py-2.5 text-base font-semibold transition-all duration-300 font-[var(--font-body)] rounded-full",
+                  "relative px-3 xl:px-5 py-2.5 text-sm xl:text-base font-semibold transition-all duration-300 font-[var(--font-body)] rounded-full",
                   activeSection === item.targetId
                     ? "text-[oklch(0.58_0.11_50)]"
                     : "text-[oklch(0.45_0.04_30)] hover:text-foreground"
