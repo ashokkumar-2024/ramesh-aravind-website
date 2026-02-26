@@ -79,77 +79,77 @@ export function HeroSection() {
 
   return (
     <>
-    <section ref={sectionRef} className="relative min-h-screen flex items-end justify-center overflow-hidden dolly-container pb-20 sm:pb-24 md:pb-32">
-      <video
-        src="/hero.mp4"
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="none"
-        poster="/Ra1.jpg"
-        style={{ pointerEvents: 'none' }}
-      />
-      <div className="absolute inset-0 bg-black/30" />
-      
-    </section>
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-  
-  {/* Ambient Background (static – no animation) */}
-  <div className="absolute inset-0 pointer-events-none">
-    <div
-      className="absolute inset-0"
-      style={{
-        background: `
+      <section ref={sectionRef} className="relative min-h-[70vh] md:min-h-screen flex items-end justify-center overflow-hidden dolly-container pb-20 sm:pb-24 md:pb-32">
+        <video
+          src="/hero.mp4"
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/Ra1.jpg"
+          style={{ pointerEvents: 'none' }}
+        />
+        <div className="absolute inset-0 bg-black/30" />
+
+      </section>
+      <section className="relative flex items-center justify-center overflow-hidden">
+
+        {/* Ambient Background (static – no animation) */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div
+            className="absolute inset-0"
+            style={{
+              background: `
           radial-gradient(ellipse 120% 80% at 30% 20%, oklch(0.58 0.11 50 / 0.08), transparent 60%),
           radial-gradient(ellipse 100% 70% at 70% 80%, oklch(0.72 0.1 65 / 0.06), transparent 60%),
           radial-gradient(ellipse 80% 50% at 50% 100%, oklch(0.94 0.028 68 / 0.4), transparent)
         `,
-      }}
-    />
-  </div>
+            }}
+          />
+        </div>
 
-  <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
-    
-    <p className="text-[oklch(0.25_0.04_25)] text-xs sm:text-sm md:text-base tracking-[0.5em] uppercase mb-4 font-[var(--font-body)]">
-      Actor • Director • Author • Speaker
-    </p>
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center py-16">
 
-    {/* 🔥 Updated Heading (matches About Section style) */}
-    <h1 className="text-2xl sm:text-lg md:text-4xl lg:text-6xl xl:text-[9rem] font-bold gold-text leading-tight">
-      Dr Ramesh Aravind
-    </h1>
+          <p className="text-[oklch(0.25_0.04_25)] text-xs sm:text-sm md:text-base tracking-[0.5em] uppercase mb-4 font-[var(--font-body)]">
+            Actor • Director • Author • Speaker
+          </p>
 
-    <div className="text-[oklch(0.25_0.04_25)] max-w-4xl mx-auto mt-6 mb-8 px-4 leading-tight text-center"
-      style={{
-        fontSize: "clamp(0.875rem, 3.5vw, 1.75rem)"
-      }}
-    >
-      "From Silver Screen to Stage: Inspiring Every Step of the Way"
-    </div>
+          {/* 🔥 Updated Heading (matches About Section style) */}
+          <h1 className="text-2xl sm:text-lg md:text-4xl lg:text-6xl xl:text-[9rem] font-bold gold-text leading-tight">
+            Dr Ramesh Aravind
+          </h1>
 
-    <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
-      <Button
-        size="lg"
-        className="bg-[oklch(0.58_0.11_50)] text-white hover:bg-[oklch(0.6_0.12_55)] px-8 py-6 text-base font-[var(--font-body)] shadow-lg"
-        asChild
-      >
-        <a href="#contact">Book for Speaking</a>
-      </Button>
+          <div className="text-[oklch(0.25_0.04_25)] max-w-4xl mx-auto mt-6 mb-8 px-4 leading-tight text-center"
+            style={{
+              fontSize: "clamp(0.875rem, 3.5vw, 1.75rem)"
+            }}
+          >
+            "From Silver Screen to Stage: Inspiring Every Step of the Way"
+          </div>
 
-      <Button
-        size="lg"
-        variant="outline"
-        className="border-[oklch(0.58_0.11_50)] text-[oklch(0.25_0.04_25)] hover:bg-white/10 px-8 py-6 text-base font-[var(--font-body)]"
-        asChild
-      >
-        <a href="#about">Explore His Journey</a>
-      </Button>
-    </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
+            <Button
+              size="lg"
+              className="bg-[oklch(0.58_0.11_50)] text-white hover:bg-[oklch(0.6_0.12_55)] px-8 py-6 text-base font-[var(--font-body)] shadow-lg"
+              asChild
+            >
+              <a href="#contact">Book for Speaking</a>
+            </Button>
 
-  </div>
-</section>
-    </>    
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-[oklch(0.58_0.11_50)] text-[oklch(0.25_0.04_25)] hover:bg-white/10 px-8 py-6 text-base font-[var(--font-body)]"
+              asChild
+            >
+              <a href="#about">Explore His Journey</a>
+            </Button>
+          </div>
+
+        </div>
+      </section>
+    </>
   )
 }

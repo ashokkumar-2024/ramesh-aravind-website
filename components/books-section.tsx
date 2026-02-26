@@ -19,7 +19,7 @@ const books = [
     description: "Personal experiences and wisdom",
     awards: [],
     hasTrailer: false,
-    image: "/kushiyinda ramesh.webp"
+
   },
   {
     title: "Art of Success",
@@ -100,9 +100,8 @@ export function BooksSection() {
 
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
           <div
-            className={`flex justify-center transition-all duration-1000 ${
-              isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-            }`}
+            className={`flex justify-center transition-all duration-1000 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
+              }`}
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
@@ -115,9 +114,8 @@ export function BooksSection() {
               />
 
               <div
-                className={`relative w-48 h-64 sm:w-64 sm:h-80 md:w-96 md:h-[500px] cursor-pointer transition-all duration-1000 gpu-accelerate ${
-                  isHovering ? "" : "anti-gravity"
-                }`}
+                className={`relative w-48 h-64 sm:w-64 sm:h-80 md:w-96 md:h-[500px] cursor-pointer transition-all duration-1000 gpu-accelerate ${isHovering ? "" : "anti-gravity"
+                  }`}
                 style={{
                   transformStyle: "preserve-3d",
                   transform: `rotateY(${isHovering ? -8 : activeBook * -5}deg) rotateX(${isHovering ? 4 : 1.5}deg)`,
@@ -178,9 +176,8 @@ export function BooksSection() {
               <div
                 key={book.title}
                 onClick={() => setActiveBook(index)}
-                className={`p-3 sm:p-4 rounded-xl cursor-pointer transition-all duration-500 neuro-highlight hover-lift ${
-                  activeBook === index ? "scale-[1.02]" : ""
-                } ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}
+                className={`p-3 sm:p-4 rounded-xl cursor-pointer transition-all duration-500 neuro-highlight hover-lift ${activeBook === index ? "scale-[1.02]" : ""
+                  } ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}
                 style={{
                   transitionDelay: `${index * 150}ms`,
                   background:
@@ -194,9 +191,8 @@ export function BooksSection() {
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <h4
-                      className={`text-xl font-bold mb-1 transition-colors duration-300 ${
-                        activeBook === index ? "text-foreground" : "text-foreground/75"
-                      }`}
+                      className={`text-xl font-bold mb-1 transition-colors duration-300 ${activeBook === index ? "text-foreground" : "text-foreground/75"
+                        }`}
                     >
                       {book.title}
                     </h4>
@@ -215,11 +211,11 @@ export function BooksSection() {
                       ))}
                     </div>
                   </div>
-                  
+
                   {/* Video Trailer Icon */}
                   {book.hasTrailer && (
                     <div className="relative">
-                      <div 
+                      <div
                         className="w-12 h-12 rounded-full bg-[oklch(0.58_0.11_50/0.1)] flex items-center justify-center cursor-pointer hover:bg-[oklch(0.58_0.11_50/0.2)] transition-all duration-300 hover:scale-110 active:scale-95"
                         style={{
                           animation: 'pulse 2s ease-in-out infinite'
@@ -229,20 +225,20 @@ export function BooksSection() {
                           setShowVideoPopup(true)
                         }}
                       >
-                        <Play 
-                          className="h-5 w-5 text-[oklch(0.58_0.11_50)] ml-0.5 transition-transform duration-200" 
+                        <Play
+                          className="h-5 w-5 text-[oklch(0.58_0.11_50)] ml-0.5 transition-transform duration-200"
                           fill="currentColor"
                         />
                       </div>
-                      
+
                       {/* Animated rings */}
-                      <div 
+                      <div
                         className="absolute inset-0 rounded-full border-2 border-[oklch(0.58_0.11_50/0.3)]"
                         style={{
                           animation: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite'
                         }}
                       />
-                      <div 
+                      <div
                         className="absolute inset-0 rounded-full border border-[oklch(0.58_0.11_50/0.2)]"
                         style={{
                           animation: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite 0.5s'
@@ -256,9 +252,8 @@ export function BooksSection() {
 
             {/* Audiobook card */}
             <div
-              className={`p-4 rounded-xl transition-all duration-700 neuro-highlight hover-lift cream-card ${
-                isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
-              }`}
+              className={`p-4 rounded-xl transition-all duration-700 neuro-highlight hover-lift cream-card ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
+                }`}
               style={{ transitionDelay: "500ms" }}
             >
               <div className="flex items-center gap-6">
@@ -292,11 +287,11 @@ export function BooksSection() {
 
       {/* Video Popup Modal */}
       {showVideoPopup && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
           onClick={() => setShowVideoPopup(false)}
         >
-          <div 
+          <div
             className="relative bg-white rounded-2xl p-6 max-w-2xl w-full max-h-[80vh] overflow-auto"
             onClick={(e) => e.stopPropagation()}
             style={{
@@ -310,13 +305,13 @@ export function BooksSection() {
             >
               ×
             </button>
-            
+
             {/* Video content */}
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4 text-gray-800">
                 {selectedVideo} - Book Trailer
               </h3>
-              
+
               {/* Placeholder for video */}
               <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center mb-4">
                 <div className="text-center">
@@ -324,7 +319,7 @@ export function BooksSection() {
                   <p className="text-gray-500">Video trailer will be embedded here</p>
                 </div>
               </div>
-              
+
               <p className="text-gray-600">
                 Watch the official book trailer for "{selectedVideo}"
               </p>
