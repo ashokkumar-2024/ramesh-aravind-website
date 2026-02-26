@@ -78,6 +78,7 @@ export function HeroSection() {
   const dollyScale = 1 + scrollY * 0.00025
 
   return (
+    <>
     <section ref={sectionRef} className="relative min-h-screen flex items-end justify-center overflow-hidden dolly-container pb-20 sm:pb-24 md:pb-32">
       <video
         src="/hero.mp4"
@@ -91,32 +92,64 @@ export function HeroSection() {
         style={{ pointerEvents: 'none' }}
       />
       <div className="absolute inset-0 bg-black/30" />
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center gpu-accelerate" style={{ transform: `scale(${dollyScale}) translateZ(${scrollY * -0.4}px)` }}>
-        <div className={`transition-all duration-1000 ease-out ${isLoaded ? "opacity-100" : "opacity-0"}`} style={{ transform: `translate3d(${mousePosition.x * 0.15}px, ${mousePosition.y * 0.15}px, 50px) rotateX(${mousePosition.y * -0.008}deg) rotateY(${mousePosition.x * 0.008}deg)`, transformStyle: "preserve-3d" }}>
-          <p className={`text-white text-xs sm:text-sm md:text-base tracking-[0.3em] sm:tracking-[0.5em] uppercase mb-3 sm:mb-4 font-[var(--font-body)] transition-all duration-1000 delay-300 drop-shadow-lg ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transform: "translateZ(30px)", textShadow: "0 2px 10px rgba(0,0,0,0.5)" }}>Actor &bull; Director &bull; Author &bull; Speaker</p>
-          <h1 className={`text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[9rem] font-bold mb-3 sm:mb-4 text-white leading-none tracking-tight transition-all duration-1200 drop-shadow-2xl ${isLoaded ? "text-emerge" : "opacity-0"}`} style={{ transform: "translateZ(80px)", textShadow: "0 4px 20px rgba(0,0,0,0.7)" }}>Dr Ramesh Aravind</h1>
-          <div className={`transition-all duration-1000 delay-600 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transform: "translateZ(40px)" }}>
-            <div className="text-white max-w-4xl mx-auto mb-6 sm:mb-8 px-4 drop-shadow-lg leading-tight text-center" style={{
-              textShadow: "0 2px 10px rgba(0,0,0,0.6)",
-              fontSize: "clamp(0.875rem, 3.5vw, 1.75rem)"
-            }}>
-              <span className="hidden sm:inline">{"\"From Silver Screen to Stage:\nInspiring Every Step of the Way\""}</span>
-              <span className="sm:hidden">{"\"From Silver Screen to Stage: Inspiring Every Step of the Way\""}</span>
-            </div>
-          </div>
-          <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center px-4 transition-all duration-1000 delay-800 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transform: "translateZ(20px)" }}>
-            <Button size="lg" className="relative bg-white/90 text-black hover:bg-white px-6 sm:px-8 md:px-12 py-5 sm:py-6 md:py-8 text-sm sm:text-base md:text-lg group font-[var(--font-body)] overflow-hidden w-full sm:w-auto shadow-xl" asChild>
-              <a href="#contact"><span className="relative z-10 flex items-center justify-center"><Mic className="mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5 transition-transform duration-500 group-hover:scale-110" />Book for Speaking</span><span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" /></a>
-            </Button>
-            <Button size="lg" variant="outline" className="relative border-white/60 text-white hover:border-white hover:bg-white/10 px-6 sm:px-8 md:px-12 py-5 sm:py-6 md:py-8 text-sm sm:text-base md:text-lg font-[var(--font-body)] bg-transparent backdrop-blur-sm w-full sm:w-auto shadow-xl" asChild>
-              <a href="#about">Explore His Journey</a>
-            </Button>
-          </div>
-        </div>
-        <div className={`absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-1200 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
-          <a href="#about" aria-label="Scroll to explore" className="block group"><div className="relative"><ChevronDown className="h-6 w-6 sm:h-8 sm:w-8 text-white/80 animate-bounce group-hover:text-white transition-colors duration-300 drop-shadow-lg" style={{ filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.5))" }} /><div className="absolute inset-0 blur-xl bg-white/20 animate-pulse" /></div></a>
-        </div>
-      </div>
+      
     </section>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  
+  {/* Ambient Background (static – no animation) */}
+  <div className="absolute inset-0 pointer-events-none">
+    <div
+      className="absolute inset-0"
+      style={{
+        background: `
+          radial-gradient(ellipse 120% 80% at 30% 20%, oklch(0.58 0.11 50 / 0.08), transparent 60%),
+          radial-gradient(ellipse 100% 70% at 70% 80%, oklch(0.72 0.1 65 / 0.06), transparent 60%),
+          radial-gradient(ellipse 80% 50% at 50% 100%, oklch(0.94 0.028 68 / 0.4), transparent)
+        `,
+      }}
+    />
+  </div>
+
+  <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
+    
+    <p className="text-[oklch(0.25_0.04_25)] text-xs sm:text-sm md:text-base tracking-[0.5em] uppercase mb-4 font-[var(--font-body)]">
+      Actor • Director • Author • Speaker
+    </p>
+
+    {/* 🔥 Updated Heading (matches About Section style) */}
+    <h1 className="text-2xl sm:text-lg md:text-4xl lg:text-6xl xl:text-[9rem] font-bold gold-text leading-tight">
+      Dr Ramesh Aravind
+    </h1>
+
+    <div className="text-[oklch(0.25_0.04_25)] max-w-4xl mx-auto mt-6 mb-8 px-4 leading-tight text-center"
+      style={{
+        fontSize: "clamp(0.875rem, 3.5vw, 1.75rem)"
+      }}
+    >
+      "From Silver Screen to Stage: Inspiring Every Step of the Way"
+    </div>
+
+    <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
+      <Button
+        size="lg"
+        className="bg-[oklch(0.58_0.11_50)] text-white hover:bg-[oklch(0.6_0.12_55)] px-8 py-6 text-base font-[var(--font-body)] shadow-lg"
+        asChild
+      >
+        <a href="#contact">Book for Speaking</a>
+      </Button>
+
+      <Button
+        size="lg"
+        variant="outline"
+        className="border-[oklch(0.58_0.11_50)] text-[oklch(0.25_0.04_25)] hover:bg-white/10 px-8 py-6 text-base font-[var(--font-body)]"
+        asChild
+      >
+        <a href="#about">Explore His Journey</a>
+      </Button>
+    </div>
+
+  </div>
+</section>
+    </>    
   )
 }
