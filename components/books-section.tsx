@@ -13,14 +13,7 @@ const books = [
     hasTrailer: false,
     image: "/Its-no-Fun.png"
   },
-  {
-    title: "Kushiyinda Ramesh",
-    language: "Kannada",
-    description: "Personal experiences and wisdom",
-    awards: [],
-    hasTrailer: false,
 
-  },
   {
     title: "Art of Success",
     language: "Kannada",
