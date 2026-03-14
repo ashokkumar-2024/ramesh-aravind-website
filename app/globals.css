@@ -6,49 +6,49 @@
 /* Advanced 3D Parallax Neuro-Design with Creamy Background */
 :root {
   /* Creamy warm base - open, immersive feel */
-  --background: oklch(0.965 0.018 75);
-  --foreground: oklch(0.18 0.035 25);
-  --card: oklch(0.975 0.012 78);
-  --card-foreground: oklch(0.18 0.035 25);
-  --popover: oklch(0.97 0.015 76);
-  --popover-foreground: oklch(0.18 0.035 25);
-  /* Deep espresso #342323 as primary */
-  --primary: oklch(0.25 0.04 25);
-  --primary-foreground: oklch(0.97 0.012 75);
+  --background: #f1e4d8;
+  --foreground: #0e2a3f;
+  --card: #f5eade;
+  --card-foreground: #0e2a3f;
+  --popover: #f4e7db;
+  --popover-foreground: #0e2a3f;
+  /* Deep teal primary for buttons/headings */
+  --primary: #0e2a3f;
+  --primary-foreground: #f8f2eb;
   /* Soft cream secondary */
-  --secondary: oklch(0.94 0.022 72);
-  --secondary-foreground: oklch(0.22 0.035 25);
-  --muted: oklch(0.92 0.018 70);
-  --muted-foreground: oklch(0.42 0.035 30);
+  --secondary: #f3e9df;
+  --secondary-foreground: #0e2a3f;
+  --muted: #e9ddcf;
+  --muted-foreground: #0e2a3f;
   /* Warm gold accent */
-  --accent: oklch(0.68 0.12 55);
-  --accent-foreground: oklch(0.15 0.025 25);
+  --accent: #bf8843;
+  --accent-foreground: #0e2a3f;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0.01 75);
-  --border: oklch(0.9 0.02 68);
-  --input: oklch(0.95 0.015 74);
-  --ring: oklch(0.25 0.04 25);
-  --chart-1: oklch(0.25 0.04 25);
+  --border: #e2d5c8;
+  --input: #f2e7db;
+  --ring: #0e2a3f;
+  --chart-1: #0e2a3f;
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --radius: 0.625rem;
   --sidebar: oklch(0.95 0.018 74);
-  --sidebar-foreground: oklch(0.18 0.035 25);
-  --sidebar-primary: oklch(0.25 0.04 25);
+  --sidebar-foreground: #0e2a3f;
+  --sidebar-primary: #0e2a3f;
   --sidebar-primary-foreground: oklch(0.98 0 0);
   --sidebar-accent: oklch(0.92 0.022 70);
   --sidebar-accent-foreground: oklch(0.18 0 0);
   --sidebar-border: oklch(0.88 0.02 68);
-  --sidebar-ring: oklch(0.25 0.04 25);
+  --sidebar-ring: #0e2a3f;
 
   /* Deep espresso anchor #342323 */
-  --espresso: oklch(0.25 0.04 25);
-  --espresso-dark: oklch(0.18 0.035 25);
-  --copper: oklch(0.58 0.11 50);
-  --rose-smoke: oklch(0.78 0.045 25);
-  --gold-warm: oklch(0.72 0.1 65);
+  --espresso: #a66f29;
+  --espresso-dark: #8c5a1c;
+  --copper: #bf8843;
+  --rose-smoke: #e5d5c5;
+  --gold-warm: #d8a75c;
   /* Creamy depth tones */
   --cream-base: oklch(0.965 0.018 75);
   --cream-soft: oklch(0.98 0.012 80);
@@ -124,10 +124,7 @@ html::-webkit-scrollbar {
 
 /* Espresso gold text gradient for creamy background */
 .gold-text {
-  background: linear-gradient(135deg, var(--espresso-dark), var(--copper), var(--espresso), var(--gold-warm));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #bf8843;
   line-height: 1.1;
   padding: 0.1em 0;
 }
@@ -423,7 +420,7 @@ html::-webkit-scrollbar {
 
 /* Better focus states for accessibility */
 *:focus-visible {
-  outline: 2px solid oklch(0.58 0.11 50);
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 

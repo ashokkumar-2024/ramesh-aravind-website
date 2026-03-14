@@ -9,7 +9,7 @@ const speakingTypes = [
     icon: GraduationCap,
     title: "Covid 19 Awareness By BBMP",
     description: "Public health advocacy and community safety",
-    image: "/speaking/Covid-19.png"
+    image: "/RA (3).png"
   },
   {
     icon: Users,
@@ -261,7 +261,7 @@ export function SpeakingSection() {
             <div className="relative">
               <Button
                 size="lg"
-                className="relative bg-[oklch(0.25_0.04_25)] text-[oklch(0.97_0.01_75)] hover:bg-[oklch(0.3_0.045_25)] font-[var(--font-body)] px-10 py-7 text-lg transition-all duration-500 overflow-hidden group border-0"
+                className="relative bg-[#0e2a3f] text-white hover:bg-[#124166] font-[var(--font-body)] px-10 py-7 text-lg transition-all duration-500 overflow-hidden group border-0"
                 style={{
                   boxShadow: "0 4px 20px oklch(0.25 0.04 25 / 0.15)",
                   transform: 'translateZ(0)',

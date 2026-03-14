@@ -80,10 +80,10 @@ export function FilmographySection() {
               onClick={() => setActiveFilter(lang)}
               className={cn(
                 "relative px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-medium transition-all duration-500 font-[var(--font-body)] neuro-highlight",
-                activeFilter === lang
-                  ? "bg-[oklch(0.25_0.04_25)] text-[oklch(0.97_0.01_75)]"
-                  : "bg-transparent text-[oklch(0.45_0.04_30)] hover:text-foreground border border-[oklch(0.25_0.04_25/0.15)] hover:border-[oklch(0.25_0.04_25/0.35)]",
-              )}
+                  activeFilter === lang
+                    ? "bg-[#0e2a3f] text-white"
+                    : "bg-transparent text-[oklch(0.45_0.04_30)] hover:text-foreground border border-[#0e2a3f]/20 hover:border-[#0e2a3f]/50",
+                )}
               style={{
                 boxShadow: activeFilter === lang ? "0 0 25px oklch(0.25 0.04 25 / 0.2)" : "none",
               }}
@@ -129,10 +129,10 @@ export function FilmographySection() {
                   <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3">
                     <span
                       className={`inline-block px-2 sm:px-3 py-1 sm:py-1.5 text-xs rounded-full mb-1.5 sm:mb-2 font-[var(--font-body)] transition-all duration-300 ${
-                        hoveredFilm === index
-                          ? "bg-[oklch(0.25_0.04_25)] text-[oklch(0.97_0.01_75)]"
-                          : "bg-[oklch(0.58_0.11_50/0.15)] text-[oklch(0.25_0.04_25)]"
-                      }`}
+                          hoveredFilm === index
+                          ? "bg-[#0e2a3f] text-white"
+                            : "bg-[oklch(0.58_0.11_50/0.15)] text-[#0e2a3f]"
+                        }`}
                     >
                       {film.language}
                     </span>

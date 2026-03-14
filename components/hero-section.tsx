@@ -79,7 +79,7 @@ export function HeroSection() {
 
   return (
     <>
-      <section ref={sectionRef} className="relative min-h-[70vh] md:min-h-screen flex items-end justify-center overflow-hidden dolly-container pb-20 sm:pb-24 md:pb-32">
+      <section ref={sectionRef} className="relative min-h-[70vh] md:min-h-screen flex items-end justify-center overflow-hidden dolly-container pt-36 sm:pt-40 pb-20 sm:pb-24 md:pb-32">
         <video
           src="/hero.mp4"
           className="absolute inset-0 w-full h-full object-cover"
@@ -112,7 +112,7 @@ export function HeroSection() {
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center py-16">
 
-          <p className="text-[oklch(0.25_0.04_25)] text-xs sm:text-sm md:text-base tracking-[0.5em] uppercase mb-4 font-[var(--font-body)]">
+          <p className="text-[#0e2a3f] text-xs sm:text-sm md:text-base tracking-[0.5em] uppercase mb-4 font-[var(--font-body)]">
             Actor • Director • Author • Speaker
           </p>
 
@@ -121,7 +121,7 @@ export function HeroSection() {
             Dr Ramesh Aravind
           </h1>
 
-          <div className="text-[oklch(0.25_0.04_25)] max-w-4xl mx-auto mt-6 mb-8 px-4 leading-tight text-center"
+          <div className="text-[#0e2a3f] max-w-4xl mx-auto mt-6 mb-8 px-4 leading-tight text-center"
             style={{
               fontSize: "clamp(0.875rem, 3.5vw, 1.75rem)"
             }}
@@ -132,7 +132,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
             <Button
               size="lg"
-              className="bg-[oklch(0.58_0.11_50)] text-white hover:bg-[oklch(0.6_0.12_55)] px-8 py-6 text-base font-[var(--font-body)] shadow-lg"
+              className="bg-[#0e2a3f] text-white hover:bg-[#124166] px-8 py-6 text-base font-[var(--font-body)] shadow-lg"
               asChild
             >
               <a href="#contact">Book for Speaking</a>
@@ -141,7 +141,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-[oklch(0.58_0.11_50)] text-[oklch(0.25_0.04_25)] hover:bg-white/10 px-8 py-6 text-base font-[var(--font-body)]"
+              className="border-[#0e2a3f] text-[#0e2a3f] hover:bg-[#0e2a3f]/10 px-8 py-6 text-base font-[var(--font-body)]"
               asChild
             >
               <a href="#about">Explore His Journey</a>

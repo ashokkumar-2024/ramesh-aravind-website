@@ -4,12 +4,12 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 
 const brands = [
-  { name: "TMT Steel", image: "/tmt.jpg" },
-  { name: "Siri", image: "/drinks.png" },
-  { name: "Aashirvaad's Chilli", image: "/Masala.png" },
-  { name: "Narayanashastra", image: "/nara.jpg" },
-  { name: "Vasu Agarbathies", image: "/vasu.png" },
-  { name: "Silk Shirts and Dhoti", image: "/Dhoti.jpg" }
+  { name: "TMT Steel", image: "/tmt.jpg", link: "https://www.youtube.com/watch?v=7XE0iyU5hoU" },
+  { name: "Siri", image: "/drinks.png", link: "https://www.youtube.com/watch?v=Tzkx29SJl7o" },
+  { name: "Aashirvaad's Chilli", image: "/Masala.png", link: "https://www.youtube.com/watch?v=y6L_MYSpk_I" },
+  { name: "Narayanashastra", image: "/nara.jpg" }, // no link provided
+  { name: "Vasu Agarbathies", image: "/vasu.png", link: "https://www.youtube.com/watch?v=LFb0KAAOApE" },
+  { name: "Silk Shirts and Dhoti", image: "/Dhoti.jpg", link: "https://www.youtube.com/watch?v=dG46TWNUlMY" }
 ]
 
 export function EndorsementsSection() {
@@ -75,6 +75,11 @@ export function EndorsementsSection() {
               opacity = 0.3
             }
 
+            const Wrapper = brand.link ? "a" : "div"
+            const wrapperProps = brand.link
+              ? { href: brand.link, target: "_blank", rel: "noopener noreferrer" }
+              : {}
+
             return (
               <div
                 key={brand.name}
@@ -87,13 +92,14 @@ export function EndorsementsSection() {
                   transitionTimingFunction: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
                 }}
               >
-                <div
-                  className="relative cursor-pointer"
+                <Wrapper
+                  className="relative block cursor-pointer"
                   style={{
                     width: '380px',
                     height: '240px',
                     transformStyle: 'preserve-3d'
                   }}
+                  {...wrapperProps}
                 >
                   {/* Main Card */}
                   <div
@@ -131,7 +137,7 @@ export function EndorsementsSection() {
                       {brand.name}
                     </span>
                   </div>
-                </div>
+                </Wrapper>
               </div>
             )
           })}

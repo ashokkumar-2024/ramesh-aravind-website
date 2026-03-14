@@ -97,7 +97,7 @@ export function CareerHighlights() {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className={`text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-          <h2 className="text-sm text-[oklch(0.58_0.11_50)] tracking-[0.5em] uppercase mb-3 font-[var(--font-body)]">
+          <h2 className="text-sm text-[#0e2a3f] tracking-[0.5em] uppercase mb-3 font-[var(--font-body)]">
             Career Dimensions
           </h2>
           <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold gold-text">A Multi-Faceted Artist</h3>
@@ -189,68 +189,62 @@ export function CareerHighlights() {
                   />
                 </div>
 
-                <h4 className="text-xl font-bold mb-1 text-foreground">{career.title}</h4>
+                <h4 className="text-xl font-bold mb-1 text-[#bf8843]">{career.title}</h4>
                 <p
-                  className="text-sm mb-2 font-[var(--font-body)] transition-colors duration-300"
-                  style={{
-                    color:
-                      hoveredIndex === index
-                        ? moodColors[career.mood as keyof typeof moodColors]
-                        : "oklch(0.58 0.11 50 / 0.65)",
-                  }}
+                  className="text-sm mb-2 font-[var(--font-body)] transition-colors duration-300 text-[#0e2a3f]"
                 >
                   {career.subtitle}
                 </p>
-                <p className="text-[oklch(0.45_0.04_30)] text-sm font-[var(--font-body)] leading-relaxed mb-2">
+                <p className="text-[#0e2a3f] text-sm sm:text-base font-[var(--font-body)] leading-relaxed mb-2">
                   {career.description}
                 </p>
                 
                 {career.title === "Actor" ? (
                   <a
                     href="/best-movies"
-                    className="inline-flex items-center text-sm font-semibold bg-[oklch(0.25_0.04_25)] text-[oklch(0.97_0.01_75)] hover:bg-[oklch(0.3_0.045_25)] px-4 py-2 rounded-lg transition-colors duration-300"
+                    className="inline-flex items-center text-sm font-semibold bg-[#0e2a3f] text-white hover:bg-[#124166] px-4 py-2 rounded-lg transition-colors duration-300"
                   >
                     Best Movies →
                   </a>
                 ) : career.title === "Director" ? (
                   <a
                     href="/director-portfolio"
-                    className="inline-flex items-center text-sm font-semibold bg-[oklch(0.25_0.04_25)] text-[oklch(0.97_0.01_75)] hover:bg-[oklch(0.3_0.045_25)] px-4 py-2 rounded-lg transition-colors duration-300"
+                    className="inline-flex items-center text-sm font-semibold bg-[#0e2a3f] text-white hover:bg-[#124166] px-4 py-2 rounded-lg transition-colors duration-300"
                   >
                     Director Portfolio →
                   </a>
                 ) : career.title === "Producer" ? (
                   <a
                     href="/producer-portfolio"
-                    className="inline-flex items-center text-sm font-semibold bg-[oklch(0.25_0.04_25)] text-[oklch(0.97_0.01_75)] hover:bg-[oklch(0.3_0.045_25)] px-4 py-2 rounded-lg transition-colors duration-300"
+                    className="inline-flex items-center text-sm font-semibold bg-[#0e2a3f] text-white hover:bg-[#124166] px-4 py-2 rounded-lg transition-colors duration-300"
                   >
                     TV Productions →
                   </a>
                 ) : career.title === "Motivational Speaker" ? (
                   <a
                     href="/speaker-portfolio"
-                    className="inline-flex items-center text-sm font-semibold bg-[oklch(0.25_0.04_25)] text-[oklch(0.97_0.01_75)] hover:bg-[oklch(0.3_0.045_25)] px-4 py-2 rounded-lg transition-colors duration-300"
+                    className="inline-flex items-center text-sm font-semibold bg-[#0e2a3f] text-white hover:bg-[#124166] px-4 py-2 rounded-lg transition-colors duration-300"
                   >
                     Inspiring Talks →
                   </a>
                 ) : career.title === "Writer" ? (
                   <a
                     href="/#books"
-                    className="inline-flex items-center text-sm font-semibold bg-[oklch(0.25_0.04_25)] text-[oklch(0.97_0.01_75)] hover:bg-[oklch(0.3_0.045_25)] px-4 py-2 rounded-lg transition-colors duration-300"
+                    className="inline-flex items-center text-sm font-semibold bg-[#0e2a3f] text-white hover:bg-[#124166] px-4 py-2 rounded-lg transition-colors duration-300"
                   >
                     Read Books →
                   </a>
                 ) : career.title === "Author" ? (
                   <a
                     href="/#books"
-                    className="inline-flex items-center text-sm font-semibold bg-[oklch(0.25_0.04_25)] text-[oklch(0.97_0.01_75)] hover:bg-[oklch(0.3_0.045_25)] px-4 py-2 rounded-lg transition-colors duration-300"
+                    className="inline-flex items-center text-sm font-semibold bg-[#0e2a3f] text-white hover:bg-[#124166] px-4 py-2 rounded-lg transition-colors duration-300"
                   >
                     Read Books →
                   </a>
                 ) : career.title === "TV Host" ? (
                   <a
                     href="/#tv-shows"
-                    className="inline-flex items-center text-sm font-semibold bg-[oklch(0.25_0.04_25)] text-[oklch(0.97_0.01_75)] hover:bg-[oklch(0.3_0.045_25)] px-4 py-2 rounded-lg transition-colors duration-300"
+                    className="inline-flex items-center text-sm font-semibold bg-[#0e2a3f] text-white hover:bg-[#124166] px-4 py-2 rounded-lg transition-colors duration-300"
                   >
                     TV Shows →
                   </a>

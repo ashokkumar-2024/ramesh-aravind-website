@@ -47,6 +47,7 @@ export function BooksSection() {
   const [showVideoPopup, setShowVideoPopup] = useState(false)
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
   const sectionRef = useRef<HTMLElement>(null)
+  const isFeaturedBook = books[activeBook]?.title === "Preetiyinda Ramesh"
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -82,9 +83,9 @@ export function BooksSection() {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className={`text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-          <h2 className="text-sm text-[oklch(0.58_0.11_50)] tracking-[0.5em] uppercase mb-3 font-[var(--font-body)]">
-            Books & Writing
-          </h2>
+            <h2 className="text-sm text-[#0E2A3F] tracking-[0.5em] uppercase mb-3 font-[var(--font-body)]">
+              Books & Writing
+            </h2>
           <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold gold-text mb-3 sm:mb-4">Words That Inspire</h3>
           <p className="text-[oklch(0.45_0.04_30)] font-[var(--font-body)] max-w-2xl mx-auto text-base sm:text-lg px-4">
             Bestselling author sharing wisdom through the written word
@@ -107,11 +108,11 @@ export function BooksSection() {
               />
 
               <div
-                className={`relative w-48 h-64 sm:w-64 sm:h-80 md:w-96 md:h-[500px] cursor-pointer transition-all duration-1000 gpu-accelerate ${isHovering ? "" : "anti-gravity"
+                className={`relative w-48 h-64 sm:w-64 sm:h-80 md:w-96 md:h-[560px] lg:h-[620px] cursor-pointer transition-all duration-1000 gpu-accelerate ${isHovering ? "" : "anti-gravity"
                   }`}
                 style={{
                   transformStyle: "preserve-3d",
-                  transform: `rotateY(${isHovering ? -8 : activeBook * -5}deg) rotateX(${isHovering ? 4 : 1.5}deg)`,
+                  transform: `rotateY(${isHovering ? -8 : activeBook * -5}deg) rotateX(${isHovering ? 4 : 1.5}deg) scale(${isFeaturedBook ? 1.12 : 1})`,
                 }}
               >
                 <div

@@ -49,7 +49,7 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   }, [isVisible, value])
 
   return (
-    <div ref={ref} className="text-4xl md:text-5xl font-bold text-[oklch(0.25_0.04_25)]">
+    <div ref={ref} className="text-4xl md:text-5xl font-bold text-[#0e2a3f]">
       {count}{suffix}
     </div>
   )
@@ -134,7 +134,7 @@ export function AboutSection() {
         <div className={`text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20 transition-all duration-1200 gpu-accelerate ${isVisible ? "opacity-100" : "opacity-0"}`} style={{ transform: `perspective(1500px) rotateX(${isVisible ? 0 : 15}deg) translateY(${isVisible ? 0 : 50}px) translateZ(${isVisible ? 0 : -100}px)` }}>
           <div className="flex items-center justify-center gap-4 mb-6">
             <span className="w-16 h-px bg-gradient-to-r from-transparent via-[oklch(0.58_0.11_50/0.5)] to-transparent" />
-            <span className="text-sm text-[oklch(0.58_0.11_50)] tracking-[0.4em] uppercase font-[var(--font-body)]">
+            <span className="text-sm text-[#0e2a3f] tracking-[0.4em] uppercase font-[var(--font-body)]">
               Legacy
             </span>
             <span className="w-16 h-px bg-gradient-to-r from-transparent via-[oklch(0.58_0.11_50/0.5)] to-transparent" />
@@ -205,16 +205,8 @@ export function AboutSection() {
                 }}
               />
 
-              {/* Signature quote overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8" style={{ transform: "translateZ(40px)" }}>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl italic text-[oklch(0.25_0.04_25/0.9)] font-[var(--font-body)] leading-relaxed">
-                  "Cinema is the most powerful medium to touch hearts and transform lives."
-                </p>
-                <div className="mt-2 sm:mt-3 flex items-center gap-2 sm:gap-3">
-                  <span className="w-6 sm:w-8 h-px bg-[oklch(0.58_0.11_50/0.6)]" />
-                  <span className="text-xs sm:text-sm text-[oklch(0.58_0.11_50)] font-medium">Dr Ramesh Aravind</span>
-                </div>
-              </div>
+              {/* Signature overlay area reserved for future content */}
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8" style={{ transform: "translateZ(40px)" }} />
 
               {/* Frame border */}
               <div
@@ -321,7 +313,7 @@ export function AboutSection() {
                         }}
                       />
                       <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-                      <div className="text-sm text-[oklch(0.5_0.04_30)] font-[var(--font-body)] tracking-wide uppercase mt-2">
+                      <div className="text-sm text-[#0e2a3f] font-[var(--font-body)] tracking-wide uppercase mt-2">
                         {stat.label}
                       </div>
                     </div>
