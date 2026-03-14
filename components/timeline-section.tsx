@@ -170,6 +170,8 @@ export function TimelineSection() {
           </div>
         </div>
       </div>
+      {/* Spacer to keep following section from touching the sticky circle */}
+      <div className="h-12 sm:h-16 md:h-20 lg:h-24" />
       <style jsx>{`@keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }`}</style>
     </section>
   )
