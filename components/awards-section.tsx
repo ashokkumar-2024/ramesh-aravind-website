@@ -100,57 +100,44 @@ export function AwardsSection() {
                     transformStyle: 'preserve-3d'
                   }}
                 >
-                  {/* Award Card */}
+                  {/* Award Card - Image and Name Only */}
                   <div 
-                    className="w-56 h-72 md:w-72 md:h-80 rounded-3xl p-4 md:p-6 backdrop-blur-sm border-2 shadow-2xl"
+                    className="w-56 h-72 md:w-72 md:h-80 rounded-3xl overflow-hidden backdrop-blur-sm border-2 shadow-2xl"
                     style={{
-                      background: isActive 
-                        ? 'linear-gradient(145deg, var(--cream-soft), var(--cream-warm))' 
-                        : 'linear-gradient(145deg, var(--cream-base), var(--cream-deep))',
                       borderColor: isActive ? 'var(--copper)' : 'var(--cream-deep)',
                       boxShadow: isActive 
                         ? '0 30px 80px rgba(0,0,0,0.3), 0 0 0 1px var(--copper)' 
                         : '0 20px 40px rgba(0,0,0,0.1)'
                     }}
                   >
-                    {/* Year */}
-                    <div className="text-center mb-4">
+                    {/* Award Image */}
+                    <div className="relative w-full h-full">
+                      <img 
+                        src={`/award-${index + 1}.jpg`}
+                        alt={award.award}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          // Fallback to placeholder if image doesn't exist
+                          e.currentTarget.src = '/Ra1.jpg'
+                        }}
+                      />
+                      
+                      {/* Award Name Overlay */}
                       <div 
-                        className="inline-block px-4 py-2 rounded-full text-xl font-bold"
+                        className="absolute bottom-0 left-0 right-0 p-4 text-center"
                         style={{
-                          background: isActive ? 'var(--espresso)' : 'var(--muted)',
-                          color: isActive ? 'var(--cream-soft)' : 'var(--muted-foreground)'
+                          background: isActive 
+                            ? 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)' 
+                            : 'linear-gradient(to top, rgba(0,0,0,0.6), transparent)'
                         }}
                       >
-                        {award.year}
+                        <h3 
+                          className="text-lg md:text-xl font-bold text-white leading-tight"
+                        >
+                          {award.award}
+                        </h3>
+                        <p className="text-sm text-white/90 mt-1">{award.year}</p>
                       </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="text-center space-y-3">
-                      <h3 
-                        className="text-xl font-bold leading-tight"
-                        style={{ color: isActive ? 'var(--espresso-dark)' : 'var(--muted-foreground)' }}
-                      >
-                        {award.award}
-                      </h3>
-                      
-                      <div 
-                        className="inline-block px-4 py-2 rounded-full text-sm font-medium"
-                        style={{
-                          background: isActive ? 'var(--accent)' : 'var(--muted)',
-                          color: isActive ? 'var(--accent-foreground)' : 'var(--muted-foreground)'
-                        }}
-                      >
-                        {award.category}
-                      </div>
-                      
-                      <p 
-                        className="text-lg italic leading-relaxed"
-                        style={{ color: isActive ? 'var(--foreground)' : 'var(--muted-foreground)' }}
-                      >
-                        "{award.film}"
-                      </p>
                     </div>
                   </div>
                 </div>

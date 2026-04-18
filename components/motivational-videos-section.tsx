@@ -57,7 +57,7 @@ export function MotivationalVideosSection() {
             >
               <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <iframe
-                  src={`https://www.youtube.com/embed/${video.id}?mute=1&autoplay=1&controls=1&modestbranding=1&loop=1&playlist=${video.id}`}
+                  src={`https://www.youtube.com/embed/${video.id}?mute=1&controls=1&modestbranding=1`}
                   title={video.title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -80,7 +80,7 @@ export function MotivationalVideosSection() {
             >
               <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <iframe
-                  src={`https://www.youtube.com/embed/${video.id}?mute=1&autoplay=1&controls=1&modestbranding=1&loop=1&playlist=${video.id}`}
+                  src={`https://www.youtube.com/embed/${video.id}?mute=1&controls=1&modestbranding=1`}
                   title={video.title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen

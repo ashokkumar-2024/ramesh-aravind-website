@@ -4,17 +4,18 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 
 const brands = [
-  { name: "TMT Steel", image: "/tmt.jpg", link: "https://www.youtube.com/watch?v=7XE0iyU5hoU" },
-  { name: "Siri", image: "/drinks.png", link: "https://www.youtube.com/watch?v=Tzkx29SJl7o" },
-  { name: "Aashirvaad's Chilli", image: "/Masala.png", link: "https://www.youtube.com/watch?v=y6L_MYSpk_I" },
-  { name: "Narayanashastra", image: "/nara.jpg" }, // no link provided
-  { name: "Vasu Agarbathies", image: "/vasu.png", link: "https://www.youtube.com/watch?v=LFb0KAAOApE" },
-  { name: "Silk Shirts and Dhoti", image: "/Dhoti.jpg", link: "https://www.youtube.com/watch?v=dG46TWNUlMY" }
+  { name: "TMT Steel", image: "/tmt.jpg", videoId: "7XE0iyU5hoU" },
+  { name: "Siri", image: "/drinks.png", videoId: "Tzkx29SJl7o" },
+  { name: "Aashirvaad's Chilli", image: "/Masala.png", videoId: "y6L_MYSpk_I" },
+  { name: "Narayanashastra", image: "/nara.jpg" }, // no video
+  { name: "Vasu Agarbathies", image: "/vasu.png", videoId: "LFb0KAAOApE" },
+  { name: "Silk Shirts and Dhoti", image: "/Dhoti.jpg", videoId: "dG46TWNUlMY" }
 ]
 
 export function EndorsementsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [isArrowHovered, setIsArrowHovered] = useState(false)
+  const [playingVideo, setPlayingVideo] = useState<number | null>(null)
 
   const nextSlide = () => {
     setActiveIndex((prev) => (prev + 1) % brands.length)
@@ -75,10 +76,7 @@ export function EndorsementsSection() {
               opacity = 0.3
             }
 
-            const Wrapper = brand.link ? "a" : "div"
-            const wrapperProps = brand.link
-              ? { href: brand.link, target: "_blank", rel: "noopener noreferrer" }
-              : {}
+            const Wrapper = "div"
 
             return (
               <div
@@ -99,7 +97,7 @@ export function EndorsementsSection() {
                     height: '240px',
                     transformStyle: 'preserve-3d'
                   }}
-                  {...wrapperProps}
+                  onClick={() => brand.videoId && setPlayingVideo(index)}
                 >
                   {/* Main Card */}
                   <div
@@ -136,6 +134,11 @@ export function EndorsementsSection() {
                     <span className="text-white text-lg font-medium text-center">
                       {brand.name}
                     </span>
+                    {brand.videoId && (
+                      <div className="absolute bottom-2 right-2 bg-primary/80 text-white px-2 py-1 rounded text-xs">
+                        Click to play
+                      </div>
+                    )}
                   </div>
                 </Wrapper>
               </div>
@@ -173,6 +176,30 @@ export function EndorsementsSection() {
             <span className="text-white text-2xl">›</span>
           </button>
         </div>
+
+        {/* Video Modal */}
+        {playingVideo !== null && brands[playingVideo]?.videoId && (
+          <div
+            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+            onClick={() => setPlayingVideo(null)}
+          >
+            <button
+              onClick={() => setPlayingVideo(null)}
+              className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/20 text-white flex items-center justify-center text-2xl hover:bg-white/30 transition-colors"
+            >
+              ×
+            </button>
+            <div className="w-full max-w-4xl aspect-video" onClick={(e) => e.stopPropagation()}>
+              <iframe
+                src={`https://www.youtube.com/embed/${brands[playingVideo].videoId}?mute=1&controls=1&modestbranding=1&autoplay=1`}
+                title={brands[playingVideo].name}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full rounded-lg"
+              />
+            </div>
+          </div>
+        )}
       </div>
 
       <style jsx>{`

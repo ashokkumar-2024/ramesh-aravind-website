@@ -2,12 +2,12 @@
 import { useEffect, useRef, useState } from "react"
 
 const moments = [
-  { year: "1986", title: "The Beginning", subtitle: "Film Debut with K. Balachander", detail: "Sundara Swapnagalu" },
-  { year: "1990s", title: "Rising Star", subtitle: "Kannada Cinema Breakthrough", detail: "Multiple blockbusters" },
-  { year: "1998", title: "Behind the Camera", subtitle: "Directorial Vision", detail: "Rama Shama Bhama" },
-  { year: "2000s", title: "Pan-Indian Icon", subtitle: "Multi-language Mastery", detail: "Cross-cultural storytelling" },
-  { year: "2013", title: "Television Legend", subtitle: "Weekend With Ramesh", detail: "Connecting hearts" },
-  { year: "Present", title: "Living Legacy", subtitle: "140+ Films & Inspiring Millions", detail: "Timeless influence" },
+  { year: "1986", title: "The Beginning", subtitle: "Film Debut with K. Balachander", detail: "Sundara Swapnagalu", centerImage: "/canva-images/panel-1/panel-1-001.jpg" },
+  { year: "1990s", title: "Rising Star", subtitle: "Kannada Cinema Breakthrough", detail: "Multiple blockbusters", centerImage: "/canva-images/panel-1/panel-1-002.png" },
+  { year: "1998", title: "Behind the Camera", subtitle: "Directorial Vision", detail: "Rama Shama Bhama", centerImage: "/canva-images/panel-1/panel-1-003.png" },
+  { year: "2000s", title: "Pan-Indian Icon", subtitle: "Multi-language Mastery", detail: "Cross-cultural storytelling", centerImage: "/canva-images/panel-1/panel-1-004.jpg" },
+  { year: "2013", title: "Television Legend", subtitle: "Weekend With Ramesh", detail: "Connecting hearts", centerImage: "/canva-images/panel-1/panel-1-005.jpg" },
+  { year: "Present", title: "Living Legacy", subtitle: "140+ Films & Inspiring Millions", detail: "Timeless influence", centerImage: "/canva-images/panel-1/panel-1-006.png" },
 ]
 
 const descriptions = [
@@ -87,6 +87,23 @@ export function TimelineSection() {
 
         <div className="relative h-full flex items-center justify-center overflow-hidden px-4" style={{ perspective: '1500px' }}>
           <div className="absolute left-1/2 w-[400px] md:w-[650px] h-[400px] md:h-[650px] rounded-full pointer-events-none" style={{ top: '60%', ...getClockTransform(), transformStyle: 'preserve-3d', zIndex: 5, boxShadow: `0 0 60px rgba(0, 0, 0, 0.2), inset 0 2px 3px rgba(255, 255, 255, 0.03), inset 0 -2px 3px rgba(0, 0, 0, 0.4)`, background: `radial-gradient(circle at 50% 50%, transparent 49%, rgba(20, 20, 20, 0.85) 49.5%, rgba(30, 30, 30, 0.9) 50%, rgba(20, 20, 20, 0.85) 50.5%, transparent 51%)`, filter: `drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3))` }}>
+            {/* Center Image that changes with scroll */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] md:w-[520px] md:h-[520px] rounded-full overflow-hidden shadow-2xl">
+              {moments.map((moment, index) => {
+                const itemProgress = Math.max(0, Math.min(1, scrollProgress * moments.length - index))
+                const isActive = itemProgress > 0.15 && itemProgress < 0.85
+                const opacity = isActive ? 1 : 0
+                return (
+                  <img
+                    key={moment.year}
+                    src={moment.centerImage}
+                    alt={moment.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+                    style={{ opacity }}
+                  />
+                )
+              })}
+            </div>
             {[...Array(12)].map((_, i) => {
               const angle = (i * 30) - 90
               const radius = 310

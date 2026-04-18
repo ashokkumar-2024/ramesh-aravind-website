@@ -3,7 +3,8 @@
 import { useState, useEffect, useRef } from "react"
 import { X, ZoomIn } from "lucide-react"
 
-const galleryImages = [
+// Old gallery images (kept for reference)
+const oldGalleryImages = [
   { src: "/Ra1.jpg", category: "" },
   { src: "/Ra2.jpg", category: "" },
   { src: "/Ra3.jpg", category: "" },
@@ -24,6 +25,13 @@ const galleryImages = [
   { src: "/Ra18.jpg", category: "" },
   { src: "/Ra19.jpg", category: "" },
 ]
+
+// New gallery images from panels 12, 13, 14
+const galleryImages = Array.from({ length: 49 }, (_, i) => {
+  const num = String(i + 1).padStart(3, '0')
+  const ext = i === 32 ? 'png' : 'jpg' // gallery-033 is png, rest are jpg
+  return { src: `/gallery-new/gallery-${num}.${ext}`, category: "" }
+})
 
 const pressImages = [
   { src: "/press3.jpeg", alt: "Press meet moment 3" },

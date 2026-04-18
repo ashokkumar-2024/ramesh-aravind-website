@@ -1,0 +1,1322 @@
+{
+  "totalPanels": 15,
+  "totalImages": 118,
+  "capturedAt": "2026-04-17T11:25:23.862Z",
+  "panels": [
+    {
+      "panel": 1,
+      "name": "panel-1",
+      "imageCount": 6,
+      "images": [
+        "e6e3a28de4333a73221920c880a4160c.jpg",
+        "f2d633372a424e316c6ed1a6ebcd518b.png",
+        "762908427d01b895cd04557d46e689d4.png",
+        "dcea37cf66712fd1dd550eb69f028758.jpg",
+        "7a4b65fcbcd4465dfdd84f3f9553550b.jpg",
+        "5faee519db6fdd47027f1eca6589dd50.png"
+      ],
+      "allImageData": [
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/e6e3a28de4333a73221920c880a4160c.jpg",
+          "filename": "e6e3a28de4333a73221920c880a4160c.jpg",
+          "visible": true,
+          "top": 99,
+          "left": 244,
+          "width": 252,
+          "height": 337
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/f2d633372a424e316c6ed1a6ebcd518b.png",
+          "filename": "f2d633372a424e316c6ed1a6ebcd518b.png",
+          "visible": true,
+          "top": 419,
+          "left": 244,
+          "width": 252,
+          "height": 285
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/762908427d01b895cd04557d46e689d4.png",
+          "filename": "762908427d01b895cd04557d46e689d4.png",
+          "visible": true,
+          "top": 125,
+          "left": 497,
+          "width": 480,
+          "height": 285
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/dcea37cf66712fd1dd550eb69f028758.jpg",
+          "filename": "dcea37cf66712fd1dd550eb69f028758.jpg",
+          "visible": true,
+          "top": 419,
+          "left": 456,
+          "width": 428,
+          "height": 285
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/7a4b65fcbcd4465dfdd84f3f9553550b.jpg",
+          "filename": "7a4b65fcbcd4465dfdd84f3f9553550b.jpg",
+          "visible": true,
+          "top": 125,
+          "left": 825,
+          "width": 345,
+          "height": 285
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/5faee519db6fdd47027f1eca6589dd50.png",
+          "filename": "5faee519db6fdd47027f1eca6589dd50.png",
+          "visible": true,
+          "top": 419,
+          "left": 845,
+          "width": 222,
+          "height": 296
+        }
+      ]
+    },
+    {
+      "panel": 2,
+      "name": "panel-2",
+      "imageCount": 7,
+      "images": [
+        "cbc08bd3e724d76b1c93e485dfb4c676.png",
+        "7ab398401385150cb600c3905584b702.png",
+        "aeb3361f2f44c1d5cc09a15332d596e8.png",
+        "535bd045e278a948935c90fc0e6db31c.png",
+        "c476629b68a8e81398fe530389f8db16.png",
+        "3ab90168b2eeda9f749f8cd476f9a8dd.png",
+        "afdc2777a03eb4c144db3d172f425524.png"
+      ],
+      "allImageData": [
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/cbc08bd3e724d76b1c93e485dfb4c676.png",
+          "filename": "cbc08bd3e724d76b1c93e485dfb4c676.png",
+          "visible": true,
+          "top": 138,
+          "left": 74,
+          "width": 371,
+          "height": 209
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/7ab398401385150cb600c3905584b702.png",
+          "filename": "7ab398401385150cb600c3905584b702.png",
+          "visible": true,
+          "top": 361,
+          "left": 74,
+          "width": 371,
+          "height": 185
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/aeb3361f2f44c1d5cc09a15332d596e8.png",
+          "filename": "aeb3361f2f44c1d5cc09a15332d596e8.png",
+          "visible": true,
+          "top": 572,
+          "left": 74,
+          "width": 371,
+          "height": 278
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/535bd045e278a948935c90fc0e6db31c.png",
+          "filename": "535bd045e278a948935c90fc0e6db31c.png",
+          "visible": true,
+          "top": 372,
+          "left": 470,
+          "width": 371,
+          "height": 163
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/c476629b68a8e81398fe530389f8db16.png",
+          "filename": "c476629b68a8e81398fe530389f8db16.png",
+          "visible": true,
+          "top": 161,
+          "left": 866,
+          "width": 371,
+          "height": 198
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/3ab90168b2eeda9f749f8cd476f9a8dd.png",
+          "filename": "3ab90168b2eeda9f749f8cd476f9a8dd.png",
+          "visible": true,
+          "top": 377,
+          "left": 866,
+          "width": 371,
+          "height": 211
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/afdc2777a03eb4c144db3d172f425524.png",
+          "filename": "afdc2777a03eb4c144db3d172f425524.png",
+          "visible": true,
+          "top": 532,
+          "left": 866,
+          "width": 371,
+          "height": 209
+        }
+      ]
+    },
+    {
+      "panel": 3,
+      "name": "panel-3",
+      "imageCount": 9,
+      "images": [
+        "e1981cfa7556374555f455aa71e720c8.jpg",
+        "d8431d2d733d3b53c57f36d5887064a4.png",
+        "8e14aeb84e32a50737b4c3816794d326.jpg",
+        "5e27e51a52bd0f949418c06e6bf935d4.jpg",
+        "7506cb59d3d4896a756affbab83c0c6c.jpg",
+        "9cffb0bd05b1363f776f80d29b5a9620.jpg",
+        "3ee5020421fac509877008c1d102428e.jpg",
+        "de8220c1e3294282f9d40350a5205e74.jpg",
+        "4f0403401101afb6c2e6cdf939638bd3.jpg"
+      ],
+      "allImageData": [
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/e1981cfa7556374555f455aa71e720c8.jpg",
+          "filename": "e1981cfa7556374555f455aa71e720c8.jpg",
+          "visible": true,
+          "top": 141,
+          "left": 74,
+          "width": 371,
+          "height": 246
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/d8431d2d733d3b53c57f36d5887064a4.png",
+          "filename": "d8431d2d733d3b53c57f36d5887064a4.png",
+          "visible": true,
+          "top": 364,
+          "left": 74,
+          "width": 371,
+          "height": 209
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/8e14aeb84e32a50737b4c3816794d326.jpg",
+          "filename": "8e14aeb84e32a50737b4c3816794d326.jpg",
+          "visible": true,
+          "top": 573,
+          "left": 74,
+          "width": 371,
+          "height": 278
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/5e27e51a52bd0f949418c06e6bf935d4.jpg",
+          "filename": "5e27e51a52bd0f949418c06e6bf935d4.jpg",
+          "visible": true,
+          "top": 138,
+          "left": 470,
+          "width": 371,
+          "height": 209
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/7506cb59d3d4896a756affbab83c0c6c.jpg",
+          "filename": "7506cb59d3d4896a756affbab83c0c6c.jpg",
+          "visible": true,
+          "top": 325,
+          "left": 470,
+          "width": 371,
+          "height": 278
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/9cffb0bd05b1363f776f80d29b5a9620.jpg",
+          "filename": "9cffb0bd05b1363f776f80d29b5a9620.jpg",
+          "visible": true,
+          "top": 382,
+          "left": 470,
+          "width": 371,
+          "height": 521
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/3ee5020421fac509877008c1d102428e.jpg",
+          "filename": "3ee5020421fac509877008c1d102428e.jpg",
+          "visible": true,
+          "top": 144,
+          "left": 866,
+          "width": 371,
+          "height": 247
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/de8220c1e3294282f9d40350a5205e74.jpg",
+          "filename": "de8220c1e3294282f9d40350a5205e74.jpg",
+          "visible": true,
+          "top": 330,
+          "left": 866,
+          "width": 371,
+          "height": 247
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/4f0403401101afb6c2e6cdf939638bd3.jpg",
+          "filename": "4f0403401101afb6c2e6cdf939638bd3.jpg",
+          "visible": true,
+          "top": 549,
+          "left": 866,
+          "width": 371,
+          "height": 287
+        }
+      ]
+    },
+    {
+      "panel": 4,
+      "name": "panel-4",
+      "imageCount": 5,
+      "images": [
+        "ad2b95c53746b6118143593492f30531.png",
+        "c4cda3b64f1f675249c8a605aa554586.jpg",
+        "3dff297654af39bf2b65da4c9a3aae1e.png",
+        "6dec182ad610327e5a498ec78dee2183.png",
+        "345d0cf1a343c09a79ebb8c01898c6a0.jpg"
+      ],
+      "allImageData": [
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/ad2b95c53746b6118143593492f30531.png",
+          "filename": "ad2b95c53746b6118143593492f30531.png",
+          "visible": true,
+          "top": 115,
+          "left": 74,
+          "width": 371,
+          "height": 256
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/c4cda3b64f1f675249c8a605aa554586.jpg",
+          "filename": "c4cda3b64f1f675249c8a605aa554586.jpg",
+          "visible": true,
+          "top": 281,
+          "left": -14,
+          "width": 558,
+          "height": 558
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/3dff297654af39bf2b65da4c9a3aae1e.png",
+          "filename": "3dff297654af39bf2b65da4c9a3aae1e.png",
+          "visible": true,
+          "top": 149,
+          "left": 470,
+          "width": 371,
+          "height": 269
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/6dec182ad610327e5a498ec78dee2183.png",
+          "filename": "6dec182ad610327e5a498ec78dee2183.png",
+          "visible": true,
+          "top": 354,
+          "left": 470,
+          "width": 371,
+          "height": 181
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/345d0cf1a343c09a79ebb8c01898c6a0.jpg",
+          "filename": "345d0cf1a343c09a79ebb8c01898c6a0.jpg",
+          "visible": true,
+          "top": 117,
+          "left": 866,
+          "width": 371,
+          "height": 306
+        }
+      ]
+    },
+    {
+      "panel": 5,
+      "name": "panel-5",
+      "imageCount": 1,
+      "images": [
+        "8e82df4ec2496793693ffd64c8a47193.png"
+      ],
+      "allImageData": [
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/8e82df4ec2496793693ffd64c8a47193.png",
+          "filename": "8e82df4ec2496793693ffd64c8a47193.png",
+          "visible": true,
+          "top": 196,
+          "left": 266,
+          "width": 780,
+          "height": 407
+        }
+      ]
+    },
+    {
+      "panel": 6,
+      "name": "panel-6",
+      "imageCount": 1,
+      "images": [
+        "8e82df4ec2496793693ffd64c8a47193.png"
+      ],
+      "allImageData": [
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/8e82df4ec2496793693ffd64c8a47193.png",
+          "filename": "8e82df4ec2496793693ffd64c8a47193.png",
+          "visible": true,
+          "top": 196,
+          "left": 266,
+          "width": 780,
+          "height": 407
+        }
+      ]
+    },
+    {
+      "panel": 7,
+      "name": "panel-7",
+      "imageCount": 2,
+      "images": [
+        "629649c5da34de0276819fd23f788886.png",
+        "34a184cc8b763308f7936f5f5564fad1.png"
+      ],
+      "allImageData": [
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/629649c5da34de0276819fd23f788886.png",
+          "filename": "629649c5da34de0276819fd23f788886.png",
+          "visible": true,
+          "top": 130,
+          "left": 421,
+          "width": 640,
+          "height": 639
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/34a184cc8b763308f7936f5f5564fad1.png",
+          "filename": "34a184cc8b763308f7936f5f5564fad1.png",
+          "visible": true,
+          "top": 161,
+          "left": 170,
+          "width": 571,
+          "height": 428
+        }
+      ]
+    },
+    {
+      "panel": 8,
+      "name": "panel-8",
+      "imageCount": 2,
+      "images": [
+        "629649c5da34de0276819fd23f788886.png",
+        "34a184cc8b763308f7936f5f5564fad1.png"
+      ],
+      "allImageData": [
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/629649c5da34de0276819fd23f788886.png",
+          "filename": "629649c5da34de0276819fd23f788886.png",
+          "visible": true,
+          "top": 130,
+          "left": 421,
+          "width": 640,
+          "height": 639
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/34a184cc8b763308f7936f5f5564fad1.png",
+          "filename": "34a184cc8b763308f7936f5f5564fad1.png",
+          "visible": true,
+          "top": 161,
+          "left": 170,
+          "width": 571,
+          "height": 428
+        }
+      ]
+    },
+    {
+      "panel": 9,
+      "name": "panel-9",
+      "imageCount": 2,
+      "images": [
+        "b6c7236fa6557ec58edaf15d56e0902b.png",
+        "c9e63e9c4b4997a078a5148ad4085e1f.png"
+      ],
+      "allImageData": [
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/b6c7236fa6557ec58edaf15d56e0902b.png",
+          "filename": "b6c7236fa6557ec58edaf15d56e0902b.png",
+          "visible": true,
+          "top": 220,
+          "left": 132,
+          "width": 522,
+          "height": 348
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/c9e63e9c4b4997a078a5148ad4085e1f.png",
+          "filename": "c9e63e9c4b4997a078a5148ad4085e1f.png",
+          "visible": true,
+          "top": 229,
+          "left": 670,
+          "width": 509,
+          "height": 339
+        }
+      ]
+    },
+    {
+      "panel": 10,
+      "name": "panel-10",
+      "imageCount": 10,
+      "images": [
+        "f691d857a643a6cafc35f14f12bfd609.png",
+        "e5b38b1ae4eae3b29dc726bfd591db56.png",
+        "927d52b0cddcce6d387e42e8ab8a9a98.png",
+        "c083f64eb4c874517dea557a736dedf0.png",
+        "764eadb433553e089b5cd403e5956225.png",
+        "8c66d2d587654df74c9f1789cbb316a8.png",
+        "f8984abb11ef1bf5da2f2936ebf9531b.png",
+        "eaf5cd7ccad23ab352a3d8ce36f11dbc.png",
+        "6358175b9d61fde490d024ad2670886f.png",
+        "b4f0a6500568503911240a934aef1541.png"
+      ],
+      "allImageData": [
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/f691d857a643a6cafc35f14f12bfd609.png",
+          "filename": "f691d857a643a6cafc35f14f12bfd609.png",
+          "visible": true,
+          "top": 322,
+          "left": -233,
+          "width": 498,
+          "height": 280
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/e5b38b1ae4eae3b29dc726bfd591db56.png",
+          "filename": "e5b38b1ae4eae3b29dc726bfd591db56.png",
+          "visible": true,
+          "top": 487,
+          "left": 81,
+          "width": 134,
+          "height": 134
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/927d52b0cddcce6d387e42e8ab8a9a98.png",
+          "filename": "927d52b0cddcce6d387e42e8ab8a9a98.png",
+          "visible": true,
+          "top": 322,
+          "left": 21,
+          "width": 500,
+          "height": 280
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/c083f64eb4c874517dea557a736dedf0.png",
+          "filename": "c083f64eb4c874517dea557a736dedf0.png",
+          "visible": true,
+          "top": 337,
+          "left": 286,
+          "width": 87,
+          "height": 87
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/764eadb433553e089b5cd403e5956225.png",
+          "filename": "764eadb433553e089b5cd403e5956225.png",
+          "visible": true,
+          "top": 322,
+          "left": 339,
+          "width": 495,
+          "height": 371
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/8c66d2d587654df74c9f1789cbb316a8.png",
+          "filename": "8c66d2d587654df74c9f1789cbb316a8.png",
+          "visible": true,
+          "top": 500,
+          "left": 617,
+          "width": 103,
+          "height": 103
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/f8984abb11ef1bf5da2f2936ebf9531b.png",
+          "filename": "f8984abb11ef1bf5da2f2936ebf9531b.png",
+          "visible": true,
+          "top": 322,
+          "left": 535,
+          "width": 498,
+          "height": 280
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/eaf5cd7ccad23ab352a3d8ce36f11dbc.png",
+          "filename": "eaf5cd7ccad23ab352a3d8ce36f11dbc.png",
+          "visible": true,
+          "top": 381,
+          "left": 814,
+          "width": 92,
+          "height": 92
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/6358175b9d61fde490d024ad2670886f.png",
+          "filename": "6358175b9d61fde490d024ad2670886f.png",
+          "visible": true,
+          "top": 322,
+          "left": 772,
+          "width": 570,
+          "height": 299
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/b4f0a6500568503911240a934aef1541.png",
+          "filename": "b4f0a6500568503911240a934aef1541.png",
+          "visible": true,
+          "top": 509,
+          "left": 1097,
+          "width": 83,
+          "height": 83
+        }
+      ]
+    },
+    {
+      "panel": 11,
+      "name": "panel-11",
+      "imageCount": 4,
+      "images": [
+        "38597499ba8aecb6e12796c067af0c87.png",
+        "577627bac1636fa3d7678b03e0fb02a0.jpg",
+        "577627bac1636fa3d7678b03e0fb02a0.jpg",
+        "a32857fe2b011736c3be73b8434f9e41.png"
+      ],
+      "allImageData": [
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/38597499ba8aecb6e12796c067af0c87.png",
+          "filename": "38597499ba8aecb6e12796c067af0c87.png",
+          "visible": true,
+          "top": 303,
+          "left": 652,
+          "width": 234,
+          "height": 303
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/577627bac1636fa3d7678b03e0fb02a0.jpg",
+          "filename": "577627bac1636fa3d7678b03e0fb02a0.jpg",
+          "visible": true,
+          "top": 313,
+          "left": 82,
+          "width": 343,
+          "height": 516
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/577627bac1636fa3d7678b03e0fb02a0.jpg",
+          "filename": "577627bac1636fa3d7678b03e0fb02a0.jpg",
+          "visible": true,
+          "top": 315,
+          "left": 336,
+          "width": 343,
+          "height": 516
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/a32857fe2b011736c3be73b8434f9e41.png",
+          "filename": "a32857fe2b011736c3be73b8434f9e41.png",
+          "visible": true,
+          "top": 315,
+          "left": 779,
+          "width": 499,
+          "height": 280
+        }
+      ]
+    },
+    {
+      "panel": 12,
+      "name": "panel-12",
+      "imageCount": 20,
+      "images": [
+        "afed7f937618a11fc93d4c804770501b.jpg",
+        "7c4fad5e2e7cc336edb2440f1f4273c5.jpg",
+        "0b89022f9318c52efbe5cba929fbd2f8.jpg",
+        "9e43ddb1d0b0f60ffdf42cd06c0bb335.jpg",
+        "f016f4690b239cd94e6eab288e888b59.jpg",
+        "65b9fd47c26086c8a237c0c5a67e769f.jpg",
+        "b77d81b74e883f160fce9dd0b5434215.jpg",
+        "5554b25be82a283aa691c9bdf4a208c5.jpg",
+        "5d6cea43f43fcd023670a0347c0b2bf6.jpg",
+        "1932c0857ff268dbdfd079041676cf59.jpg",
+        "e1981cfa7556374555f455aa71e720c8.jpg",
+        "6e6f238a6de0828a428801b298a188ce.jpg",
+        "aaa15ff78dc08278ceaa3b92b5dc078f.jpg",
+        "be49b56a0e7f6b0941d1ffbba01ed1a4.jpg",
+        "9b98d510f681f578ce2cb5a402047bfe.jpg",
+        "033ca425a8e9b28a9d3a8a5f0ef2bb63.jpg",
+        "13339a624b30c0de89db9e5d64258c51.jpg",
+        "afc0ae5e7debc0558a37b67e80bdcdac.jpg",
+        "e31cc9167f115eb359377158c27ffb89.jpg",
+        "de9be58e9e16f3ce371156c5865771eb.jpg"
+      ],
+      "allImageData": [
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/afed7f937618a11fc93d4c804770501b.jpg",
+          "filename": "afed7f937618a11fc93d4c804770501b.jpg",
+          "visible": true,
+          "top": 167,
+          "left": 60,
+          "width": 226,
+          "height": 150
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/7c4fad5e2e7cc336edb2440f1f4273c5.jpg",
+          "filename": "7c4fad5e2e7cc336edb2440f1f4273c5.jpg",
+          "visible": true,
+          "top": 489,
+          "left": 60,
+          "width": 226,
+          "height": 150
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/0b89022f9318c52efbe5cba929fbd2f8.jpg",
+          "filename": "0b89022f9318c52efbe5cba929fbd2f8.jpg",
+          "visible": true,
+          "top": 164,
+          "left": 296,
+          "width": 226,
+          "height": 154
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/9e43ddb1d0b0f60ffdf42cd06c0bb335.jpg",
+          "filename": "9e43ddb1d0b0f60ffdf42cd06c0bb335.jpg",
+          "visible": true,
+          "top": 489,
+          "left": 296,
+          "width": 226,
+          "height": 150
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/f016f4690b239cd94e6eab288e888b59.jpg",
+          "filename": "f016f4690b239cd94e6eab288e888b59.jpg",
+          "visible": true,
+          "top": 160,
+          "left": 533,
+          "width": 226,
+          "height": 162
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/65b9fd47c26086c8a237c0c5a67e769f.jpg",
+          "filename": "65b9fd47c26086c8a237c0c5a67e769f.jpg",
+          "visible": true,
+          "top": 489,
+          "left": 528,
+          "width": 237,
+          "height": 150
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/b77d81b74e883f160fce9dd0b5434215.jpg",
+          "filename": "b77d81b74e883f160fce9dd0b5434215.jpg",
+          "visible": true,
+          "top": 164,
+          "left": 779,
+          "width": 226,
+          "height": 154
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/5554b25be82a283aa691c9bdf4a208c5.jpg",
+          "filename": "5554b25be82a283aa691c9bdf4a208c5.jpg",
+          "visible": true,
+          "top": 489,
+          "left": 776,
+          "width": 232,
+          "height": 150
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/5d6cea43f43fcd023670a0347c0b2bf6.jpg",
+          "filename": "5d6cea43f43fcd023670a0347c0b2bf6.jpg",
+          "visible": true,
+          "top": 167,
+          "left": 1024,
+          "width": 228,
+          "height": 150
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/1932c0857ff268dbdfd079041676cf59.jpg",
+          "filename": "1932c0857ff268dbdfd079041676cf59.jpg",
+          "visible": true,
+          "top": 484,
+          "left": 1025,
+          "width": 226,
+          "height": 159
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/e1981cfa7556374555f455aa71e720c8.jpg",
+          "filename": "e1981cfa7556374555f455aa71e720c8.jpg",
+          "visible": true,
+          "top": 328,
+          "left": 60,
+          "width": 226,
+          "height": 150
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/6e6f238a6de0828a428801b298a188ce.jpg",
+          "filename": "6e6f238a6de0828a428801b298a188ce.jpg",
+          "visible": true,
+          "top": 646,
+          "left": 60,
+          "width": 226,
+          "height": 159
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/aaa15ff78dc08278ceaa3b92b5dc078f.jpg",
+          "filename": "aaa15ff78dc08278ceaa3b92b5dc078f.jpg",
+          "visible": true,
+          "top": 327,
+          "left": 296,
+          "width": 226,
+          "height": 151
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/be49b56a0e7f6b0941d1ffbba01ed1a4.jpg",
+          "filename": "be49b56a0e7f6b0941d1ffbba01ed1a4.jpg",
+          "visible": true,
+          "top": 650,
+          "left": 296,
+          "width": 226,
+          "height": 151
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/9b98d510f681f578ce2cb5a402047bfe.jpg",
+          "filename": "9b98d510f681f578ce2cb5a402047bfe.jpg",
+          "visible": true,
+          "top": 326,
+          "left": 533,
+          "width": 226,
+          "height": 152
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/033ca425a8e9b28a9d3a8a5f0ef2bb63.jpg",
+          "filename": "033ca425a8e9b28a9d3a8a5f0ef2bb63.jpg",
+          "visible": true,
+          "top": 650,
+          "left": 533,
+          "width": 226,
+          "height": 151
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/13339a624b30c0de89db9e5d64258c51.jpg",
+          "filename": "13339a624b30c0de89db9e5d64258c51.jpg",
+          "visible": true,
+          "top": 323,
+          "left": 779,
+          "width": 226,
+          "height": 160
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/afc0ae5e7debc0558a37b67e80bdcdac.jpg",
+          "filename": "afc0ae5e7debc0558a37b67e80bdcdac.jpg",
+          "visible": true,
+          "top": 650,
+          "left": 779,
+          "width": 226,
+          "height": 151
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/e31cc9167f115eb359377158c27ffb89.jpg",
+          "filename": "e31cc9167f115eb359377158c27ffb89.jpg",
+          "visible": true,
+          "top": 324,
+          "left": 1025,
+          "width": 226,
+          "height": 157
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/de9be58e9e16f3ce371156c5865771eb.jpg",
+          "filename": "de9be58e9e16f3ce371156c5865771eb.jpg",
+          "visible": true,
+          "top": 650,
+          "left": 1025,
+          "width": 226,
+          "height": 151
+        }
+      ]
+    },
+    {
+      "panel": 13,
+      "name": "panel-13",
+      "imageCount": 20,
+      "images": [
+        "afed7f937618a11fc93d4c804770501b.jpg",
+        "7c4fad5e2e7cc336edb2440f1f4273c5.jpg",
+        "0b89022f9318c52efbe5cba929fbd2f8.jpg",
+        "9e43ddb1d0b0f60ffdf42cd06c0bb335.jpg",
+        "f016f4690b239cd94e6eab288e888b59.jpg",
+        "65b9fd47c26086c8a237c0c5a67e769f.jpg",
+        "b77d81b74e883f160fce9dd0b5434215.jpg",
+        "5554b25be82a283aa691c9bdf4a208c5.jpg",
+        "5d6cea43f43fcd023670a0347c0b2bf6.jpg",
+        "1932c0857ff268dbdfd079041676cf59.jpg",
+        "e1981cfa7556374555f455aa71e720c8.jpg",
+        "6e6f238a6de0828a428801b298a188ce.jpg",
+        "aaa15ff78dc08278ceaa3b92b5dc078f.jpg",
+        "be49b56a0e7f6b0941d1ffbba01ed1a4.jpg",
+        "9b98d510f681f578ce2cb5a402047bfe.jpg",
+        "033ca425a8e9b28a9d3a8a5f0ef2bb63.jpg",
+        "13339a624b30c0de89db9e5d64258c51.jpg",
+        "afc0ae5e7debc0558a37b67e80bdcdac.jpg",
+        "e31cc9167f115eb359377158c27ffb89.jpg",
+        "de9be58e9e16f3ce371156c5865771eb.jpg"
+      ],
+      "allImageData": [
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/afed7f937618a11fc93d4c804770501b.jpg",
+          "filename": "afed7f937618a11fc93d4c804770501b.jpg",
+          "visible": true,
+          "top": 167,
+          "left": 60,
+          "width": 226,
+          "height": 150
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/7c4fad5e2e7cc336edb2440f1f4273c5.jpg",
+          "filename": "7c4fad5e2e7cc336edb2440f1f4273c5.jpg",
+          "visible": true,
+          "top": 489,
+          "left": 60,
+          "width": 226,
+          "height": 150
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/0b89022f9318c52efbe5cba929fbd2f8.jpg",
+          "filename": "0b89022f9318c52efbe5cba929fbd2f8.jpg",
+          "visible": true,
+          "top": 164,
+          "left": 296,
+          "width": 226,
+          "height": 154
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/9e43ddb1d0b0f60ffdf42cd06c0bb335.jpg",
+          "filename": "9e43ddb1d0b0f60ffdf42cd06c0bb335.jpg",
+          "visible": true,
+          "top": 489,
+          "left": 296,
+          "width": 226,
+          "height": 150
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/f016f4690b239cd94e6eab288e888b59.jpg",
+          "filename": "f016f4690b239cd94e6eab288e888b59.jpg",
+          "visible": true,
+          "top": 160,
+          "left": 533,
+          "width": 226,
+          "height": 162
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/65b9fd47c26086c8a237c0c5a67e769f.jpg",
+          "filename": "65b9fd47c26086c8a237c0c5a67e769f.jpg",
+          "visible": true,
+          "top": 489,
+          "left": 528,
+          "width": 237,
+          "height": 150
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/b77d81b74e883f160fce9dd0b5434215.jpg",
+          "filename": "b77d81b74e883f160fce9dd0b5434215.jpg",
+          "visible": true,
+          "top": 164,
+          "left": 779,
+          "width": 226,
+          "height": 154
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/5554b25be82a283aa691c9bdf4a208c5.jpg",
+          "filename": "5554b25be82a283aa691c9bdf4a208c5.jpg",
+          "visible": true,
+          "top": 489,
+          "left": 776,
+          "width": 232,
+          "height": 150
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/5d6cea43f43fcd023670a0347c0b2bf6.jpg",
+          "filename": "5d6cea43f43fcd023670a0347c0b2bf6.jpg",
+          "visible": true,
+          "top": 167,
+          "left": 1024,
+          "width": 228,
+          "height": 150
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/1932c0857ff268dbdfd079041676cf59.jpg",
+          "filename": "1932c0857ff268dbdfd079041676cf59.jpg",
+          "visible": true,
+          "top": 484,
+          "left": 1025,
+          "width": 226,
+          "height": 159
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/e1981cfa7556374555f455aa71e720c8.jpg",
+          "filename": "e1981cfa7556374555f455aa71e720c8.jpg",
+          "visible": true,
+          "top": 328,
+          "left": 60,
+          "width": 226,
+          "height": 150
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/6e6f238a6de0828a428801b298a188ce.jpg",
+          "filename": "6e6f238a6de0828a428801b298a188ce.jpg",
+          "visible": true,
+          "top": 646,
+          "left": 60,
+          "width": 226,
+          "height": 159
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/aaa15ff78dc08278ceaa3b92b5dc078f.jpg",
+          "filename": "aaa15ff78dc08278ceaa3b92b5dc078f.jpg",
+          "visible": true,
+          "top": 327,
+          "left": 296,
+          "width": 226,
+          "height": 151
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/be49b56a0e7f6b0941d1ffbba01ed1a4.jpg",
+          "filename": "be49b56a0e7f6b0941d1ffbba01ed1a4.jpg",
+          "visible": true,
+          "top": 650,
+          "left": 296,
+          "width": 226,
+          "height": 151
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/9b98d510f681f578ce2cb5a402047bfe.jpg",
+          "filename": "9b98d510f681f578ce2cb5a402047bfe.jpg",
+          "visible": true,
+          "top": 326,
+          "left": 533,
+          "width": 226,
+          "height": 152
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/033ca425a8e9b28a9d3a8a5f0ef2bb63.jpg",
+          "filename": "033ca425a8e9b28a9d3a8a5f0ef2bb63.jpg",
+          "visible": true,
+          "top": 650,
+          "left": 533,
+          "width": 226,
+          "height": 151
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/13339a624b30c0de89db9e5d64258c51.jpg",
+          "filename": "13339a624b30c0de89db9e5d64258c51.jpg",
+          "visible": true,
+          "top": 323,
+          "left": 779,
+          "width": 226,
+          "height": 160
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/afc0ae5e7debc0558a37b67e80bdcdac.jpg",
+          "filename": "afc0ae5e7debc0558a37b67e80bdcdac.jpg",
+          "visible": true,
+          "top": 650,
+          "left": 779,
+          "width": 226,
+          "height": 151
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/e31cc9167f115eb359377158c27ffb89.jpg",
+          "filename": "e31cc9167f115eb359377158c27ffb89.jpg",
+          "visible": true,
+          "top": 324,
+          "left": 1025,
+          "width": 226,
+          "height": 157
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/de9be58e9e16f3ce371156c5865771eb.jpg",
+          "filename": "de9be58e9e16f3ce371156c5865771eb.jpg",
+          "visible": true,
+          "top": 650,
+          "left": 1025,
+          "width": 226,
+          "height": 151
+        }
+      ]
+    },
+    {
+      "panel": 14,
+      "name": "panel-14",
+      "imageCount": 19,
+      "images": [
+        "4faf58cd094bd789bb2fc8e72f4c3bb5.jpg",
+        "be7b68368ba87786d6e847f185b25a54.jpg",
+        "68801570e37cdcb04771d693f741de21.jpg",
+        "c2ab6742690fc4406a57021aabf8aef5.jpg",
+        "96e901c89d12cbb111c820a75e971131.jpg",
+        "f778ed20c865db6d3726deef403b0561.jpg",
+        "6b3905aacda554b77e2e9269ecd78daa.jpg",
+        "196587c0cbb3973953e7b6ddf5bc8746.jpg",
+        "314fd177a0aedc8bb3d40a171a9c20be.jpg",
+        "9c4ac61997ac73197b8c1e079d78e95d.jpg",
+        "87cd62a5b3ed6e63c8d6402176de738f.jpg",
+        "4b822bed01fea52b4d909f0f2525f143.jpg",
+        "369af059529b1ca5e0883a65e58cfb32.png",
+        "63cc4b27b678fa6172eae1dc52c04df2.jpg",
+        "a14a2fe83b1f96bd25d5fbdeffed010d.jpg",
+        "61ecfe59c8940aeb83d4a022f7645531.jpg",
+        "107a3457ca8c896390c17c14ac67bd53.jpg",
+        "269aa95af037592e679f3f1a9dcc7f61.jpg",
+        "15c8bdfc8e10b2a722b94f726ec19f0e.jpg"
+      ],
+      "allImageData": [
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/4faf58cd094bd789bb2fc8e72f4c3bb5.jpg",
+          "filename": "4faf58cd094bd789bb2fc8e72f4c3bb5.jpg",
+          "visible": true,
+          "top": 112,
+          "left": 60,
+          "width": 226,
+          "height": 340
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/be7b68368ba87786d6e847f185b25a54.jpg",
+          "filename": "be7b68368ba87786d6e847f185b25a54.jpg",
+          "visible": true,
+          "top": 489,
+          "left": 60,
+          "width": 226,
+          "height": 151
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/68801570e37cdcb04771d693f741de21.jpg",
+          "filename": "68801570e37cdcb04771d693f741de21.jpg",
+          "visible": true,
+          "top": 167,
+          "left": 296,
+          "width": 226,
+          "height": 186
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/c2ab6742690fc4406a57021aabf8aef5.jpg",
+          "filename": "c2ab6742690fc4406a57021aabf8aef5.jpg",
+          "visible": true,
+          "top": 467,
+          "left": 187,
+          "width": 362,
+          "height": 203
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/96e901c89d12cbb111c820a75e971131.jpg",
+          "filename": "96e901c89d12cbb111c820a75e971131.jpg",
+          "visible": true,
+          "top": 133,
+          "left": 533,
+          "width": 226,
+          "height": 340
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/f778ed20c865db6d3726deef403b0561.jpg",
+          "filename": "f778ed20c865db6d3726deef403b0561.jpg",
+          "visible": true,
+          "top": 489,
+          "left": 533,
+          "width": 226,
+          "height": 151
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/6b3905aacda554b77e2e9269ecd78daa.jpg",
+          "filename": "6b3905aacda554b77e2e9269ecd78daa.jpg",
+          "visible": true,
+          "top": 126,
+          "left": 779,
+          "width": 226,
+          "height": 340
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/196587c0cbb3973953e7b6ddf5bc8746.jpg",
+          "filename": "196587c0cbb3973953e7b6ddf5bc8746.jpg",
+          "visible": true,
+          "top": 487,
+          "left": 779,
+          "width": 226,
+          "height": 154
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/314fd177a0aedc8bb3d40a171a9c20be.jpg",
+          "filename": "314fd177a0aedc8bb3d40a171a9c20be.jpg",
+          "visible": true,
+          "top": 116,
+          "left": 1025,
+          "width": 226,
+          "height": 340
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/9c4ac61997ac73197b8c1e079d78e95d.jpg",
+          "filename": "9c4ac61997ac73197b8c1e079d78e95d.jpg",
+          "visible": true,
+          "top": 489,
+          "left": 1025,
+          "width": 226,
+          "height": 151
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/87cd62a5b3ed6e63c8d6402176de738f.jpg",
+          "filename": "87cd62a5b3ed6e63c8d6402176de738f.jpg",
+          "visible": true,
+          "top": 273,
+          "left": 60,
+          "width": 226,
+          "height": 340
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/4b822bed01fea52b4d909f0f2525f143.jpg",
+          "filename": "4b822bed01fea52b4d909f0f2525f143.jpg",
+          "visible": true,
+          "top": 292,
+          "left": 289,
+          "width": 278,
+          "height": 185
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/369af059529b1ca5e0883a65e58cfb32.png",
+          "filename": "369af059529b1ca5e0883a65e58cfb32.png",
+          "visible": true,
+          "top": 650,
+          "left": 247,
+          "width": 324,
+          "height": 150
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/63cc4b27b678fa6172eae1dc52c04df2.jpg",
+          "filename": "63cc4b27b678fa6172eae1dc52c04df2.jpg",
+          "visible": true,
+          "top": 295,
+          "left": 533,
+          "width": 226,
+          "height": 340
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/a14a2fe83b1f96bd25d5fbdeffed010d.jpg",
+          "filename": "a14a2fe83b1f96bd25d5fbdeffed010d.jpg",
+          "visible": true,
+          "top": 650,
+          "left": 533,
+          "width": 226,
+          "height": 151
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/61ecfe59c8940aeb83d4a022f7645531.jpg",
+          "filename": "61ecfe59c8940aeb83d4a022f7645531.jpg",
+          "visible": true,
+          "top": 312,
+          "left": 779,
+          "width": 226,
+          "height": 376
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/107a3457ca8c896390c17c14ac67bd53.jpg",
+          "filename": "107a3457ca8c896390c17c14ac67bd53.jpg",
+          "visible": true,
+          "top": 650,
+          "left": 779,
+          "width": 226,
+          "height": 151
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/269aa95af037592e679f3f1a9dcc7f61.jpg",
+          "filename": "269aa95af037592e679f3f1a9dcc7f61.jpg",
+          "visible": true,
+          "top": 289,
+          "left": 1025,
+          "width": 226,
+          "height": 226
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/15c8bdfc8e10b2a722b94f726ec19f0e.jpg",
+          "filename": "15c8bdfc8e10b2a722b94f726ec19f0e.jpg",
+          "visible": true,
+          "top": 650,
+          "left": 1025,
+          "width": 226,
+          "height": 151
+        }
+      ]
+    },
+    {
+      "panel": 15,
+      "name": "panel-15",
+      "imageCount": 10,
+      "images": [
+        "b1b554c2a6760433770ea4cef6a9704b.jpg",
+        "bf3cc1f0df7ebc1be496f23692623028.jpg",
+        "49f4cb07e2e64af7bd7fad45e7354ab4.jpg",
+        "7b0b7a5048cda22550ee0baf47c9783d.jpg",
+        "2a9e58fc38859df4a0f1e7643183b9a0.jpg",
+        "426ac3457b2005da10ef10aee8ea0eaf.jpg",
+        "4f01fc1f02eb2bd1bbe2f0f7d9301832.jpg",
+        "b9f16219c1475917a42d9d785a0b80c2.jpg",
+        "5988a534f4840630ca3c53535e99bb9b.jpg",
+        "e39f7efc8cb9829051e6e2c78d583790.jpg"
+      ],
+      "allImageData": [
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/b1b554c2a6760433770ea4cef6a9704b.jpg",
+          "filename": "b1b554c2a6760433770ea4cef6a9704b.jpg",
+          "visible": true,
+          "top": 137,
+          "left": 60,
+          "width": 226,
+          "height": 340
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/bf3cc1f0df7ebc1be496f23692623028.jpg",
+          "filename": "bf3cc1f0df7ebc1be496f23692623028.jpg",
+          "visible": true,
+          "top": 490,
+          "left": 49,
+          "width": 248,
+          "height": 311
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/49f4cb07e2e64af7bd7fad45e7354ab4.jpg",
+          "filename": "49f4cb07e2e64af7bd7fad45e7354ab4.jpg",
+          "visible": true,
+          "top": 167,
+          "left": 129,
+          "width": 467,
+          "height": 311
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/7b0b7a5048cda22550ee0baf47c9783d.jpg",
+          "filename": "7b0b7a5048cda22550ee0baf47c9783d.jpg",
+          "visible": true,
+          "top": 490,
+          "left": -15,
+          "width": 553,
+          "height": 311
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/2a9e58fc38859df4a0f1e7643183b9a0.jpg",
+          "filename": "2a9e58fc38859df4a0f1e7643183b9a0.jpg",
+          "visible": true,
+          "top": 167,
+          "left": 309,
+          "width": 466,
+          "height": 311
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/426ac3457b2005da10ef10aee8ea0eaf.jpg",
+          "filename": "426ac3457b2005da10ef10aee8ea0eaf.jpg",
+          "visible": true,
+          "top": 490,
+          "left": 379,
+          "width": 553,
+          "height": 311
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/4f01fc1f02eb2bd1bbe2f0f7d9301832.jpg",
+          "filename": "4f01fc1f02eb2bd1bbe2f0f7d9301832.jpg",
+          "visible": true,
+          "top": 167,
+          "left": 594,
+          "width": 553,
+          "height": 311
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/b9f16219c1475917a42d9d785a0b80c2.jpg",
+          "filename": "b9f16219c1475917a42d9d785a0b80c2.jpg",
+          "visible": true,
+          "top": 490,
+          "left": 621,
+          "width": 467,
+          "height": 311
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/5988a534f4840630ca3c53535e99bb9b.jpg",
+          "filename": "5988a534f4840630ca3c53535e99bb9b.jpg",
+          "visible": true,
+          "top": 167,
+          "left": 833,
+          "width": 553,
+          "height": 311
+        },
+        {
+          "src": "https://ergherh.my.canva.site/dr-ra-website/_assets/media/e39f7efc8cb9829051e6e2c78d583790.jpg",
+          "filename": "e39f7efc8cb9829051e6e2c78d583790.jpg",
+          "visible": true,
+          "top": 430,
+          "left": 914,
+          "width": 601,
+          "height": 400
+        }
+      ]
+    }
+  ]
+}

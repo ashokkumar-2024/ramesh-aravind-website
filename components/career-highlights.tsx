@@ -41,13 +41,6 @@ const careers = [
     mood: "neutral",
   },
   {
-    icon: BookOpen,
-    title: "Author",
-    subtitle: "Published Works",
-    description: "Written inspiring books on personal development and life experiences.",
-    mood: "cool",
-  },
-  {
     icon: Mic2,
     title: "Motivational Speaker",
     subtitle: "Inspiring Millions",
@@ -228,13 +221,6 @@ export function CareerHighlights() {
                     Inspiring Talks →
                   </a>
                 ) : career.title === "Writer" ? (
-                  <a
-                    href="/#books"
-                    className="inline-flex items-center text-sm font-semibold bg-[#0e2a3f] text-white hover:bg-[#124166] px-4 py-2 rounded-lg transition-colors duration-300"
-                  >
-                    Read Books →
-                  </a>
-                ) : career.title === "Author" ? (
                   <a
                     href="/#books"
                     className="inline-flex items-center text-sm font-semibold bg-[#0e2a3f] text-white hover:bg-[#124166] px-4 py-2 rounded-lg transition-colors duration-300"

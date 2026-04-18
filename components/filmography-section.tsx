@@ -6,21 +6,27 @@ import { cn } from "@/lib/utils"
 const languages = ["All", "Kannada", "Tamil", "Telugu", "Hindi"]
 
 const films = [
-  { title: "Sundara Swapnagalu", year: "1986", language: "Kannada", role: "Debut", image: "/Sundara_Swapnagalu.jpg" },
-  { title: "Rudraveena", year: "1988", language: "Telugu", role: "Supporting", image: "/Rudraveena.jpg" },
-  { title: "America America", year: "1995", language: "Kannada", role: "Lead", image: "/America_America_.jpg" },
-  { title: "Amrutha Varshini", year: "1997", language: "Kannada", role: "Lead", image: "/Amruthavarshini_poster.jpg" },
-  { title: "O Mallige", year: "1997", language: "Kannada", role: "Lead", image: "/O Mallige.jpg" },
-  { title: "Hoomale", year: "1998", language: "Kannada", role: "Actor/Writer", image: "/Hoomale.jpg" },
-  { title: "Rama Shama Bhama", year: "2005", language: "Kannada", role: "Director", image: "/rama shama bhama.avif" },
-  { title: "Mumbai Xpress", year: "2005", language: "Hindi", role: "Supporting", image: "/Mumbai_Xpress.jpg" },
-  { title: "Mumbai Xpress", year: "2005", language: "Telugu", role: "Supporting", image: "/Mumbai_Xpress.jpg" },
-  { title: "Sathi Leelavathi", year: "1995", language: "Tamil", role: "Lead", image: "/Sathi Leelavathi.jpg" },
-  { title: "Uttama Villain", year: "2015", language: "Tamil", role: "Director", image: "/VW.jpg" },
-  { title: "100", year: "2019", language: "Kannada", role: "Director/Actor", image: "/100.jpg" },
-  { title: "Sundaranga Jaana", year: "2018", language: "Kannada", role: "Director", image: "/Sundaranga_Jaana_Kannada_Film_Poster.jpg" },
-  { title: "Shanti Kranti", year: "1991", language: "Kannada", role: "Lead", image: "/shanti-kranti-1991.jpg" },
-  { title: "Nammoora Mandara Hoove", year: "1997", language: "Kannada", role: "Lead", image: "/Namoora_Mandara_Hoove_Promotional_Poster.jpg" },
+  { title: "Sundara Swapnagalu", year: "1986", language: "Kannada", role: "Debut", image: "/filmography/sundara-swapnagalu.png" },
+  { title: "Rudraveena", year: "1988", language: "Telugu", role: "Supporting", image: "/filmography/rudraveena.png" },
+  { title: "Duet", year: "1994", language: "Tamil", role: "Lead", image: "/filmography/duet.png" },
+  { title: "Sathi Leelavathi", year: "1995", language: "Tamil", role: "Lead", image: "/filmography/sathi-leelavathi.png" },
+  { title: "Amrutha Varshini", year: "1997", language: "Kannada", role: "Lead", image: "/filmography/amrutha-varshini.png" },
+  { title: "O Mallige", year: "1997", language: "Kannada", role: "Lead", image: "/filmography/o-mallige.png" },
+  { title: "Nammoora Mandara Hoove", year: "1997", language: "Kannada", role: "Lead", image: "/filmography/nammoora-mandara-hoove.png" },
+  { title: "Hoomale", year: "1998", language: "Kannada", role: "Actor/Writer", image: "/filmography/hoomale.png" },
+  { title: "Bhoomi Thayiya Chochhala Maga", year: "1998", language: "Kannada", role: "Actor", image: "/filmography/bhoomi-thayiya-chochhala-maga.png" },
+  { title: "Kotigalu Saar Kotigalu", year: "2001", language: "Kannada", role: "Actor", image: "/filmography/kotigalu-saar-kotigalu.jpg" },
+  { title: "Rama Shama Bhama", year: "2005", language: "Kannada", role: "Director", image: "/filmography/rama-shama-bhama.png" },
+  { title: "Uttama Villain", year: "2015", language: "Tamil", role: "Director", image: "/filmography/uttama-villain.jpg" },
+  { title: "Pushpaka Vimana", year: "2017", language: "Kannada", role: "Actor", image: "/filmography/pushpaka-vimana.jpg" },
+  { title: "Sundaranga Jaana", year: "2018", language: "Kannada", role: "Director", image: "/filmography/sundaranga-jaana.jpg" },
+  { title: "100", year: "2019", language: "Kannada", role: "Director/Actor", image: "/filmography/100.jpg" },
+  { title: "Pancha Tantra", year: "2019", language: "Kannada", role: "Actor", image: "/filmography/pancha-tantra.jpg" },
+  { title: "Shivaji Surathkal", year: "2020", language: "Kannada", role: "Lead", image: "/filmography/shivaji-surathkal.jpg" },
+  { title: "Maha Sharanya Haralya", year: "2023", language: "Kannada", role: "Actor", image: "/filmography/maha-sharanya-haralya.jpg" },
+  { title: "Shivaji Surathkal 2", year: "2023", language: "Kannada", role: "Lead", image: "/filmography/shivaji-surathkal-2.jpg" },
+  { title: "KD - The Devil", year: "2024", language: "Kannada", role: "Actor", image: "/filmography/kd-the-devil.png" },
+  { title: "Apta Mitra", year: "2024", language: "Kannada", role: "Actor", image: "/filmography/apta-mitra.jpg" },
 ]
 
 export function FilmographySection() {
@@ -124,9 +130,7 @@ export function FilmographySection() {
                     }}
                   />
 
-                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[oklch(0.965_0.018_75)] via-[oklch(0.965_0.018_75/0.8)] to-transparent" />
-
-                  <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3">
+                  <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 bg-gradient-to-t from-black/60 via-black/40 to-transparent">
                     <span
                       className={`inline-block px-2 sm:px-3 py-1 sm:py-1.5 text-xs rounded-full mb-1.5 sm:mb-2 font-[var(--font-body)] transition-all duration-300 ${
                           hoveredFilm === index
@@ -136,8 +140,8 @@ export function FilmographySection() {
                     >
                       {film.language}
                     </span>
-                    <h4 className="text-base sm:text-lg font-bold text-amber-900 mb-0.5">{film.title}</h4>
-                    <p className="text-amber-800 text-xs sm:text-sm font-[var(--font-body)]">
+                    <h4 className="text-base sm:text-lg font-bold text-white mb-0.5">{film.title}</h4>
+                    <p className="text-white/90 text-xs sm:text-sm font-[var(--font-body)]">
                       {film.year} &bull; {film.role}
                     </p>
                   </div>

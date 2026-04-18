@@ -7,21 +7,21 @@ import { Button } from "@/components/ui/button"
 const speakingTypes = [
   {
     icon: GraduationCap,
-    title: "Covid 19 Awareness By BBMP",
-    description: "Public health advocacy and community safety",
-    image: "/RA (3).png"
+    title: "BBMP Covid-19 Awareness Ambassador (2020)",
+    description: "In July 2020, the Bruhat Bengaluru Mahanagara Palike (BBMP) appointed Ramesh Aravind as the awareness ambassador for COVID-19 to help spread official information, dispel myths, and encourage safety measures.",
+    image: "/canva-images/panel-5/panel-5-001.png"
   },
   {
     icon: Users,
-    title: "7 Wonders of Karnataka by Suvarna News & Karnataka Tourism Department",
-    description: "Promoting Karnataka's heritage and tourism",
-    image: "/speaking/7-wonders.png"
+    title: "7 Wonders of Karnataka - Brand Ambassador",
+    description: "Kannada Prabha and Asianet Suvarna News embarked upon the crucial campaign of recognising and saluting the wonders of Karnataka. Ramesh Aravind is the Brand Ambassador for the 7 Wonders of Karnataka campaign jointly done by Suvarna News and the Tourism Dept of Karnataka.",
+    image: "/canva-images/panel-7/panel-7-002.png"
   },
   {
     icon: Building2,
-    title: "Children's Movement for Civic Awareness - Dignity Foundation",
-    description: "Empowering youth for social responsibility",
-    image: "/speaking/Dignity.png"
+    title: "Children's Movement for Civic Awareness - Brand Ambassador",
+    description: "Ramesh Aravind is a dedicated supporter and brand ambassador for the Children's Movement for Civic Awareness (CMCA), a Bangalore-based non-profit fostering active citizenship and civic sense in children. He has supported CMCA for over a decade by acting in films, promoting civic education, and attending events, including their 25-year silver jubilee celebration.",
+    image: "/canva-images/panel-9/panel-9-002.png"
   },
   {
     icon: GraduationCap,

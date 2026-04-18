@@ -198,7 +198,6 @@ export function AboutSection() {
                 className="absolute inset-0 rounded-2xl"
                 style={{
                   background: `
-                    linear-gradient(180deg, transparent 40%, oklch(0.965 0.018 75 / 0.9) 100%),
                     radial-gradient(ellipse 80% 50% at 50% 0%, oklch(0.58 0.11 50 / 0.1), transparent 50%)
                   `,
                   transform: "translateZ(30px)",

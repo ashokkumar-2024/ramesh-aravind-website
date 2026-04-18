@@ -23,6 +23,7 @@ export default function Home() {
     <main className="bg-background film-grain">
       <Navigation />
       <HeroSection />
+      <UpcomingMovies />
       <AboutSection />
       <TimelineSection />
       <CareerHighlights />
@@ -30,9 +31,8 @@ export default function Home() {
       <SpeakingSection />
       <BooksSection />
       <TVShowsSection />
-      <AwardsSection />
+      {/* <AwardsSection /> */}
       <MotivationalVideosSection />
-      <UpcomingMovies />
       <RameshAravindDaySection />
       <GallerySection />
       <EndorsementsSection />

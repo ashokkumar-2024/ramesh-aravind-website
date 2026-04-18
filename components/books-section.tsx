@@ -154,13 +154,6 @@ export function BooksSection() {
                   }}
                 />
               </div>
-
-              <div
-                className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-52 h-6 rounded-full blur-xl gpu-accelerate"
-                style={{
-                  background: `radial-gradient(ellipse at center, transparent, transparent)`,
-                }}
-              />
             </div>
           </div>
 
@@ -244,37 +237,7 @@ export function BooksSection() {
               </div>
             ))}
 
-            {/* Audiobook card */}
-            <div
-              className={`p-4 rounded-xl transition-all duration-700 neuro-highlight hover-lift cream-card ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
-                }`}
-              style={{ transitionDelay: "500ms" }}
-            >
-              <div className="flex items-center gap-6">
-                <div className="w-16 h-16 rounded-xl bg-[oklch(0.58_0.11_50/0.08)] flex items-center justify-center relative overflow-hidden">
-                  <Headphones className="h-8 w-8 text-[oklch(0.58_0.11_50)] relative z-10" />
-                  <div className="absolute bottom-2 left-2 right-2 flex items-end justify-center gap-0.5">
-                    {[8, 6, 12, 9, 15, 12, 7].map((height, i) => (
-                      <div
-                        key={i}
-                        className="w-1 bg-[oklch(0.58_0.11_50/0.4)] rounded-full breathe-wave"
-                        style={{
-                          height: `${height}px`,
-                          "--wave-delay": `${i * 0.1}s`,
-                        } as React.CSSProperties}
-                      />
-                    ))}
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-bold text-foreground">MasadaMaatu with Ramesh</h4>
-                  <p className="text-[oklch(0.45_0.04_30)] text-sm font-[var(--font-body)]">
-                    Kannada Audiobook on Storytel
-                  </p>
-                </div>
-                <Volume2 className="h-5 w-5 text-[oklch(0.58_0.11_50/0.45)]" />
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
