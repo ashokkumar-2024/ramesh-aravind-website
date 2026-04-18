@@ -33,12 +33,6 @@ const galleryImages = Array.from({ length: 49 }, (_, i) => {
   return { src: `/gallery-new/gallery-${num}.${ext}`, category: "" }
 })
 
-const pressImages = [
-  { src: "/press3.jpeg", alt: "Press meet moment 3" },
-  { src: "/press2.jpeg", alt: "Press meet moment 2" },
-  { src: "/Press1.png", alt: "Press meet moment 1" },
-]
-
 export function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
   const [hoveredImage, setHoveredImage] = useState<number | null>(null)
@@ -67,6 +61,7 @@ export function GallerySection() {
       <div className="absolute inset-0 spotlight opacity-20" />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        {/* Main Gallery */}
         <div
           className={`text-center mb-12 sm:mb-16 md:mb-20 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
@@ -131,35 +126,6 @@ export function GallerySection() {
               />
             </div>
           ))}
-        </div>
-
-        {/* Press Meets */}
-        <div className="mt-16 sm:mt-20 md:mt-24">
-          <div
-            className={`text-center mb-8 sm:mb-10 md:mb-12 transition-all duration-800 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-          >
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold gold-text mb-3 sm:mb-4">Press Meet&apos;s</h3>
-            <p className="text-muted-foreground font-[var(--font-body)] max-w-2xl mx-auto text-base sm:text-lg">
-              In the spotlight, press coverage celebrating the journey.
-            </p>
-          </div>
-
-          <div className="grid gap-6 sm:gap-8 md:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {pressImages.map((image, idx) => (
-              <div
-                key={image.src}
-                className={`relative rounded-2xl overflow-hidden shadow-lg transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
-                style={{ transitionDelay: `${200 + idx * 120}ms` }}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
         </div>
 
         {selectedImage !== null && (

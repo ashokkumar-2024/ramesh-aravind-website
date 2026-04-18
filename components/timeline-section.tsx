@@ -23,8 +23,17 @@ export function TimelineSection() {
   const [scrollProgress, setScrollProgress] = useState(0)
   const [idleRotation, setIdleRotation] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const sectionRef = useRef<HTMLElement>(null)
   const lastScrollTime = useRef(Date.now())
+
+  // Auto-rotate center images every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % moments.length)
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -87,23 +96,6 @@ export function TimelineSection() {
 
         <div className="relative h-full flex items-center justify-center overflow-hidden px-4" style={{ perspective: '1500px' }}>
           <div className="absolute left-1/2 w-[400px] md:w-[650px] h-[400px] md:h-[650px] rounded-full pointer-events-none" style={{ top: '60%', ...getClockTransform(), transformStyle: 'preserve-3d', zIndex: 5, boxShadow: `0 0 60px rgba(0, 0, 0, 0.2), inset 0 2px 3px rgba(255, 255, 255, 0.03), inset 0 -2px 3px rgba(0, 0, 0, 0.4)`, background: `radial-gradient(circle at 50% 50%, transparent 49%, rgba(20, 20, 20, 0.85) 49.5%, rgba(30, 30, 30, 0.9) 50%, rgba(20, 20, 20, 0.85) 50.5%, transparent 51%)`, filter: `drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3))` }}>
-            {/* Center Image that changes with scroll */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] md:w-[520px] md:h-[520px] rounded-full overflow-hidden shadow-2xl">
-              {moments.map((moment, index) => {
-                const itemProgress = Math.max(0, Math.min(1, scrollProgress * moments.length - index))
-                const isActive = itemProgress > 0.15 && itemProgress < 0.85
-                const opacity = isActive ? 1 : 0
-                return (
-                  <img
-                    key={moment.year}
-                    src={moment.centerImage}
-                    alt={moment.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
-                    style={{ opacity }}
-                  />
-                )
-              })}
-            </div>
             {[...Array(12)].map((_, i) => {
               const angle = (i * 30) - 90
               const radius = 310
@@ -114,6 +106,22 @@ export function TimelineSection() {
               )
             })}
             <div className="absolute inset-0 rounded-full opacity-10" style={{ background: `linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.08) 25%, transparent 45%, rgba(255, 255, 255, 0.04) 75%, transparent 100%)`, transform: `rotate(${scrollProgress * 30}deg)`, transition: 'transform 0.5s ease-out' }} />
+          </div>
+
+          {/* Center Image that changes automatically - stays static on top */}
+          <div className="absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] md:w-[520px] md:h-[520px] rounded-full overflow-hidden shadow-2xl pointer-events-none" style={{ zIndex: 6 }}>
+            {moments.map((moment, index) => {
+              const isActive = currentImageIndex === index
+              return (
+                <img
+                  key={moment.year}
+                  src={moment.centerImage}
+                  alt={moment.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+                  style={{ opacity: isActive ? 1 : 0 }}
+                />
+              )
+            })}
           </div>
 
           <div className="absolute left-1/2 top-[3%] md:top-[5%] lg:top-[6%] transform -translate-x-1/2 text-center z-20 px-4 mb-4">

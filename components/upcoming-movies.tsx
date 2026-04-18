@@ -4,11 +4,11 @@ export function UpcomingMovies() {
   const movies = [
     { title: "Yours Sincerely Raam", image: "/upcoming/1.jpg" },
     { title: "KD: The Devil", image: "/upcoming/2.jpg" },
-    { title: "Daji", image: "/upcoming/3.jpg" },
+    { title: "Daiji", image: "/upcoming/3.jpg" },
   ]
 
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
+    <section className="-mt-8 pb-4 md:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-background to-background" />
 
       <div className="container mx-auto px-6 relative z-10">

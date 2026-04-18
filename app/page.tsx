@@ -15,6 +15,7 @@ const MotivationalVideosSection = dynamic(() => import("@/components/motivationa
 const UpcomingMovies = dynamic(() => import("@/components/upcoming-movies").then(mod => ({ default: mod.UpcomingMovies })))
 const RameshAravindDaySection = dynamic(() => import("@/components/ramesh-aravind-day-section").then(mod => ({ default: mod.RameshAravindDaySection })))
 const GallerySection = dynamic(() => import("@/components/gallery-section").then(mod => ({ default: mod.GallerySection })))
+const PressMeetsSection = dynamic(() => import("@/components/press-meets-section").then(mod => ({ default: mod.PressMeetsSection })))
 const EndorsementsSection = dynamic(() => import("@/components/endorsements-section").then(mod => ({ default: mod.EndorsementsSection })))
 const ContactSection = dynamic(() => import("@/components/contact-section").then(mod => ({ default: mod.ContactSection })))
 
@@ -34,9 +35,10 @@ export default function Home() {
       {/* <AwardsSection /> */}
       <MotivationalVideosSection />
       <RameshAravindDaySection />
-      <GallerySection />
       <EndorsementsSection />
+      <PressMeetsSection />
       <ContactSection />
+      <GallerySection />
       <Footer />
     </main>
   )

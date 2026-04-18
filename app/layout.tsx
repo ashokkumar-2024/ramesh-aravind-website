@@ -32,6 +32,10 @@ export const metadata: Metadata = {
     "Weekend With Ramesh",
   ],
   authors: [{ name: "Dr Ramesh Aravind" }],
+  icons: {
+    icon: '/Black BG_RA.png.png',
+    apple: '/Black BG_RA.png.png',
+  },
   openGraph: {
     title: "Dr Ramesh Aravind | Actor • Director • Author • Motivational Speaker",
     description: "From Silver Screen to Stage – Inspiring Every Step of the Way",

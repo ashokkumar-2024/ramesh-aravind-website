@@ -7,7 +7,7 @@ const tvShows = [
     title: "Weekend With Ramesh - Season 1",
     description: "Celebrity talk show celebrating achievers",
     seasons: "Season 1",
-    image: "/tv-shows/weekend-with-ramesh-season-1.png",
+    image: "/tv showsss/1.png",
     videoUrl: "https://www.youtube.com/watch?v=EhZNxQmTbmA&list=PLuOI2Oe0kP-GYUewox2J25rONExGW4hX4",
     objectPosition: "90% center"
   },
@@ -15,7 +15,7 @@ const tvShows = [
     title: "Weekend With Ramesh - Season 2",
     description: "Continuing the journey of inspiring stories",
     seasons: "Season 2",
-    image: "/tv-shows/weekend-with-ramesh-season-2.png",
+    image: "/tv showsss/2.png",
     videoUrl: "https://www.youtube.com/watch?v=SKnsC6owV-Q",
     objectPosition: "90% center"
   },
@@ -23,22 +23,22 @@ const tvShows = [
     title: "Weekend With Ramesh - Season 3",
     description: "More inspiring conversations with achievers",
     seasons: "Season 3",
-    image: "/tv-shows/weekend-with-ramesh-season-3.png",
+    image: "/tv showsss/3.png",
     videoUrl: "https://www.youtube.com/watch?v=EhZNxQmTbmA"
   },
   {
     title: "Weekend With Ramesh - Season 4",
     description: "Celebrating success stories and achievements",
     seasons: "Season 4",
-    image: "/tv-shows/weekend-with-ramesh-season-4.png",
+    image: "/tv showsss/4.png",
     videoUrl: "https://www.youtube.com/watch?v=EhZNxQmTbmA",
-    objectPosition: "90% center"
+    objectPosition: "90 % center"
   },
   {
     title: "Weekend With Ramesh - Season 5",
     description: "Latest season of the popular talk show",
     seasons: "Season 5",
-    image: "/tv-shows/weekend-with-ramesh-season-5.png",
+    image: "/tv showsss/5.png",
     videoUrl: "https://www.youtube.com/watch?v=EhZNxQmTbmA"
   },
   {
@@ -52,23 +52,21 @@ const tvShows = [
     title: "Raja Rani",
     description: "Entertainment game show",
     seasons: "Season 1",
-    image: "/tv-shows/raja-rani.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=Y9iUH4dTOFM",
-    objectPosition: "center 30%"
+    image: "/tv showsss/rajarani.png",
+    videoUrl: "https://www.youtube.com/watch?v=Y9iUH4dTOFM"
   },
   {
     title: "Preetyinda Ramesh",
     description: "Connecting with audiences through stories",
     seasons: "Season 1",
-    image: "/tv-shows/preetyinda-ramesh.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=DQmmA-6TaIw",
-    objectPosition: "center 30%"
+    image: "/tv showsss/preetuyinda ramesh.png",
+    videoUrl: "https://www.youtube.com/watch?v=DQmmA-6TaIw"
   },
   {
     title: "Mahanati",
     description: "Celebrating legendary personalities",
     seasons: "Season 1",
-    image: "/tv-shows/mahanati.png",
+    image: "/tv showsss/Mahanati.png",
     videoUrl: "https://www.youtube.com/watch?v=eOMA6TGW9Nk"
   }
 ]
@@ -104,12 +102,11 @@ export function TVShowsSection() {
           {tvShows.map((show, index) => (
             <div key={show.title} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)} className={`flex-shrink-0 w-64 sm:w-80 snap-start transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`} style={{transitionDelay: `${200 + index * 100}ms`, transform: hoveredIndex === index ? "translateY(-8px) scale(1.02)" : "translateY(0) scale(1)"}}>
               <div className={`glass-card rounded-xl overflow-hidden transition-all duration-500 ${hoveredIndex === index ? "border-primary/50" : ""}`}>
-                <div className="aspect-square relative overflow-hidden bg-white">
+                <div className="relative overflow-hidden bg-white">
                   <img 
                     src={show.image || `/.jpg?height=200&width=360&query=${encodeURIComponent(show.title + " TV show thumbnail Indian television cinematic")}`} 
                     alt={show.title} 
-                    className={`w-full h-full object-cover transition-all duration-700 ${hoveredIndex === index ? "scale-110 brightness-110" : "scale-100 brightness-100"}`}
-                    style={{ objectPosition: show.objectPosition || 'center' }}
+                    className={`w-full h-auto transition-all duration-700 ${hoveredIndex === index ? "scale-110 brightness-110" : "scale-100 brightness-100"}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
                   {hoveredIndex === index && (<div className="absolute inset-0 flex items-center justify-center bg-background/30 animate-in fade-in duration-300"><div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/50 group cursor-pointer hover:scale-110 transition-transform" onClick={() => show.videoUrl && window.open(show.videoUrl, '_blank')}><Play className="h-7 w-7 text-primary-foreground fill-current ml-1" /></div></div>)}

@@ -79,7 +79,7 @@ export function HeroSection() {
 
   return (
     <>
-      <section ref={sectionRef} className="relative min-h-[70vh] md:min-h-screen flex items-end justify-center overflow-hidden dolly-container pt-36 sm:pt-40 pb-20 sm:pb-24 md:pb-32">
+      <section ref={sectionRef} className="relative min-h-[70vh] md:min-h-screen flex items-end justify-center overflow-hidden dolly-container pt-36 sm:pt-40 pb-8 sm:pb-24 md:pb-32">
         <video
           src="/hero.mp4"
           className="absolute inset-0 w-full h-full object-cover"
@@ -88,7 +88,7 @@ export function HeroSection() {
           loop
           playsInline
           preload="none"
-          poster="/Ra1.jpg"
+          poster="/canva-images/panel-1/panel-1-001.jpg"
           style={{ pointerEvents: 'none' }}
         />
         <div className="absolute inset-0 bg-black/30" />
@@ -110,7 +110,7 @@ export function HeroSection() {
           />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center py-16">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center pt-4 pb-0 sm:py-16">
 
           <p className="text-[#0e2a3f] text-xs sm:text-sm md:text-base tracking-[0.5em] uppercase mb-4 font-[var(--font-body)]">
             Actor • Director • Author • Speaker
@@ -132,7 +132,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
             <Button
               size="lg"
-              className="bg-[#0e2a3f] text-white hover:bg-[#124166] px-8 py-6 text-base font-[var(--font-body)] shadow-lg"
+              className="bg-[#0e2a3f] text-white hover:bg-[#124166] px-8 py-6 text-base font-[var(--font-body)] shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#0e2a3f]/50"
               asChild
             >
               <a href="#contact">Book for Speaking</a>
@@ -141,7 +141,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-[#0e2a3f] text-[#0e2a3f] hover:bg-[#0e2a3f]/10 px-8 py-6 text-base font-[var(--font-body)]"
+              className="border-2 border-[#0e2a3f] text-[#0e2a3f] hover:bg-[#0e2a3f] hover:text-white px-8 py-6 text-base font-[var(--font-body)] transition-all duration-300 hover:scale-105 hover:shadow-xl"
               asChild
             >
               <a href="#about">Explore His Journey</a>

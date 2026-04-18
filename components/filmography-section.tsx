@@ -16,17 +16,17 @@ const films = [
   { title: "Hoomale", year: "1998", language: "Kannada", role: "Actor/Writer", image: "/filmography/hoomale.png" },
   { title: "Bhoomi Thayiya Chochhala Maga", year: "1998", language: "Kannada", role: "Actor", image: "/filmography/bhoomi-thayiya-chochhala-maga.png" },
   { title: "Kotigalu Saar Kotigalu", year: "2001", language: "Kannada", role: "Actor", image: "/filmography/kotigalu-saar-kotigalu.jpg" },
+  { title: "Apthamitra", year: "2004", language: "Kannada", role: "Lead", image: "/filmography/apta-mitra.jpg" },
   { title: "Rama Shama Bhama", year: "2005", language: "Kannada", role: "Director", image: "/filmography/rama-shama-bhama.png" },
   { title: "Uttama Villain", year: "2015", language: "Tamil", role: "Director", image: "/filmography/uttama-villain.jpg" },
+  { title: "Sundaranga Jaana", year: "2016", language: "Kannada", role: "Director", image: "/filmography/sundaranga-jaana.jpg" },
   { title: "Pushpaka Vimana", year: "2017", language: "Kannada", role: "Actor", image: "/filmography/pushpaka-vimana.jpg" },
-  { title: "Sundaranga Jaana", year: "2018", language: "Kannada", role: "Director", image: "/filmography/sundaranga-jaana.jpg" },
   { title: "100", year: "2019", language: "Kannada", role: "Director/Actor", image: "/filmography/100.jpg" },
-  { title: "Pancha Tantra", year: "2019", language: "Kannada", role: "Actor", image: "/filmography/pancha-tantra.jpg" },
+  { title: "Pancha Tantra", year: "2019", language: "Tamil", role: "Actor", image: "/filmography/pancha-tantra.jpg" },
   { title: "Shivaji Surathkal", year: "2020", language: "Kannada", role: "Lead", image: "/filmography/shivaji-surathkal.jpg" },
   { title: "Maha Sharanya Haralya", year: "2023", language: "Kannada", role: "Actor", image: "/filmography/maha-sharanya-haralya.jpg" },
   { title: "Shivaji Surathkal 2", year: "2023", language: "Kannada", role: "Lead", image: "/filmography/shivaji-surathkal-2.jpg" },
   { title: "KD - The Devil", year: "2024", language: "Kannada", role: "Actor", image: "/filmography/kd-the-devil.png" },
-  { title: "Apta Mitra", year: "2024", language: "Kannada", role: "Actor", image: "/filmography/apta-mitra.jpg" },
 ]
 
 export function FilmographySection() {
@@ -131,13 +131,7 @@ export function FilmographySection() {
                   />
 
                   <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 bg-gradient-to-t from-black/60 via-black/40 to-transparent">
-                    <span
-                      className={`inline-block px-2 sm:px-3 py-1 sm:py-1.5 text-xs rounded-full mb-1.5 sm:mb-2 font-[var(--font-body)] transition-all duration-300 ${
-                          hoveredFilm === index
-                          ? "bg-[#0e2a3f] text-white"
-                            : "bg-[oklch(0.58_0.11_50/0.15)] text-[#0e2a3f]"
-                        }`}
-                    >
+                    <span className="inline-block px-2 sm:px-3 py-1 sm:py-1.5 text-xs rounded-full mb-1.5 sm:mb-2 font-[var(--font-body)] bg-[#0e2a3f] text-white">
                       {film.language}
                     </span>
                     <h4 className="text-base sm:text-lg font-bold text-white mb-0.5">{film.title}</h4>
