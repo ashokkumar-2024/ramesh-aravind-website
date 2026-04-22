@@ -42,13 +42,6 @@ const tvShows = [
     videoUrl: "https://www.youtube.com/watch?v=EhZNxQmTbmA"
   },
   {
-    title: "Kannadada Kotyadhipati",
-    description: "Kannada version of Who Wants to Be a Millionaire",
-    seasons: "Multiple Seasons",
-    image: "/tv-shows/kannadada-kotyadhipati.png",
-    videoUrl: "https://www.youtube.com/watch?v=lKPXmNthRfY"
-  },
-  {
     title: "Raja Rani",
     description: "Entertainment game show",
     seasons: "Season 1",
@@ -94,8 +87,8 @@ export function TVShowsSection() {
         <div className={`flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-6 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div><h2 className="text-sm text-primary tracking-[0.4em] uppercase mb-2 font-[var(--font-body)]">TV Shows</h2><h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold gold-text">On Screen Magic</h3></div>
           <div className="flex gap-3">
-            <button onClick={() => scroll("left")} className="p-4 rounded-full bg-secondary/50 hover:bg-secondary/80 border border-primary/10 hover:border-primary/30 transition-all duration-300 group" aria-label="Scroll left"><ChevronLeft className="h-5 w-5 group-hover:text-primary transition-colors" /></button>
-            <button onClick={() => scroll("right")} className="p-4 rounded-full bg-secondary/50 hover:bg-secondary/80 border border-primary/10 hover:border-primary/30 transition-all duration-300 group" aria-label="Scroll right"><ChevronRight className="h-5 w-5 group-hover:text-primary transition-colors" /></button>
+            <button onClick={() => scroll("left")} className="p-4 rounded-full bg-[#0e2a3f] hover:bg-[#124166] text-white border-0 transition-all duration-300 group" aria-label="Scroll left"><ChevronLeft className="h-5 w-5 transition-colors" /></button>
+            <button onClick={() => scroll("right")} className="p-4 rounded-full bg-[#0e2a3f] hover:bg-[#124166] text-white border-0 transition-all duration-300 group" aria-label="Scroll right"><ChevronRight className="h-5 w-5 transition-colors" /></button>
           </div>
         </div>
         <div ref={scrollRef} className="flex gap-3 sm:gap-4 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory" style={{scrollbarWidth: 'none', msOverflowStyle: 'none'}}>

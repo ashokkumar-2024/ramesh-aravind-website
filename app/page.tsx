@@ -10,7 +10,6 @@ const FilmographySection = dynamic(() => import("@/components/filmography-sectio
 const SpeakingSection = dynamic(() => import("@/components/speaking-section").then(mod => ({ default: mod.SpeakingSection })))
 const BooksSection = dynamic(() => import("@/components/books-section").then(mod => ({ default: mod.BooksSection })))
 const TVShowsSection = dynamic(() => import("@/components/tv-shows-section").then(mod => ({ default: mod.TVShowsSection })))
-const AwardsSection = dynamic(() => import("@/components/awards-section").then(mod => ({ default: mod.AwardsSection })))
 const MotivationalVideosSection = dynamic(() => import("@/components/motivational-videos-section").then(mod => ({ default: mod.MotivationalVideosSection })))
 const UpcomingMovies = dynamic(() => import("@/components/upcoming-movies").then(mod => ({ default: mod.UpcomingMovies })))
 const RameshAravindDaySection = dynamic(() => import("@/components/ramesh-aravind-day-section").then(mod => ({ default: mod.RameshAravindDaySection })))
@@ -21,7 +20,7 @@ const ContactSection = dynamic(() => import("@/components/contact-section").then
 
 export default function Home() {
   return (
-    <main className="bg-background film-grain">
+    <main className="bg-background">
       <Navigation />
       <HeroSection />
       <UpcomingMovies />
@@ -32,7 +31,6 @@ export default function Home() {
       <SpeakingSection />
       <BooksSection />
       <TVShowsSection />
-      {/* <AwardsSection /> */}
       <MotivationalVideosSection />
       <RameshAravindDaySection />
       <EndorsementsSection />

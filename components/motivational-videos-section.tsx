@@ -1,23 +1,31 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { Volume2, VolumeX } from "lucide-react"
+
+const featuredVideo = { 
+  src: "/RA_YT AD-_v6 1 1 1 1.mp4", 
+  title: "Featured Motivational Talk" 
+}
 
 const videos = [
-  { id: "6aRZVQQiReA", title: "Motivational Talk 1" },
-  { id: "v4o7SJqxaPo", title: "Motivational Talk 2" },
-  { id: "WgQBA-eAn6Y", title: "Motivational Talk 3" },
-  { id: "3BnNFlTFWLo", title: "Motivational Talk 4" },
-  { id: "IFf5Jih3-zk", title: "Motivational Talk 5" },
-  { id: "vtP5gLkOu5o", title: "Motivational Talk 6" },
-  { id: "qVUlq613toE", title: "Motivational Talk 7" },
-  { id: "235rK7GZY3o", title: "Motivational Talk 8" },
-  { id: "L_3oYVSGmjs", title: "Motivational Talk 9" },
-  { id: "wbI2PMz30f8", title: "Motivational Talk 10" },
+  { id: "6aRZVQQiReA", title: "Success Mantra - Motivational Speech by Ramesh Aravind" },
+  { id: "v4o7SJqxaPo", title: "Life Lessons - Inspirational Talk by Ramesh Aravind" },
+  { id: "WgQBA-eAn6Y", title: "Overcoming Challenges - Ramesh Aravind Motivational Video" },
+  { id: "3BnNFlTFWLo", title: "Dream Big - Ramesh Aravind Inspiring Message" },
+  { id: "IFf5Jih3-zk", title: "Positive Thinking - Ramesh Aravind Motivational Speech" },
+  { id: "vtP5gLkOu5o", title: "Never Give Up - Ramesh Aravind Inspirational Talk" },
+  { id: "qVUlq613toE", title: "Path to Success - Ramesh Aravind Motivational Video" },
+  { id: "235rK7GZY3o", title: "Believe in Yourself - Ramesh Aravind Inspiring Speech" },
+  { id: "L_3oYVSGmjs", title: "Life Philosophy - Ramesh Aravind Motivational Message" },
+  { id: "wbI2PMz30f8", title: "Achieve Your Goals - Ramesh Aravind Inspirational Talk" },
 ]
 
 export function MotivationalVideosSection() {
   const [isVisible, setIsVisible] = useState(false)
+  const [isMuted, setIsMuted] = useState(true)
   const sectionRef = useRef<HTMLElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -29,6 +37,13 @@ export function MotivationalVideosSection() {
     if (sectionRef.current) observer.observe(sectionRef.current)
     return () => observer.disconnect()
   }, [])
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted
+      setIsMuted(!isMuted)
+    }
+  }
 
   return (
     <section ref={sectionRef} className="py-8 md:py-12 relative overflow-hidden">
@@ -44,6 +59,42 @@ export function MotivationalVideosSection() {
             Watch powerful motivational speeches and inspiring talks
           </p>
         </div>
+      </div>
+
+      {/* Featured Video - Large - Local MP4 - Full Width like Hero */}
+      <div className="mb-8 relative w-full">
+        <div
+          className={`transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+          }`}
+        >
+          <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden">
+            <video
+              ref={videoRef}
+              src={featuredVideo.src}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ pointerEvents: 'none' }}
+            />
+            <div className="absolute inset-0 bg-black/10 pointer-events-none" />
+            
+            {/* Unmute Button */}
+            <button
+              onClick={toggleMute}
+              className="absolute top-4 right-4 z-10 w-12 h-12 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-all duration-300 hover:scale-110"
+              aria-label={isMuted ? "Unmute video" : "Mute video"}
+            >
+              {isMuted ? <VolumeX className="h-6 w-6" /> : <Volume2 className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
 
         {/* Row 1 - First 5 videos */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-4">
@@ -57,13 +108,16 @@ export function MotivationalVideosSection() {
             >
               <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <iframe
-                  src={`https://www.youtube.com/embed/${video.id}?autoplay=1&mute=1&controls=1&modestbranding=1&loop=1&playlist=${video.id}`}
+                  src={`https://www.youtube.com/embed/${video.id}?autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=${video.id}`}
                   title={video.title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                  className="w-full h-full"
+                  className="w-full h-full pointer-events-none"
                 />
               </div>
+              <p className="text-center text-sm text-muted-foreground mt-2 font-[var(--font-inter)]">
+                {video.title}
+              </p>
             </div>
           ))}
         </div>
@@ -80,13 +134,16 @@ export function MotivationalVideosSection() {
             >
               <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <iframe
-                  src={`https://www.youtube.com/embed/${video.id}?autoplay=1&mute=1&controls=1&modestbranding=1&loop=1&playlist=${video.id}`}
+                  src={`https://www.youtube.com/embed/${video.id}?autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=${video.id}`}
                   title={video.title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                  className="w-full h-full"
+                  className="w-full h-full pointer-events-none"
                 />
               </div>
+              <p className="text-center text-sm text-muted-foreground mt-2 font-[var(--font-inter)]">
+                {video.title}
+              </p>
             </div>
           ))}
         </div>

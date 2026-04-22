@@ -113,13 +113,26 @@
 /* Hide scrollbar for immersive spatial experience */
 html {
   scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  content-visibility: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #bf8843 #f1e4d8;
+  /* content-visibility: auto removed — implies layout containment which traps position:fixed children */
 }
 
 html::-webkit-scrollbar {
-  display: none;
+  width: 12px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #f1e4d8;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #bf8843;
+  border-radius: 6px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #a67739;
 }
 
 /* Espresso gold text gradient for creamy background */
@@ -310,7 +323,7 @@ html::-webkit-scrollbar {
 
 /* Very subtle film grain for texture */
 .film-grain {
-  position: relative;
+  /* Removed position: relative to not break fixed positioning */
 }
 
 .film-grain::after {
@@ -330,7 +343,7 @@ html::-webkit-scrollbar {
   transform: translateZ(0);
   will-change: transform, opacity;
   backface-visibility: hidden;
-  contain: layout style paint;
+  /* contain: layout style paint removed — 'contain: layout' traps position:fixed descendants */
 }
 
 /* Responsive utilities */

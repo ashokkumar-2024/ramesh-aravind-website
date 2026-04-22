@@ -15,14 +15,14 @@ const films = [
   { title: "Nammoora Mandara Hoove", year: "1997", language: "Kannada", role: "Lead", image: "/filmography/nammoora-mandara-hoove.png" },
   { title: "Hoomale", year: "1998", language: "Kannada", role: "Actor/Writer", image: "/filmography/hoomale.png" },
   { title: "Bhoomi Thayiya Chochhala Maga", year: "1998", language: "Kannada", role: "Actor", image: "/filmography/bhoomi-thayiya-chochhala-maga.png" },
-  { title: "Kotigalu Saar Kotigalu", year: "2001", language: "Kannada", role: "Actor", image: "/filmography/kotigalu-saar-kotigalu.jpg" },
+  { title: "Kotigalu Saar Kotigalu", year: "2001", language: "Kannada", role: "Actor", image: "/filmography/kotigalu-saar-kotigalu.png" },
+  { title: "Panchatanthiram", year: "2002", language: "Tamil", role: "Actor", image: "/filmography/pancha-tantra.jpg" },
   { title: "Apthamitra", year: "2004", language: "Kannada", role: "Lead", image: "/filmography/apta-mitra.jpg" },
   { title: "Rama Shama Bhama", year: "2005", language: "Kannada", role: "Director", image: "/filmography/rama-shama-bhama.png" },
   { title: "Uttama Villain", year: "2015", language: "Tamil", role: "Director", image: "/filmography/uttama-villain.jpg" },
-  { title: "Sundaranga Jaana", year: "2016", language: "Kannada", role: "Director", image: "/filmography/sundaranga-jaana.jpg" },
+  { title: "Sundaranga Jaana", year: "2016", language: "Kannada", role: "Director", image: "/filmography/sundaranga-jaana.png" },
   { title: "Pushpaka Vimana", year: "2017", language: "Kannada", role: "Actor", image: "/filmography/pushpaka-vimana.jpg" },
-  { title: "100", year: "2019", language: "Kannada", role: "Director/Actor", image: "/filmography/100.jpg" },
-  { title: "Pancha Tantra", year: "2019", language: "Tamil", role: "Actor", image: "/filmography/pancha-tantra.jpg" },
+  { title: "100", year: "2019", language: "Kannada", role: "Director/Actor", image: "/filmography/100.png" },
   { title: "Shivaji Surathkal", year: "2020", language: "Kannada", role: "Lead", image: "/filmography/shivaji-surathkal.jpg" },
   { title: "Maha Sharanya Haralya", year: "2023", language: "Kannada", role: "Actor", image: "/filmography/maha-sharanya-haralya.jpg" },
   { title: "Shivaji Surathkal 2", year: "2023", language: "Kannada", role: "Lead", image: "/filmography/shivaji-surathkal-2.jpg" },
@@ -88,7 +88,7 @@ export function FilmographySection() {
                 "relative px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-medium transition-all duration-500 font-[var(--font-body)] neuro-highlight",
                   activeFilter === lang
                     ? "bg-[#0e2a3f] text-white"
-                    : "bg-transparent text-[oklch(0.45_0.04_30)] hover:text-foreground border border-[#0e2a3f]/20 hover:border-[#0e2a3f]/50",
+                    : "bg-transparent text-[oklch(0.45_0.04_30)] hover:bg-[#124166] hover:text-white border border-[#0e2a3f]/20 hover:border-[#124166]",
                 )}
               style={{
                 boxShadow: activeFilter === lang ? "0 0 25px oklch(0.25 0.04 25 / 0.2)" : "none",

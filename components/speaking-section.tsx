@@ -33,7 +33,7 @@ const speakingTypes = [
     icon: Users,
     title: "Bengaluru Gold Shopping",
     description: "Brand endorsement and community engagement",
-    image: "/speaking/Gold.png"
+    image: "/speaking/Gold.jpg"
   },
 ]
 
@@ -261,7 +261,7 @@ export function SpeakingSection() {
             <div className="relative">
               <Button
                 size="lg"
-                className="relative bg-[#0e2a3f] text-white hover:bg-[#124166] font-[var(--font-body)] px-10 py-7 text-lg transition-all duration-500 overflow-hidden group border-0"
+                className="relative bg-[#0e2a3f] text-white hover:bg-[#bf8843] hover:text-white font-[var(--font-body)] px-10 py-7 text-lg transition-all duration-500 overflow-hidden group border-0"
                 style={{
                   boxShadow: "0 4px 20px oklch(0.25 0.04 25 / 0.15)",
                   transform: 'translateZ(0)',

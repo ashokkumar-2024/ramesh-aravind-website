@@ -31,7 +31,7 @@ const galleryImages = Array.from({ length: 49 }, (_, i) => {
   const num = String(i + 1).padStart(3, '0')
   const ext = i === 32 ? 'png' : 'jpg' // gallery-033 is png, rest are jpg
   return { src: `/gallery-new/gallery-${num}.${ext}`, category: "" }
-})
+}).filter((_, i) => i !== 35) // Remove gallery-036 (index 35)
 
 export function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)

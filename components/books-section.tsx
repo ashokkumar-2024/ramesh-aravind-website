@@ -11,7 +11,7 @@ const books = [
     description: "Inspirational stories and life lessons",
     awards: [],
     hasTrailer: false,
-    image: "/Its-no-Fun.png"
+    image: "/Its-no-Fun.jpg"
   },
 
   {
@@ -20,7 +20,7 @@ const books = [
     description: "A collection of inspiring quotes",
     awards: [],
     hasTrailer: false,
-    image: "Art-of-Success.png"
+    image: "/Art-of-Success.jpg"
   },
   {
     title: "Preetiyinda Ramesh",
@@ -258,7 +258,7 @@ export function BooksSection() {
             {/* Close button */}
             <button
               onClick={() => setShowVideoPopup(false)}
-              className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors"
+              className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#0e2a3f] hover:bg-[#124166] text-white flex items-center justify-center transition-colors"
             >
               ×
             </button>

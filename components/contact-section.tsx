@@ -279,7 +279,7 @@ export function ContactSection() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-[#0e2a3f] text-white hover:bg-[#124166] font-[var(--font-body)] py-7 text-lg group neuro-highlight"
+                    className="w-full bg-[#0e2a3f] text-white hover:bg-[#bf8843] hover:text-white font-[var(--font-body)] py-7 text-lg group neuro-highlight"
                     style={{ boxShadow: "0 0 40px rgba(14, 42, 63, 0.25)" }}
                   >
                     <Send className="mr-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />

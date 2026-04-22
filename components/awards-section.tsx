@@ -153,8 +153,7 @@ export function AwardsSection() {
               setIsAutoPlay(false)
               setActiveIndex((prev) => (prev - 1 + awards.length) % awards.length)
             }}
-            className="w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all hover:scale-110"
-            style={{ borderColor: 'var(--copper)', color: 'var(--copper)' }}
+            className="w-12 h-12 rounded-full bg-[#0e2a3f] hover:bg-[#124166] text-white flex items-center justify-center transition-all"
           >
             ←
           </button>
@@ -169,7 +168,7 @@ export function AwardsSection() {
                 }}
                 className="w-3 h-3 rounded-full transition-all duration-300"
                 style={{
-                  background: index === activeIndex ? 'var(--copper)' : 'var(--muted)',
+                  background: index === activeIndex ? '#0e2a3f' : 'var(--muted)',
                   transform: index === activeIndex ? 'scale(1.3)' : 'scale(1)'
                 }}
               />
@@ -181,8 +180,7 @@ export function AwardsSection() {
               setIsAutoPlay(false)
               setActiveIndex((prev) => (prev + 1) % awards.length)
             }}
-            className="w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all hover:scale-110"
-            style={{ borderColor: 'var(--copper)', color: 'var(--copper)' }}
+            className="w-12 h-12 rounded-full bg-[#0e2a3f] hover:bg-[#124166] text-white flex items-center justify-center transition-all"
           >
             →
           </button>

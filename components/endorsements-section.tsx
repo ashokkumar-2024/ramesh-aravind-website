@@ -16,13 +16,20 @@ export function EndorsementsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [isArrowHovered, setIsArrowHovered] = useState(false)
   const [playingVideo, setPlayingVideo] = useState<number | null>(null)
+  const [isTransitioning, setIsTransitioning] = useState(false)
 
   const nextSlide = () => {
+    if (isTransitioning) return
+    setIsTransitioning(true)
     setActiveIndex((prev) => (prev + 1) % brands.length)
+    setTimeout(() => setIsTransitioning(false), 400)
   }
 
   const prevSlide = () => {
+    if (isTransitioning) return
+    setIsTransitioning(true)
     setActiveIndex((prev) => (prev - 1 + brands.length) % brands.length)
+    setTimeout(() => setIsTransitioning(false), 400)
   }
 
   return (
@@ -38,7 +45,7 @@ export function EndorsementsSection() {
 
         {/* Header */}
         <div className="text-center mb-8">
-          <h3 className="text-5xl md:text-6xl lg:text-8xl font-light text-white tracking-wide">
+          <h3 className="text-4xl md:text-5xl font-bold gold-text">
             Endorsements
           </h3>
         </div>
@@ -81,13 +88,13 @@ export function EndorsementsSection() {
             return (
               <div
                 key={brand.name}
-                className="absolute transition-all duration-1000 ease-out"
+                className="absolute transition-all duration-500 ease-in-out"
                 style={{
                   transform,
                   transformStyle: 'preserve-3d',
                   zIndex,
                   opacity,
-                  transitionTimingFunction: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+                  transitionTimingFunction: 'cubic-bezier(0.4, 0.0, 0.2, 1)'
                 }}
               >
                 <Wrapper
@@ -148,32 +155,22 @@ export function EndorsementsSection() {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
+            disabled={isTransitioning}
             onMouseEnter={() => setIsArrowHovered(true)}
             onMouseLeave={() => setIsArrowHovered(false)}
-            className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300"
-            style={{
-              background: 'rgba(212, 175, 55, 0.2)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(212, 175, 55, 0.3)',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)'
-            }}
+            className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 bg-[#0e2a3f] hover:bg-[#124166] text-white border-0 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <span className="text-white text-2xl">‹</span>
+            <span className="text-2xl">‹</span>
           </button>
 
           <button
             onClick={nextSlide}
+            disabled={isTransitioning}
             onMouseEnter={() => setIsArrowHovered(true)}
             onMouseLeave={() => setIsArrowHovered(false)}
-            className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300"
-            style={{
-              background: 'rgba(212, 175, 55, 0.2)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(212, 175, 55, 0.3)',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)'
-            }}
+            className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 bg-[#0e2a3f] hover:bg-[#124166] text-white border-0 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <span className="text-white text-2xl">›</span>
+            <span className="text-2xl">›</span>
           </button>
         </div>
 

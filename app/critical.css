@@ -5,7 +5,8 @@
 }
 
 .film-grain {
-  position: relative;
+  /* position: relative removed intentionally — it creates a stacking context
+     that traps position:fixed children (e.g. scroll-to-top button) */
 }
 
 .film-grain::before {

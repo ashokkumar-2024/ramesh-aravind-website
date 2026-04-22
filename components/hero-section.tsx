@@ -132,7 +132,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
             <Button
               size="lg"
-              className="bg-[#0e2a3f] text-white hover:bg-[#124166] px-8 py-6 text-base font-[var(--font-body)] shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#0e2a3f]/50"
+              className="bg-[#0e2a3f] text-white hover:bg-[#bf8843] hover:text-white px-8 py-6 text-base font-[var(--font-body)] shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#0e2a3f]/50"
               asChild
             >
               <a href="#contact">Book for Speaking</a>
@@ -141,7 +141,8 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-[#0e2a3f] text-[#0e2a3f] hover:bg-[#0e2a3f] hover:text-white px-8 py-6 text-base font-[var(--font-body)] transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="text-[#0e2a3f] hover:bg-[#bf8843] hover:text-[#0e2a3f] px-8 py-6 text-base font-[var(--font-body)] transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              style={{ border: '3px solid #bf8843' }}
               asChild
             >
               <a href="#about">Explore His Journey</a>

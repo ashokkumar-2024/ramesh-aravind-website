@@ -132,9 +132,9 @@ export function TimelineSection() {
             {moments.map((moment, index) => {
               const itemProgress = Math.max(0, Math.min(1, scrollProgress * moments.length - index))
               const translateZ = (1 - itemProgress) * -600 + itemProgress * 50
-              // isMobile is now a state variable set via useEffect to avoid SSR hydration mismatch
-              const translateY = (1 - itemProgress) * 100 + (itemProgress > 0.15 && itemProgress < 0.85 ? (isMobile ? 0 : (index % 4) * 80 - 120) : 0)
-              const translateX = (itemProgress > 0.15 && itemProgress < 0.85 ? (isMobile ? 0 : (index % 2 === 0 ? -100 : 100)) : 0)
+              // Position cards alternating left and right at the same height
+              const translateY = 0 // Same height for all cards
+              const translateX = (itemProgress > 0.15 && itemProgress < 0.85 ? (isMobile ? 0 : (index % 2 === 0 ? -450 : 450)) : 0)
               const rotateX = (1 - itemProgress) * 15
               const rotateY = (index % 2 === 0 ? 1 : -1) * (1 - itemProgress) * 10
               const isVisible = itemProgress > 0.15 && itemProgress < 0.85
@@ -161,7 +161,7 @@ export function TimelineSection() {
                         {/* Visual - Right Side (Decorative Element / Image Placeholder) */}
                         <div className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 w-28 h-28 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-xl overflow-hidden  shadow-lg">
                           <img
-                            src={`/timeline/${moment.year}.png`}
+                            src={`/timeline/${moment.year}.jpg`}
                             alt={moment.title}
                             className="w-full h-full object-cover"
                             onError={(e) => {
