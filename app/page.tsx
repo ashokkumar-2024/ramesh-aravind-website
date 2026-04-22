@@ -17,6 +17,7 @@ const GallerySection = dynamic(() => import("@/components/gallery-section").then
 const PressMeetsSection = dynamic(() => import("@/components/press-meets-section").then(mod => ({ default: mod.PressMeetsSection })))
 const EndorsementsSection = dynamic(() => import("@/components/endorsements-section").then(mod => ({ default: mod.EndorsementsSection })))
 const ContactSection = dynamic(() => import("@/components/contact-section").then(mod => ({ default: mod.ContactSection })))
+const FAQSection = dynamic(() => import("@/components/faq-section").then(mod => ({ default: mod.FAQSection })))
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
       <RameshAravindDaySection />
       <EndorsementsSection />
       <PressMeetsSection />
+      <FAQSection />
       <ContactSection />
       <GallerySection />
       <Footer />
