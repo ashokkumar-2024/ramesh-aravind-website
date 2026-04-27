@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button"
 export function HeroSection() {
   return (
     <>
-      <section className="relative w-full h-[50vh] md:h-screen overflow-hidden bg-black">
+      <section className="relative w-full aspect-video md:aspect-auto md:h-screen overflow-hidden">
         <video
           src="/hero.mp4"
-          className="absolute inset-0 w-full h-full object-contain md:object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
           autoPlay
           muted
           loop
