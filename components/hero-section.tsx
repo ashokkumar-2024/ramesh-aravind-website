@@ -13,7 +13,7 @@ export function HeroSection() {
           muted
           loop
           playsInline
-          preload="none"
+          preload="metadata"
           poster="/canva-images/panel-1/panel-1-001.jpg"
           style={{ pointerEvents: 'none' }}
         />
