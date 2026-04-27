@@ -1,36 +1,22 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 768)
-  }, [])
-
   return (
     <>
       <section className="relative min-h-[70vh] md:min-h-screen flex items-end justify-center overflow-hidden pt-36 sm:pt-40 pb-8 sm:pb-24 md:pb-32">
-        {isMobile ? (
-          <div
-            className="absolute inset-0 w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: `url('/canva-images/panel-1/panel-1-001.jpg')` }}
-          />
-        ) : (
-          <video
-            src="/hero.mp4"
-            className="absolute inset-0 w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="none"
-            poster="/canva-images/panel-1/panel-1-001.jpg"
-            style={{ pointerEvents: 'none' }}
-          />
-        )}
+        <video
+          src="/hero.mp4"
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/canva-images/panel-1/panel-1-001.jpg"
+          style={{ pointerEvents: 'none' }}
+        />
         <div className="absolute inset-0 bg-black/30" />
       </section>
 
