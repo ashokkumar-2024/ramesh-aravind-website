@@ -89,10 +89,11 @@ export function SpeakingSection() {
                         <type.icon className={`h-6 w-6 ${activeSpeakingIndex === index ? 'text-white' : 'text-[oklch(0.58_0.11_50)]'}`} />
                       </div>
                       <div className="flex-1">
-                        <h4 className={`font-semibold mb-1 ${activeSpeakingIndex === index ? 'text-[oklch(0.58_0.11_50)]' : 'text-foreground'}`}>
+                        <h4 className={`font-semibold mb-0 md:mb-1 ${activeSpeakingIndex === index ? 'text-[oklch(0.58_0.11_50)]' : 'text-foreground'}`}>
                           {type.title}
                         </h4>
-                        <p className="text-sm text-[oklch(0.45_0.04_30)] font-[var(--font-body)] leading-relaxed">
+                        {/* Mobile: hidden, shows on hover/touch — Desktop: always visible */}
+                        <p className="text-sm text-[oklch(0.45_0.04_30)] font-[var(--font-body)] leading-relaxed hidden group-hover:block md:block mt-1">
                           {type.description}
                         </p>
                       </div>

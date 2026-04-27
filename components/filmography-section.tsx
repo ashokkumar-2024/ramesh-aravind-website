@@ -77,22 +77,22 @@ export function FilmographySection() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-5 md:gap-6">
           {filteredFilms.map((film, index) => (
             <div key={`${film.title}-${index}`} className="relative overflow-hidden rounded-xl depth-shadow">
-              <div className="aspect-[4/3] relative">
+              <div className="aspect-square sm:aspect-[4/3] relative">
                 <img
                   src={film.image}
                   alt={film.title}
                   loading="lazy"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 bg-gradient-to-t from-black/60 via-black/40 to-transparent">
-                  <span className="inline-block px-2 sm:px-3 py-1 sm:py-1.5 text-xs rounded-full mb-1.5 sm:mb-2 font-[var(--font-body)] bg-[#0e2a3f] text-white">
+                <div className="absolute bottom-0 left-0 right-0 p-1.5 sm:p-3 bg-gradient-to-t from-black/60 via-black/40 to-transparent">
+                  <span className="inline-block px-1.5 sm:px-3 py-0.5 sm:py-1.5 text-[10px] sm:text-xs rounded-full mb-1 sm:mb-2 font-[var(--font-body)] bg-[#0e2a3f] text-white">
                     {film.language}
                   </span>
-                  <h4 className="text-base sm:text-lg font-bold text-white mb-0.5">{film.title}</h4>
-                  <p className="text-white/90 text-xs sm:text-sm font-[var(--font-body)]">
+                  <h4 className="text-[11px] sm:text-lg font-bold text-white mb-0.5 leading-tight">{film.title}</h4>
+                  <p className="text-white/90 text-[10px] sm:text-sm font-[var(--font-body)]">
                     {film.year} &bull; {film.role}
                   </p>
                 </div>
