@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useState, useEffect, useRef } from "react"
+import { useState } from "react"
 import { Mail, Send, Calendar, User, Phone, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -10,9 +10,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export function ContactSection() {
-  const [isVisible, setIsVisible] = useState(false)
   const [focusedField, setFocusedField] = useState<string | null>(null)
-  const sectionRef = useRef<HTMLElement>(null)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,30 +20,13 @@ export function ContactSection() {
     remarks: "",
   })
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 },
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log("Form submitted:", formData)
   }
 
   return (
-    <section id="contact" ref={sectionRef} className="relative py-12 md:py-16 overflow-hidden">
+    <section id="contact" className="relative py-12 md:py-16 overflow-hidden">
       <div
         className="absolute inset-0"
         style={{
@@ -58,11 +39,7 @@ export function ContactSection() {
       />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div
-          className={`text-center mb-12 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
+        <div className="text-center mb-12">
           <h2 className="text-sm text-[oklch(0.68_0.12_55)] tracking-[0.5em] uppercase mb-3 font-[var(--font-body)]">
             Contact
           </h2>
@@ -75,11 +52,7 @@ export function ContactSection() {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-5 gap-8">
             {/* Contact Info */}
-            <div
-              className={`md:col-span-2 space-y-6 transition-all duration-1000 ${
-                isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
-              }`}
-            >
+            <div className="md:col-span-2 space-y-6">
               <div className="p-6 rounded-2xl spatial-panel">
                 <div className="flex items-center gap-5 mb-6">
                   <div className="w-14 h-14 rounded-xl bg-[oklch(0.68_0.12_55/0.1)] flex items-center justify-center">
@@ -116,11 +89,7 @@ export function ContactSection() {
               </div>
             </div>
 
-            <div
-              className={`md:col-span-3 transition-all duration-1000 delay-200 ${
-                isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
-              }`}
-            >
+            <div className="md:col-span-3">
               <div className="relative">
                 {/* Ambient glow behind form */}
                 <div
