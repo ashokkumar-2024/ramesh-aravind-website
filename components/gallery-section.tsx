@@ -3,30 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { X, ZoomIn } from "lucide-react"
 
-// Old gallery images (kept for reference)
-const oldGalleryImages = [
-  { src: "/Ra1.jpg", category: "" },
-  { src: "/Ra2.jpg", category: "" },
-  { src: "/Ra3.jpg", category: "" },
-  { src: "/R8.jpg", category: "" },
-  { src: "/Ra4.jpg", category: "" },
-  { src: "/Ra5.jpg", category: "" },
-  { src: "/Ra6.jpg", category: "" },
-  { src: "/Ra7.jpg", category: "" },
-  { src: "/Ra9.jpg", category: "" },
-  { src: "/Ra11.jpg", category: "" },
-  { src: "/Ra10.jpg", category: "" },
-  { src: "/Ra12.jpg", category: "" },
-  { src: "/Ra13.jpg", category: "" },
-  { src: "/Ra14.jpg", category: "" },
-  { src: "/Ra15.jpg", category: "" },
-  { src: "/Ra16.jpg", category: "" },
-  { src: "/Ra17 (1).jpg", category: "" },
-  { src: "/Ra18.jpg", category: "" },
-  { src: "/Ra19.jpg", category: "" },
-]
-
-// New gallery images from panels 12, 13, 14
+// Gallery images from panels 12, 13, 14
 const galleryImages = Array.from({ length: 49 }, (_, i) => {
   const num = String(i + 1).padStart(3, '0')
   const ext = i === 32 ? 'png' : 'jpg' // gallery-033 is png, rest are jpg
@@ -79,13 +56,7 @@ export function GallerySection() {
               onClick={() => setSelectedImage(index)}
               onMouseEnter={() => setHoveredImage(index)}
               onMouseLeave={() => setHoveredImage(null)}
-              className={`relative group cursor-pointer break-inside-avoid transition-all duration-700 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-              }`}
-              style={{
-                transitionDelay: `${200 + index * 100}ms`,
-                transform: hoveredImage === index ? "scale(1.02)" : "scale(1)",
-              }}
+              className="relative group cursor-pointer break-inside-avoid"
             >
               {/* Photo frame container */}
               <div
@@ -98,9 +69,7 @@ export function GallerySection() {
                     src={image.src}
                     alt="Gallery Image"
                     loading="lazy"
-                    className={`w-full object-cover transition-all duration-700 ${
-                      hoveredImage === index ? "scale-110 brightness-110" : "scale-100 brightness-100"
-                    }`}
+                    className="w-full object-cover"
                   />
 
                   {/* Hover overlay */}
