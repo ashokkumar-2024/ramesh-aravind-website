@@ -5,20 +5,22 @@ import { Button } from "@/components/ui/button"
 export function HeroSection() {
   return (
     <>
-      <section className="relative w-full h-[55vh] md:h-screen overflow-hidden">
-        <video
-          src="/hero.mp4"
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/canva-images/panel-1/panel-1-001.jpg"
-          style={{ pointerEvents: 'none' }}
-        />
-        <div className="absolute inset-0 bg-black/30" />
-      </section>
+      <div className="pt-24 md:pt-0">
+        <section className="relative w-full aspect-video md:aspect-auto md:h-screen overflow-hidden">
+          <video
+            src="/hero.mp4"
+            className="absolute inset-0 w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/canva-images/panel-1/panel-1-001.jpg"
+            style={{ pointerEvents: 'none' }}
+          />
+          <div className="absolute inset-0 bg-black/30" />
+        </section>
+      </div>
 
       <section className="relative flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
