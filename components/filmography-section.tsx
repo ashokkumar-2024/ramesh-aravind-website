@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState } from "react"
 import { cn } from "@/lib/utils"
 
 const languages = ["All", "Kannada", "Tamil", "Telugu", "Hindi"]
@@ -31,25 +31,11 @@ const films = [
 
 export function FilmographySection() {
   const [activeFilter, setActiveFilter] = useState("All")
-  const [hoveredFilm, setHoveredFilm] = useState<number | null>(null)
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true)
-      },
-      { threshold: 0.1 },
-    )
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    return () => observer.disconnect()
-  }, [])
 
   const filteredFilms = activeFilter === "All" ? films : films.filter((film) => film.language === activeFilter)
 
   return (
-    <section id="filmography" ref={sectionRef} className="relative py-8 sm:py-10 md:py-12 overflow-hidden">
+    <section id="filmography" className="relative py-8 sm:py-10 md:py-12 overflow-hidden">
       <div
         className="absolute inset-0"
         style={{
@@ -61,11 +47,7 @@ export function FilmographySection() {
       />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div
-          className={`text-center mb-6 sm:mb-8 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
+        <div className="text-center mb-6 sm:mb-8">
           <h2 className="text-xs sm:text-sm text-[oklch(0.58_0.11_50)] tracking-[0.3em] sm:tracking-[0.5em] uppercase mb-2 sm:mb-3 font-[var(--font-body)]">
             Filmography
           </h2>
@@ -75,21 +57,17 @@ export function FilmographySection() {
           </p>
         </div>
 
-        <div
-          className={`flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 transition-all duration-700 delay-200 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-        >
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8">
           {languages.map((lang) => (
             <button
               key={lang}
               onClick={() => setActiveFilter(lang)}
               className={cn(
-                "relative px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-medium transition-all duration-500 font-[var(--font-body)] neuro-highlight",
-                  activeFilter === lang
-                    ? "bg-[#0e2a3f] text-white"
-                    : "bg-transparent text-[oklch(0.45_0.04_30)] hover:bg-[#124166] hover:text-white border border-[#0e2a3f]/20 hover:border-[#124166]",
-                )}
+                "relative px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-full text-xs sm:text-sm font-medium font-[var(--font-body)] neuro-highlight",
+                activeFilter === lang
+                  ? "bg-[#0e2a3f] text-white"
+                  : "bg-transparent text-[oklch(0.45_0.04_30)] hover:bg-[#124166] hover:text-white border border-[#0e2a3f]/20 hover:border-[#124166]",
+              )}
               style={{
                 boxShadow: activeFilter === lang ? "0 0 25px oklch(0.25 0.04 25 / 0.2)" : "none",
               }}
@@ -101,56 +79,24 @@ export function FilmographySection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
           {filteredFilms.map((film, index) => (
-            <div
-              key={`${film.title}-${index}`}
-              onMouseEnter={() => setHoveredFilm(index)}
-              onMouseLeave={() => setHoveredFilm(null)}
-              className={`group transition-all duration-700 gpu-accelerate museum-perspective ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
-              }`}
-              style={{ transitionDelay: `${300 + index * 80}ms` }}
-            >
-              <div className="relative overflow-hidden rounded-xl depth-shadow">
-                <div className="aspect-[4/3] relative">
-                  <img
-                    src={film.image}
-                    alt={film.title}
-                    loading="lazy"
-                    className={`w-full h-full object-cover transition-all duration-700 ${
-                      hoveredFilm === index ? "scale-105 brightness-105" : "scale-100 brightness-100"
-                    }`}
-                  />
-
-                  <div
-                    className={`absolute inset-0 transition-all duration-500 ${
-                      hoveredFilm === index ? "opacity-100" : "opacity-0"
-                    }`}
-                    style={{
-                      background: `radial-gradient(ellipse at center, oklch(0.58 0.11 50 / 0.12), transparent 70%)`,
-                    }}
-                  />
-
-                  <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 bg-gradient-to-t from-black/60 via-black/40 to-transparent">
-                    <span className="inline-block px-2 sm:px-3 py-1 sm:py-1.5 text-xs rounded-full mb-1.5 sm:mb-2 font-[var(--font-body)] bg-[#0e2a3f] text-white">
-                      {film.language}
-                    </span>
-                    <h4 className="text-base sm:text-lg font-bold text-white mb-0.5">{film.title}</h4>
-                    <p className="text-white/90 text-xs sm:text-sm font-[var(--font-body)]">
-                      {film.year} &bull; {film.role}
-                    </p>
-                  </div>
+            <div key={`${film.title}-${index}`} className="relative overflow-hidden rounded-xl depth-shadow">
+              <div className="aspect-[4/3] relative">
+                <img
+                  src={film.image}
+                  alt={film.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 bg-gradient-to-t from-black/60 via-black/40 to-transparent">
+                  <span className="inline-block px-2 sm:px-3 py-1 sm:py-1.5 text-xs rounded-full mb-1.5 sm:mb-2 font-[var(--font-body)] bg-[#0e2a3f] text-white">
+                    {film.language}
+                  </span>
+                  <h4 className="text-base sm:text-lg font-bold text-white mb-0.5">{film.title}</h4>
+                  <p className="text-white/90 text-xs sm:text-sm font-[var(--font-body)]">
+                    {film.year} &bull; {film.role}
+                  </p>
                 </div>
               </div>
-
-              <div
-                className={`absolute -inset-4 rounded-2xl transition-opacity duration-500 -z-10 gpu-accelerate ${
-                  hoveredFilm === index ? "opacity-100" : "opacity-0"
-                }`}
-                style={{
-                  background: `radial-gradient(ellipse at center, oklch(0.58 0.11 50 / 0.08), transparent 70%)`,
-                  filter: "blur(22px)",
-                }}
-              />
             </div>
           ))}
         </div>

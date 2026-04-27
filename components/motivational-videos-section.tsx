@@ -1,11 +1,11 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { Volume2, VolumeX } from "lucide-react"
 
-const featuredVideo = { 
-  src: "/RA_YT AD-_v6 1 1 1 1.mp4", 
-  title: "Featured Motivational Talk" 
+const featuredVideo = {
+  src: "/RA_YT AD-_v6 1 1 1 1.mp4",
+  title: "Featured Motivational Talk"
 }
 
 const videos = [
@@ -21,22 +21,47 @@ const videos = [
   { id: "wbI2PMz30f8", title: "Achieve Your Goals - Ramesh Aravind Inspirational Talk" },
 ]
 
-export function MotivationalVideosSection() {
-  const [isVisible, setIsVisible] = useState(false)
-  const [isMuted, setIsMuted] = useState(true)
-  const sectionRef = useRef<HTMLElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
+function LazyYouTube({ id, title }: { id: string; title: string }) {
+  const [active, setActive] = useState(false)
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true)
-      },
-      { threshold: 0.1 }
+  if (active) {
+    return (
+      <iframe
+        src={`https://www.youtube.com/embed/${id}?autoplay=1&controls=1&modestbranding=1`}
+        title={title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full h-full"
+      />
     )
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    return () => observer.disconnect()
-  }, [])
+  }
+
+  return (
+    <button
+      className="w-full h-full relative block"
+      onClick={() => setActive(true)}
+      aria-label={`Play: ${title}`}
+    >
+      <img
+        src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`}
+        alt={title}
+        loading="lazy"
+        className="w-full h-full object-cover"
+      />
+      <span className="absolute inset-0 flex items-center justify-center">
+        <span className="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center shadow-lg">
+          <svg className="w-5 h-5 text-white ml-1" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </span>
+      </span>
+    </button>
+  )
+}
+
+export function MotivationalVideosSection() {
+  const [isMuted, setIsMuted] = useState(true)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -46,7 +71,7 @@ export function MotivationalVideosSection() {
   }
 
   return (
-    <section ref={sectionRef} className="py-8 md:py-12 relative overflow-hidden">
+    <section className="py-8 md:py-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -61,59 +86,37 @@ export function MotivationalVideosSection() {
         </div>
       </div>
 
-      {/* Featured Video - Large - Local MP4 - Full Width like Hero */}
+      {/* Featured Video */}
       <div className="mb-8 relative w-full">
-        <div
-          className={`transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-          }`}
-        >
-          <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden">
-            <video
-              ref={videoRef}
-              src={featuredVideo.src}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              className="absolute inset-0 w-full h-full object-cover"
-              style={{ pointerEvents: 'none' }}
-            />
-            <div className="absolute inset-0 bg-black/10 pointer-events-none" />
-            
-            {/* Unmute Button */}
-            <button
-              onClick={toggleMute}
-              className="absolute top-4 right-4 z-10 w-12 h-12 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-all duration-300 hover:scale-110"
-              aria-label={isMuted ? "Unmute video" : "Mute video"}
-            >
-              {isMuted ? <VolumeX className="h-6 w-6" /> : <Volume2 className="h-6 w-6" />}
-            </button>
-          </div>
+        <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden">
+          <video
+            ref={videoRef}
+            src={featuredVideo.src}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ pointerEvents: 'none' }}
+          />
+          <div className="absolute inset-0 bg-black/10 pointer-events-none" />
+          <button
+            onClick={toggleMute}
+            className="absolute top-4 right-4 z-10 w-12 h-12 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center"
+            aria-label={isMuted ? "Unmute video" : "Mute video"}
+          >
+            {isMuted ? <VolumeX className="h-6 w-6" /> : <Volume2 className="h-6 w-6" />}
+          </button>
         </div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-
-        {/* Row 1 - First 5 videos */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-4">
-          {videos.slice(0, 5).map((video, index) => (
-            <div
-              key={video.id}
-              className={`transition-all duration-700 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <iframe
-                  src={`https://www.youtube.com/embed/${video.id}?autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=${video.id}`}
-                  title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full pointer-events-none"
-                />
+          {videos.slice(0, 5).map((video) => (
+            <div key={video.id}>
+              <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg bg-black">
+                <LazyYouTube id={video.id} title={video.title} />
               </div>
               <p className="text-center text-sm text-muted-foreground mt-2 font-[var(--font-inter)]">
                 {video.title}
@@ -122,24 +125,11 @@ export function MotivationalVideosSection() {
           ))}
         </div>
 
-        {/* Row 2 - Last 5 videos */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {videos.slice(5, 10).map((video, index) => (
-            <div
-              key={video.id}
-              className={`transition-all duration-700 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-              }`}
-              style={{ transitionDelay: `${(index + 5) * 100}ms` }}
-            >
-              <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <iframe
-                  src={`https://www.youtube.com/embed/${video.id}?autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=${video.id}`}
-                  title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full pointer-events-none"
-                />
+          {videos.slice(5, 10).map((video) => (
+            <div key={video.id}>
+              <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg bg-black">
+                <LazyYouTube id={video.id} title={video.title} />
               </div>
               <p className="text-center text-sm text-muted-foreground mt-2 font-[var(--font-inter)]">
                 {video.title}
