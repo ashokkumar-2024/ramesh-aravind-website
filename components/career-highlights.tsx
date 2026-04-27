@@ -96,7 +96,7 @@ export function CareerHighlights() {
           <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold gold-text">A Multi-Faceted Artist</h3>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-5 lg:gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-5 lg:gap-6 max-w-6xl mx-auto">
           {careers.map((career, index) => (
             <div
               key={career.title}
@@ -114,7 +114,7 @@ export function CareerHighlights() {
               }}
             >
               <div
-                className="relative p-4 sm:p-6 rounded-2xl transition-all duration-500"
+                className="relative p-3 sm:p-6 rounded-2xl transition-all duration-500"
                 style={{
                   background:
                     hoveredIndex === index
@@ -159,7 +159,7 @@ export function CareerHighlights() {
                   </rect>
                 </svg>
                 <div
-                  className="relative w-16 h-16 rounded-xl flex items-center justify-center mb-4 transition-all duration-500"
+                  className="relative w-10 h-10 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-2 sm:mb-4 transition-all duration-500"
                   style={{
                     background:
                       hoveredIndex === index
@@ -172,7 +172,7 @@ export function CareerHighlights() {
                   }}
                 >
                   <career.icon
-                    className="h-8 w-8 transition-all duration-500"
+                    className="h-5 w-5 sm:h-8 sm:w-8 transition-all duration-500"
                     style={{
                       color:
                         hoveredIndex === index
@@ -182,13 +182,11 @@ export function CareerHighlights() {
                   />
                 </div>
 
-                <h4 className="text-xl font-bold mb-1 text-[#bf8843]">{career.title}</h4>
-                <p
-                  className="text-sm mb-2 font-[var(--font-body)] transition-colors duration-300 text-[#0e2a3f]"
-                >
+                <h4 className="text-sm sm:text-xl font-bold mb-0.5 sm:mb-1 text-[#bf8843]">{career.title}</h4>
+                <p className="text-xs sm:text-sm mb-1 sm:mb-2 font-[var(--font-body)] transition-colors duration-300 text-[#0e2a3f]">
                   {career.subtitle}
                 </p>
-                <p className="text-[#0e2a3f] text-sm sm:text-base font-[var(--font-body)] leading-relaxed mb-2">
+                <p className="text-[#0e2a3f] text-[11px] sm:text-base font-[var(--font-body)] leading-relaxed mb-2">
                   {career.description}
                 </p>
                 
