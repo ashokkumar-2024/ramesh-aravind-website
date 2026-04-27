@@ -39,6 +39,12 @@ const speakingTypes = [
 
 export function SpeakingSection() {
   const [activeSpeakingIndex, setActiveSpeakingIndex] = useState(0)
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
+
+  const handleCardInteraction = (index: number) => {
+    setActiveSpeakingIndex(index)
+    setExpandedIndex(expandedIndex === index ? null : index)
+  }
 
   return (
     <section id="speaking" className="relative py-12 md:py-16 lg:py-20 overflow-hidden">
@@ -62,8 +68,8 @@ export function SpeakingSection() {
               {speakingTypes.map((type, index) => (
                 <div
                   key={type.title}
-                  onClick={() => setActiveSpeakingIndex(index)}
-                  className="group relative cursor-pointer"
+                  onClick={() => handleCardInteraction(index)}
+                  className="relative cursor-pointer"
                 >
                   <div
                     className={`relative p-4 rounded-xl overflow-hidden border ${
@@ -92,8 +98,8 @@ export function SpeakingSection() {
                         <h4 className={`font-semibold mb-0 md:mb-1 ${activeSpeakingIndex === index ? 'text-[oklch(0.58_0.11_50)]' : 'text-foreground'}`}>
                           {type.title}
                         </h4>
-                        {/* Mobile: hidden, shows on hover/touch — Desktop: always visible */}
-                        <p className="text-sm text-[oklch(0.45_0.04_30)] font-[var(--font-body)] leading-relaxed hidden group-hover:block md:block mt-1">
+                        {/* Mobile: shows on tap — Desktop: always visible */}
+                        <p className={`text-sm text-[oklch(0.45_0.04_30)] font-[var(--font-body)] leading-relaxed mt-1 md:block ${expandedIndex === index ? 'block' : 'hidden'}`}>
                           {type.description}
                         </p>
                       </div>
