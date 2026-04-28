@@ -43,7 +43,7 @@ export function EndorsementsSection() {
   return (
     <section
       id="endorsements"
-      className="relative py-8 overflow-hidden"
+      className="relative py-8 pb-12 overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, var(--espresso) 0%, #1a1515 50%, #000000 100%)',
         perspective: '1400px'
