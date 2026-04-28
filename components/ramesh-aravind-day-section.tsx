@@ -10,7 +10,7 @@ export function RameshAravindDaySection() {
           <h2 className="text-sm text-primary tracking-[0.3em] uppercase mb-3 font-[var(--font-inter)]">
             Celebrating a special occasion
           </h2>
-          <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold gold-text mb-4">Dr Ramesh Aravind's Day</h3>
+          <h3 className="font-bold gold-text mb-4 whitespace-nowrap" style={{ fontSize: 'clamp(1.4rem, 6vw, 3.75rem)' }}>Dr Ramesh Aravind's Day</h3>
           <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-[var(--font-inter)]">
             On August 23rd, the City of Austin, Texas, USA officially declared it "Dr. Ramesh Aravind Day"!
             They gave me the honor when I went there to be the keynote speaker at the Day of Gratitude Gala 2025.
