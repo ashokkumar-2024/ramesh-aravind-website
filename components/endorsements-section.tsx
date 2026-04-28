@@ -17,6 +17,14 @@ export function EndorsementsSection() {
   const [isArrowHovered, setIsArrowHovered] = useState(false)
   const [playingVideo, setPlayingVideo] = useState<number | null>(null)
   const [isTransitioning, setIsTransitioning] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
 
   const nextSlide = () => {
     if (isTransitioning) return
@@ -52,7 +60,8 @@ export function EndorsementsSection() {
 
         {/* 3D Slider Container */}
         <div
-          className="relative h-[280px] flex items-center justify-center transition-all duration-700 ease-out"
+          className="relative flex items-center justify-center transition-all duration-700 ease-out"
+          style={{ height: isMobile ? '180px' : '280px' }}
           style={{
             transformStyle: 'preserve-3d',
             transform: isArrowHovered ? 'rotateX(5deg) rotateY(3deg)' : 'rotateX(0deg) rotateY(0deg)'
@@ -68,17 +77,23 @@ export function EndorsementsSection() {
             let opacity = 0.3
 
             if (isActive) {
-              transform = 'translateX(0px) translateZ(150px) rotateY(0deg) rotateX(0deg) scale(1.1)'
+              transform = isMobile
+                ? 'translateX(0px) translateZ(60px) rotateY(0deg) scale(1.05)'
+                : 'translateX(0px) translateZ(150px) rotateY(0deg) rotateX(0deg) scale(1.1)'
               zIndex = 10
               opacity = 1
             } else if (absOffset === 1) {
               const side = offset > 0 ? 1 : -1
-              transform = `translateX(${side * 400}px) translateZ(-100px) rotateY(${-side * 35}deg) rotateX(8deg) scale(0.75)`
+              transform = isMobile
+                ? `translateX(${side * 180}px) translateZ(-40px) rotateY(${-side * 25}deg) scale(0.7)`
+                : `translateX(${side * 400}px) translateZ(-100px) rotateY(${-side * 35}deg) rotateX(8deg) scale(0.75)`
               zIndex = 5
               opacity = 0.6
             } else {
               const side = offset > 0 ? 1 : -1
-              transform = `translateX(${side * 700}px) translateZ(-250px) rotateY(${-side * 60}deg) rotateX(15deg) scale(0.5)`
+              transform = isMobile
+                ? `translateX(${side * 300}px) translateZ(-100px) rotateY(${-side * 45}deg) scale(0.4)`
+                : `translateX(${side * 700}px) translateZ(-250px) rotateY(${-side * 60}deg) rotateX(15deg) scale(0.5)`
               zIndex = 1
               opacity = 0.3
             }
@@ -100,8 +115,8 @@ export function EndorsementsSection() {
                 <Wrapper
                   className="relative block cursor-pointer"
                   style={{
-                    width: '380px',
-                    height: '240px',
+                    width: isMobile ? '220px' : '380px',
+                    height: isMobile ? '150px' : '240px',
                     transformStyle: 'preserve-3d'
                   }}
                   onClick={() => brand.videoId && setPlayingVideo(index)}
@@ -158,9 +173,10 @@ export function EndorsementsSection() {
             disabled={isTransitioning}
             onMouseEnter={() => setIsArrowHovered(true)}
             onMouseLeave={() => setIsArrowHovered(false)}
-            className="absolute left-8 top-1/2 -translate-y-1/2 z-20 w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 bg-[#0e2a3f] hover:bg-[#124166] text-white border-0 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="absolute top-1/2 -translate-y-1/2 z-20 rounded-full flex items-center justify-center bg-[#0e2a3f] hover:bg-[#124166] text-white border-0 disabled:opacity-50 disabled:cursor-not-allowed"
+            style={{ left: isMobile ? '6px' : '32px', width: isMobile ? '32px' : '64px', height: isMobile ? '32px' : '64px' }}
           >
-            <span className="text-2xl">‹</span>
+            <span className={isMobile ? 'text-base' : 'text-2xl'}>‹</span>
           </button>
 
           <button
@@ -168,9 +184,10 @@ export function EndorsementsSection() {
             disabled={isTransitioning}
             onMouseEnter={() => setIsArrowHovered(true)}
             onMouseLeave={() => setIsArrowHovered(false)}
-            className="absolute right-8 top-1/2 -translate-y-1/2 z-20 w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 bg-[#0e2a3f] hover:bg-[#124166] text-white border-0 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="absolute top-1/2 -translate-y-1/2 z-20 rounded-full flex items-center justify-center bg-[#0e2a3f] hover:bg-[#124166] text-white border-0 disabled:opacity-50 disabled:cursor-not-allowed"
+            style={{ right: isMobile ? '6px' : '32px', width: isMobile ? '32px' : '64px', height: isMobile ? '32px' : '64px' }}
           >
-            <span className="text-2xl">›</span>
+            <span className={isMobile ? 'text-base' : 'text-2xl'}>›</span>
           </button>
         </div>
 
