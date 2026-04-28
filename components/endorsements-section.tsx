@@ -52,7 +52,7 @@ export function EndorsementsSection() {
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-16">
           <h3 className="text-4xl md:text-5xl font-bold gold-text">
             Endorsements
           </h3>
@@ -116,7 +116,7 @@ export function EndorsementsSection() {
                   className="relative block cursor-pointer"
                   style={{
                     width: isMobile ? '220px' : '380px',
-                    height: isMobile ? '150px' : '240px',
+                    height: isMobile ? '170px' : '240px',
                     transformStyle: 'preserve-3d'
                   }}
                   onClick={() => brand.videoId && setPlayingVideo(index)}
