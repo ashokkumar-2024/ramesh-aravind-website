@@ -88,7 +88,7 @@ export function MotivationalVideosSection() {
 
       {/* Featured Video */}
       <div className="mb-8 relative w-full">
-        <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden">
+        <div className="relative w-full aspect-video md:aspect-auto md:h-[60vh] lg:h-[70vh] overflow-hidden">
           <video
             ref={videoRef}
             src={featuredVideo.src}
