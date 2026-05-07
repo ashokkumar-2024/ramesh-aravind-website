@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 export function HeroSection() {
   return (
     <>
-      <div className="pt-24 md:pt-0 mt-20">
+      <div className="pt-24 md:pt-0 md:mt-20">
         <section className="relative w-full aspect-video md:aspect-auto md:h-screen overflow-hidden">
           <video
             src="/hero.mp4"
