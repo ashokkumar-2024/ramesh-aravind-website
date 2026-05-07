@@ -22,7 +22,7 @@ export function HeroSection() {
         </section>
       </div>
 
-      <section className="relative flex items-center justify-center overflow-hidden">
+      <section className="relative flex items-center justify-center">
         <div className="absolute inset-0 pointer-events-none">
           <div
             className="absolute inset-0"
@@ -36,7 +36,7 @@ export function HeroSection() {
           />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center pt-4 pb-0 sm:py-16">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center pt-4 pb-0 sm:py-16 md:py-28">
           <p className="text-[#0e2a3f] text-xs sm:text-sm md:text-base tracking-[0.5em] uppercase mb-4 font-[var(--font-body)]">
             Actor • Director • Author • Speaker
           </p>
