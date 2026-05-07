@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/phanisrivatsa/ramesh-aravind-website add components/timeline-section.tsx)",
+      "Bash(git -C /Users/phanisrivatsa/ramesh-aravind-website commit -m \"Timeline: add md:pt-32 to push content below fixed nav on desktop\")",
+      "Bash(git -C /Users/phanisrivatsa/ramesh-aravind-website commit -m \"Timeline desktop: sticky below nav \\(top-32\\), height calc\\(100vh-8rem\\)\")"
+    ]
+  }
+}

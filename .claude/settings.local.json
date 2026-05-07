@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/phanisrivatsa/ramesh-aravind-website commit -m \"Hero second section desktop: remove overflow-hidden, add md:py-28 padding\")",
+      "Bash(git -C /Users/phanisrivatsa/ramesh-aravind-website commit -m \"Timeline desktop: full h-screen, heading at 20% \\(below nav\\), circle at 65%\")",
+      "Bash(ls /Users/phanisrivatsa/Downloads/ccc/app && echo \"---\" && ls /Users/phanisrivatsa/Downloads/ccc/)",
+      "Read(//Users/phanisrivatsa/Downloads/ccc/**)"
+    ]
+  }
+}
