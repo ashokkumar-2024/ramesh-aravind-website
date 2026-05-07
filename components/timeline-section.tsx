@@ -87,7 +87,7 @@ export function TimelineSection() {
 
   return (
     <section ref={sectionRef} className="relative" style={{ height: '300vh' }}>
-      <div className="sticky top-0 md:top-32 left-0 right-0 h-screen md:h-[calc(100vh-8rem)] overflow-hidden" style={{ background: `linear-gradient(180deg, oklch(0.96 0.018 75), oklch(0.88 0.03 65) 50%, oklch(0.82 0.04 55))` }}>
+      <div className="sticky top-0 left-0 right-0 h-screen overflow-hidden" style={{ background: `linear-gradient(180deg, oklch(0.96 0.018 75), oklch(0.88 0.03 65) 50%, oklch(0.82 0.04 55))` }}>
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(8)].map((_, i) => (
             <div key={i} className="absolute w-1 h-1 bg-white/20 rounded-full" style={{ left: `${20 + i * 5}%`, top: `${10 + (i % 3) * 30}%`, animation: `float ${6 + i}s ease-in-out infinite`, animationDelay: `${i * 0.5}s` }} />
@@ -95,7 +95,7 @@ export function TimelineSection() {
         </div>
 
         <div className="relative h-full flex items-center justify-center overflow-hidden px-4" style={{ perspective: '1500px' }}>
-          <div className="absolute left-1/2 w-[400px] md:w-[650px] h-[400px] md:h-[650px] rounded-full pointer-events-none" style={{ top: '60%', ...getClockTransform(), transformStyle: 'preserve-3d', zIndex: 5, boxShadow: `0 0 60px rgba(0, 0, 0, 0.2), inset 0 2px 3px rgba(255, 255, 255, 0.03), inset 0 -2px 3px rgba(0, 0, 0, 0.4)`, background: `radial-gradient(circle at 50% 50%, transparent 49%, rgba(20, 20, 20, 0.85) 49.5%, rgba(30, 30, 30, 0.9) 50%, rgba(20, 20, 20, 0.85) 50.5%, transparent 51%)`, filter: `drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3))` }}>
+          <div className="absolute left-1/2 w-[400px] md:w-[650px] h-[400px] md:h-[650px] rounded-full pointer-events-none" style={{ top: isMobile ? '60%' : '65%', ...getClockTransform(), transformStyle: 'preserve-3d', zIndex: 5, boxShadow: `0 0 60px rgba(0, 0, 0, 0.2), inset 0 2px 3px rgba(255, 255, 255, 0.03), inset 0 -2px 3px rgba(0, 0, 0, 0.4)`, background: `radial-gradient(circle at 50% 50%, transparent 49%, rgba(20, 20, 20, 0.85) 49.5%, rgba(30, 30, 30, 0.9) 50%, rgba(20, 20, 20, 0.85) 50.5%, transparent 51%)`, filter: `drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3))` }}>
             {[...Array(12)].map((_, i) => {
               const angle = (i * 30) - 90
               const radius = 310
@@ -109,7 +109,7 @@ export function TimelineSection() {
           </div>
 
           {/* Center Image that changes automatically - stays static on top */}
-          <div className="absolute left-1/2 top-[60%] -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] md:w-[520px] md:h-[520px] rounded-full overflow-hidden shadow-2xl pointer-events-none" style={{ zIndex: 6 }}>
+          <div className="absolute left-1/2 top-[60%] md:top-[65%] -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] md:w-[520px] md:h-[520px] rounded-full overflow-hidden shadow-2xl pointer-events-none" style={{ zIndex: 6 }}>
             {moments.map((moment, index) => {
               const isActive = currentImageIndex === index
               return (
@@ -124,7 +124,7 @@ export function TimelineSection() {
             })}
           </div>
 
-          <div className="absolute left-1/2 top-[3%] md:top-[5%] lg:top-[6%] transform -translate-x-1/2 text-center z-20 px-4 mb-4">
+          <div className="absolute left-1/2 top-[3%] md:top-[20%] lg:top-[20%] transform -translate-x-1/2 text-center z-20 px-4 mb-4">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold gold-text mb-1 md:mb-2 lg:mb-4 whitespace-nowrap leading-none">Journey Through Time</h1>
           </div>
 
