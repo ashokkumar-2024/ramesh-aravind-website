@@ -87,7 +87,7 @@ export function TimelineSection() {
 
   return (
     <section ref={sectionRef} className="relative" style={{ height: '300vh' }}>
-      <div className="sticky top-0 left-0 right-0 h-screen overflow-hidden md:pt-32" style={{ background: `linear-gradient(180deg, oklch(0.96 0.018 75), oklch(0.88 0.03 65) 50%, oklch(0.82 0.04 55))` }}>
+      <div className="sticky top-0 md:top-32 left-0 right-0 h-screen md:h-[calc(100vh-8rem)] overflow-hidden" style={{ background: `linear-gradient(180deg, oklch(0.96 0.018 75), oklch(0.88 0.03 65) 50%, oklch(0.82 0.04 55))` }}>
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(8)].map((_, i) => (
             <div key={i} className="absolute w-1 h-1 bg-white/20 rounded-full" style={{ left: `${20 + i * 5}%`, top: `${10 + (i % 3) * 30}%`, animation: `float ${6 + i}s ease-in-out infinite`, animationDelay: `${i * 0.5}s` }} />
