@@ -58,7 +58,6 @@ function LazyYouTube({ id, title }: { id: string; title: string }) {
     </button>
   )
 }
-
 export function MotivationalVideosSection() {
   const [isMuted, setIsMuted] = useState(true)
   const videoRef = useRef<HTMLVideoElement>(null)

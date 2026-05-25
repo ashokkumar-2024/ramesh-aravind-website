@@ -61,8 +61,8 @@ export function EndorsementsSection() {
         {/* 3D Slider Container */}
         <div
           className="relative flex items-center justify-center transition-all duration-700 ease-out"
-          style={{ height: isMobile ? '260px' : '280px' }}
           style={{
+            height: isMobile ? '260px' : '280px',
             transformStyle: 'preserve-3d',
             transform: isArrowHovered ? 'rotateX(5deg) rotateY(3deg)' : 'rotateX(0deg) rotateY(0deg)'
           }}

@@ -2,7 +2,6 @@
 
 const movies = [
   { title: "Yours Sincerely Raam", image: "/upcoming/1.jpg" },
-  { title: "KD: The Devil", image: "/upcoming/2.jpg" },
   { title: "Daiji", image: "/upcoming/3.jpg" },
 ]
 
@@ -19,7 +18,7 @@ export function UpcomingMovies() {
           <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold gold-text mb-4">Coming Soon</h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-[900px] mx-auto">
           {movies.map((movie) => (
             <div key={movie.title} className="relative">
               <div className="aspect-[2/3] overflow-hidden rounded-2xl flex justify-center items-center bg-gray-900">
