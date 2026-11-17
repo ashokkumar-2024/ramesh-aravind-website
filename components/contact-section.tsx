@@ -20,9 +20,20 @@ export function ContactSection() {
     remarks: "",
   })
 
+  // No backend yet: open the visitor's email app with the enquiry pre-filled
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
+    const subject = `Enquiry${formData.enquiryType ? ` (${formData.enquiryType})` : ""} from ${formData.name}`
+    const body = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Mobile: ${formData.mobile}`,
+      `Enquiry for: ${formData.enquiryType}`,
+      `Event date: ${formData.eventDate}`,
+      "",
+      formData.remarks,
+    ].join("\n")
+    window.location.href = `mailto:enquiry@ramesharavind.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
 
   return (

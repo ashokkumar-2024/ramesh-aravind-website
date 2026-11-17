@@ -20,6 +20,7 @@ export const infoPages = [
   { href: "/awards", label: "Awards & Honours" },
   { href: "/speaker-portfolio", label: "Motivational Speaker" },
   { href: "/producer-portfolio", label: "Producer" },
+  { href: "/contact", label: "Contact & Bookings" },
 ]
 
 export const films = [

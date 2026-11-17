@@ -10,6 +10,7 @@ const pages: { path: string; lastModified: string; priority: number }[] = [
   { path: '/television-shows', lastModified: '2026-11-17', priority: 0.8 },
   { path: '/books', lastModified: '2026-11-17', priority: 0.8 },
   { path: '/awards', lastModified: '2026-11-17', priority: 0.8 },
+  { path: '/contact', lastModified: '2026-11-17', priority: 0.8 },
   { path: '/best-movies', lastModified: '2026-11-05', priority: 0.7 },
   { path: '/producer-portfolio', lastModified: '2026-11-05', priority: 0.7 },
 ]
