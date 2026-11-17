@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Volume2, VolumeX } from "lucide-react"
 
 const featuredVideo = {
@@ -61,6 +61,22 @@ function LazyYouTube({ id, title }: { id: string; title: string }) {
 export function MotivationalVideosSection() {
   const [isMuted, setIsMuted] = useState(true)
   const videoRef = useRef<HTMLVideoElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [inView, setInView] = useState(false)
+
+  // Only start downloading the featured video when it scrolls near the viewport
+  useEffect(() => {
+    const el = containerRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setInView(true)
+        observer.disconnect()
+      }
+    }, { rootMargin: "200px" })
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -87,10 +103,10 @@ export function MotivationalVideosSection() {
 
       {/* Featured Video */}
       <div className="mb-8 relative w-full">
-        <div className="relative w-full aspect-video md:aspect-auto md:h-[60vh] lg:h-[70vh] overflow-hidden">
+        <div ref={containerRef} className="relative w-full aspect-video md:aspect-auto md:h-[60vh] lg:h-[70vh] overflow-hidden">
           <video
             ref={videoRef}
-            src={featuredVideo.src}
+            src={inView ? featuredVideo.src : undefined}
             autoPlay
             muted
             loop

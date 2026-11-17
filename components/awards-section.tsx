@@ -112,7 +112,7 @@ export function AwardsSection() {
                   >
                     {/* Award Image */}
                     <div className="relative w-full h-full">
-                      <img 
+                      <img loading="lazy" 
                         src={`/award-${index + 1}.jpg`}
                         alt={award.award}
                         className="w-full h-full object-cover"

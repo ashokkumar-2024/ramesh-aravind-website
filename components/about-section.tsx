@@ -186,7 +186,7 @@ export function AboutSection() {
                 }}
               />
 
-              <img
+              <img loading="lazy"
                 src="/Ra7.jpg"
                 alt="Ramesh Aravind - Portrait"
                 className="relative w-full h-auto object-cover rounded-2xl"

@@ -182,7 +182,7 @@ export function ContactSection() {
                         value={formData.enquiryType}
                         onValueChange={(value) => setFormData({ ...formData, enquiryType: value })}
                       >
-                        <SelectTrigger className="py-6 bg-[oklch(0.1_0.015_25/0.5)] border-[oklch(0.24_0.025_30)] font-[var(--font-body)]">
+                        <SelectTrigger id="enquiryType" aria-label="Enquiry for" className="py-6 bg-[oklch(0.1_0.015_25/0.5)] border-[oklch(0.24_0.025_30)] font-[var(--font-body)]">
                           <SelectValue placeholder="Select" />
                         </SelectTrigger>
                         <SelectContent>

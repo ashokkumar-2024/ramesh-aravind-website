@@ -22,7 +22,7 @@ export function RameshAravindDaySection() {
           {[1, 2, 3].map((num) => (
             <div key={num} className="group relative">
               <div className="aspect-[2/3] overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_-15px_rgba(212,175,55,0.3)]">
-                <img
+                <img loading="lazy"
                   src={`/ramesh-aravind-day/${num}.jpg`}
                   alt={`Ramesh Aravind's Day ${num}`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

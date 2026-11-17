@@ -4,6 +4,20 @@ import { ChevronLeft, ChevronRight, Play } from "lucide-react"
 
 const tvShows = [
   {
+    title: "Kannada Kotyadhipati",
+    description: "Quiz show changing lives across Karnataka",
+    seasons: "Season 1",
+    image: "/Ramesh Aravind (1).png",
+    videoUrl: ""
+  },
+  {
+    title: "Mahanati",
+    description: "Celebrating legendary personalities",
+    seasons: "Season 1",
+    image: "/tv showsss/Mahanati.png",
+    videoUrl: "https://www.youtube.com/watch?v=eOMA6TGW9Nk"
+  },
+  {
     title: "Weekend With Ramesh - Season 1",
     description: "Celebrity talk show celebrating achievers",
     seasons: "Season 1",
@@ -54,13 +68,6 @@ const tvShows = [
     seasons: "Season 1",
     image: "/tv showsss/preetuyinda ramesh.png",
     videoUrl: "https://www.youtube.com/watch?v=DQmmA-6TaIw"
-  },
-  {
-    title: "Mahanati",
-    description: "Celebrating legendary personalities",
-    seasons: "Season 1",
-    image: "/tv showsss/Mahanati.png",
-    videoUrl: "https://www.youtube.com/watch?v=eOMA6TGW9Nk"
   }
 ]
 
@@ -96,13 +103,13 @@ export function TVShowsSection() {
             <div key={show.title} onMouseEnter={() => setHoveredIndex(index)} onMouseLeave={() => setHoveredIndex(null)} className={`flex-shrink-0 w-64 sm:w-80 snap-start transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`} style={{transitionDelay: `${200 + index * 100}ms`, transform: hoveredIndex === index ? "translateY(-8px) scale(1.02)" : "translateY(0) scale(1)"}}>
               <div className={`glass-card rounded-xl overflow-hidden transition-all duration-500 ${hoveredIndex === index ? "border-primary/50" : ""}`}>
                 <div className="relative overflow-hidden bg-white">
-                  <img 
+                  <img loading="lazy" 
                     src={show.image || `/.jpg?height=200&width=360&query=${encodeURIComponent(show.title + " TV show thumbnail Indian television cinematic")}`} 
                     alt={show.title} 
                     className={`w-full h-auto transition-all duration-700 ${hoveredIndex === index ? "scale-110 brightness-110" : "scale-100 brightness-100"}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
-                  {hoveredIndex === index && (<div className="absolute inset-0 flex items-center justify-center bg-background/30 animate-in fade-in duration-300"><div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/50 group cursor-pointer hover:scale-110 transition-transform" onClick={() => show.videoUrl && window.open(show.videoUrl, '_blank')}><Play className="h-7 w-7 text-primary-foreground fill-current ml-1" /></div></div>)}
+                  {hoveredIndex === index && show.videoUrl && (<div className="absolute inset-0 flex items-center justify-center bg-background/30 animate-in fade-in duration-300"><div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/50 group cursor-pointer hover:scale-110 transition-transform" onClick={() => show.videoUrl && window.open(show.videoUrl, '_blank')}><Play className="h-7 w-7 text-primary-foreground fill-current ml-1" /></div></div>)}
                 </div>
                 <div className="p-4">
                   <h4 className={`font-bold text-lg mb-1 transition-colors duration-300 ${hoveredIndex === index ? "text-foreground" : "text-foreground/90"}`}>{show.title}</h4>

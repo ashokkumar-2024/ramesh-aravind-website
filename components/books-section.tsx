@@ -122,7 +122,7 @@ export function BooksSection() {
                     boxShadow: 'none',
                   }}
                 >
-                  <img
+                  <img loading="lazy"
                     src={books[activeBook].image}
                     alt={books[activeBook].title}
                     className="w-full h-full object-cover"

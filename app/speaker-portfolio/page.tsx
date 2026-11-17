@@ -134,6 +134,8 @@ export default function SpeakerPortfolio() {
                       <div className="aspect-video">
                         <iframe
                           src={`https://www.youtube.com/embed/${speech.videoId}?autoplay=1&mute=1&loop=1&playlist=${speech.videoId}&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1`}
+                          title={speech.title}
+                          loading="lazy"
                           className="w-full h-full"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen

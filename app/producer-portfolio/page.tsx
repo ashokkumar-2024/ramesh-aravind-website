@@ -149,7 +149,7 @@ export default function ProducerPortfolio() {
                             transition: 'transform 0.7s ease-out'
                           }}
                         >
-                          <img
+                          <img loading="lazy"
                             src={show.image}
                             alt={show.title}
                             className="w-full h-auto rounded-lg shadow-2xl transition-all duration-700"

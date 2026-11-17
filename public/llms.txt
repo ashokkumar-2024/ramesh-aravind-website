@@ -1,7 +1,21 @@
 # Dr Ramesh Aravind — Official Website
-> https://www.ramesharavind.com
+
+> Official website of Dr Ramesh Aravind: Indian actor of 140+ films, film director, bestselling author, television host and motivational speaker based in Bangalore.
 
 Dr Ramesh Aravind is a legendary Indian actor, acclaimed film director, bestselling author, television host, and inspirational motivational speaker. His career spans over 35 years across Kannada, Tamil, Telugu, and Hindi cinema with more than 140 films.
+
+## Pages
+
+- [Home](https://www.ramesharavind.com/): Biography, career timeline, filmography, books, TV shows, press, FAQ and contact
+- [Best Movies](https://www.ramesharavind.com/best-movies): His most acclaimed films as an actor
+- [Film Director](https://www.ramesharavind.com/director-portfolio): Films he has directed
+- [Motivational Speaker](https://www.ramesharavind.com/speaker-portfolio): Speaking topics and booking for events
+- [Producer](https://www.ramesharavind.com/producer-portfolio): TV shows and films he has produced
+
+## External Profiles
+
+- [Wikipedia](https://en.wikipedia.org/wiki/Ramesh_Aravind): Encyclopedia article
+- [IMDb](https://www.imdb.com/name/nm0712076/): Full film credits
 
 ## Identity
 

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Dr Ramesh Aravind",
   },
   description:
-    "Official website of Dr Ramesh Aravind — legendary Kannada actor with 140+ films, acclaimed director, bestselling author of Preetiyinda Ramesh, and inspirational motivational speaker. Host of Weekend With Ramesh on ZEE Kannada.",
+    "Official website of Dr Ramesh Aravind — Kannada actor of 140+ films, director, bestselling author, motivational speaker and host of Weekend With Ramesh.",
   keywords: [
     "Dr Ramesh Aravind",
     "Ramesh Aravind",
@@ -210,14 +210,6 @@ const websiteSchema = {
   publisher: {
     "@id": `${BASE_URL}/#person`,
   },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${BASE_URL}/?q={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
-  },
   inLanguage: ["en", "kn", "ta"],
 }
 
@@ -389,7 +381,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href={BASE_URL} />
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bangalore, Karnataka, India" />
         <meta name="language" content="English" />

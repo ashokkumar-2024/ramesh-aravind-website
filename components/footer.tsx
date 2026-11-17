@@ -6,7 +6,7 @@ export function Footer() {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img
+            <img loading="lazy"
               src="/Black BG_RA.png.png"
               alt="Ramesh Aravind"
               className="h-24 sm:h-28 md:h-32 w-auto object-contain"

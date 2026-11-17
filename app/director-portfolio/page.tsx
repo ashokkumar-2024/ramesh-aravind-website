@@ -195,7 +195,7 @@ export default function DirectorPortfolio() {
                         transition: 'transform 0.5s ease-out'
                       }}
                     >
-                      <img
+                      <img loading={index === 0 ? "eager" : "lazy"}
                         src={film.image}
                         alt={film.title}
                         className="w-full h-auto object-cover transition-all duration-500"

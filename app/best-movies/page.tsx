@@ -106,7 +106,7 @@ export default function BestMoviesPage() {
         <section key={movie.title} className="h-screen flex items-center relative">
           <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
             <div className={`relative ${index % 2 === 0 ? 'order-1' : 'order-2'}`}>
-              <img
+              <img loading="lazy"
                 src={movie.image}
                 alt={movie.title}
                 className="w-full max-w-md mx-auto rounded-2xl shadow-2xl"

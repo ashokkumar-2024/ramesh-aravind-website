@@ -3,11 +3,11 @@ import { useEffect, useRef, useState } from "react"
 
 const moments = [
   { year: "1986", title: "The Beginning", subtitle: "Film Debut with K. Balachander", detail: "Sundara Swapnagalu", centerImage: "/canva-images/panel-1/panel-1-001.jpg" },
-  { year: "1990s", title: "Rising Star", subtitle: "Kannada Cinema Breakthrough", detail: "Multiple blockbusters", centerImage: "/canva-images/panel-1/panel-1-002.png" },
-  { year: "1998", title: "Behind the Camera", subtitle: "Directorial Vision", detail: "Rama Shama Bhama", centerImage: "/canva-images/panel-1/panel-1-003.png" },
+  { year: "1990s", title: "Rising Star", subtitle: "Kannada Cinema Breakthrough", detail: "Multiple blockbusters", centerImage: "/canva-images/panel-1/panel-1-002.jpg" },
+  { year: "1998", title: "Behind the Camera", subtitle: "Directorial Vision", detail: "Rama Shama Bhama", centerImage: "/canva-images/panel-1/panel-1-003.jpg" },
   { year: "2000s", title: "Pan-Indian Icon", subtitle: "Multi-language Mastery", detail: "Cross-cultural storytelling", centerImage: "/canva-images/panel-1/panel-1-004.jpg" },
   { year: "2013", title: "Television Legend", subtitle: "Weekend With Ramesh", detail: "Connecting hearts", centerImage: "/canva-images/panel-1/panel-1-005.jpg" },
-  { year: "Present", title: "Living Legacy", subtitle: "140+ Films & Inspiring Millions", detail: "Timeless influence", centerImage: "/canva-images/panel-1/panel-1-006.png" },
+  { year: "Present", title: "Living Legacy", subtitle: "140+ Films & Inspiring Millions", detail: "Timeless influence", centerImage: "/canva-images/panel-1/panel-1-006.jpg" },
 ]
 
 const descriptions = [
@@ -25,6 +25,21 @@ export function TimelineSection() {
   const [isMobile, setIsMobile] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const sectionRef = useRef<HTMLElement>(null)
+  const [nearView, setNearView] = useState(false)
+
+  // Defer timeline images until the section is close to the viewport
+  useEffect(() => {
+    const el = sectionRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setNearView(true)
+        observer.disconnect()
+      }
+    }, { rootMargin: "400px" })
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
   const lastScrollTime = useRef(Date.now())
 
   // Auto-rotate center images every 3 seconds
@@ -113,9 +128,9 @@ export function TimelineSection() {
             {moments.map((moment, index) => {
               const isActive = currentImageIndex === index
               return (
-                <img
+                <img loading="lazy"
                   key={moment.year}
-                  src={moment.centerImage}
+                  src={nearView ? moment.centerImage : undefined}
                   alt={moment.title}
                   className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
                   style={{ opacity: isActive ? 1 : 0 }}
@@ -125,7 +140,7 @@ export function TimelineSection() {
           </div>
 
           <div className="absolute left-1/2 top-[3%] md:top-[20%] lg:top-[20%] transform -translate-x-1/2 text-center z-20 px-4 mb-4">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold gold-text mb-1 md:mb-2 lg:mb-4 whitespace-nowrap leading-none">Journey Through Time</h1>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold gold-text mb-1 md:mb-2 lg:mb-4 whitespace-nowrap leading-none">Journey Through Time</h2>
           </div>
 
           <div className="relative w-full h-full flex items-center justify-center z-10">
@@ -160,8 +175,8 @@ export function TimelineSection() {
 
                         {/* Visual - Right Side (Decorative Element / Image Placeholder) */}
                         <div className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 w-28 h-28 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-xl overflow-hidden  shadow-lg">
-                          <img
-                            src={`/timeline/${moment.year}.jpg`}
+                          <img loading="lazy"
+                            src={nearView ? `/timeline/${moment.year}.jpg` : undefined}
                             alt={moment.title}
                             className="w-full h-full object-cover"
                             onError={(e) => {

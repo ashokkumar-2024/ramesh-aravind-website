@@ -1,23 +1,53 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 
+const HERO_POSTER = "/canva-images/panel-1/panel-1-001.jpg"
+
 export function HeroSection() {
+  // Load the video only after the page has finished loading so the poster image paints first
+  const [showVideo, setShowVideo] = useState(false)
+
+  useEffect(() => {
+    const start = () => setTimeout(() => setShowVideo(true), 2500)
+    if (document.readyState === "complete") {
+      const t = start()
+      return () => clearTimeout(t)
+    }
+    let t: ReturnType<typeof setTimeout>
+    const onLoad = () => { t = start() }
+    window.addEventListener("load", onLoad, { once: true })
+    return () => {
+      window.removeEventListener("load", onLoad)
+      clearTimeout(t)
+    }
+  }, [])
+
   return (
     <>
       <div className="pt-24 md:pt-0 md:mt-20">
         <section className="relative w-full aspect-video md:aspect-auto md:h-screen overflow-hidden">
-          <video
-            src="/hero.mp4"
+          <img
+            src={HERO_POSTER}
+            alt="Dr Ramesh Aravind"
             className="absolute inset-0 w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            poster="/canva-images/panel-1/panel-1-001.jpg"
-            style={{ pointerEvents: 'none' }}
+            fetchPriority="high"
           />
+          {showVideo && (
+            <video
+              src="/hero.mp4"
+              className="absolute inset-0 w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              poster={HERO_POSTER}
+              aria-hidden="true"
+              style={{ pointerEvents: 'none' }}
+            />
+          )}
           <div className="absolute inset-0 bg-black/30" />
         </section>
       </div>

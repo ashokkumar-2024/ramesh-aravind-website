@@ -64,7 +64,7 @@ export function GallerySection() {
             >
               <X className="h-5 w-5 sm:h-6 sm:w-6" />
             </button>
-            <img
+            <img loading="lazy"
               src={galleryImages[selectedImage]?.src}
               alt="Gallery Image"
               className="w-full h-full object-contain"
