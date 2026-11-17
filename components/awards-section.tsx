@@ -7,8 +7,8 @@ const awards = [
   { year: "1997", award: "Filmfare Awards South", category: "Best Actor – Kannada", film: "Amrutha Varshini" },
   { year: "1997", award: "Udaya Film Awards", category: "Best Actor", film: "O Mallige" },
   { year: "1998", award: "Filmfare Award South", category: "Best Actor – Kannada", film: "Hoomale" },
-  { year: "2005", award: "SIIMA Awards", category: "Best Director", film: "Rama Shama Bhama" },
-  { year: "2019", award: "Karnataka State Film Awards", category: "Best Director", film: "100" },
+  { year: "2006", award: "Udaya Film Awards", category: "Best Debut Director", film: "Rama Shama Bhama" },
+  { year: "2024", award: "Chandanavana Film Critics Academy Awards", category: "Best Actor", film: "Shivaji Surathkal 2" },
 ]
 
 export function AwardsSection() {

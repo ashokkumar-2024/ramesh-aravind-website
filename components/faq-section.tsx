@@ -21,12 +21,12 @@ const faqs = [
   {
     question: "Which films has Dr Ramesh Aravind directed?",
     answer:
-      "Dr Ramesh Aravind has directed several acclaimed films: Rama Shama Bhama (2005, Kannada), Uttama Villain (2015, Tamil — starring Kamal Haasan), 100 (2019, Kannada — Karnataka State Film Award Best Director), Shivaji Surathkal (2020, Kannada), Accident (Kannada), and Enge Enathu Kavithai (Kannada).",
+      "Dr Ramesh Aravind has directed films in Kannada and Tamil, including Rama Shama Bhama (2005), Sathyavan Savithri (2007), Accident (2008), Venkata in Sankata (2009), Nammanna Don (2012), Uttama Villain (2015, Tamil, starring Kamal Haasan), Sundaranga Jaana (2016) and 100 (2021).",
   },
   {
     question: "What awards has Dr Ramesh Aravind won?",
     answer:
-      "Dr Ramesh Aravind has won multiple prestigious awards: Karnataka State Film Award for Best Actor (America America, 1996), Filmfare Awards South Best Actor Kannada (Amrutha Varshini 1997 & Hoomale 1998), Udaya Film Award Best Actor (O Mallige, 1997), SIIMA Award Best Director (Rama Shama Bhama, 2005), and Karnataka State Film Award for Best Director (100, 2019).",
+      "Dr Ramesh Aravind's awards include the Karnataka State Film Award for Best Actor (America America, 1996–97), Filmfare Award South for Best Actor – Kannada (Amrutha Varshini, 1997 and Hoomale, 1998), Udaya Film Award for Best Actor (O Mallige, 1997), Udaya Film Award for Best Debut Director (Rama Shama Bhama, 2006) and the Chandanavana Film Critics Academy Award for Best Actor (Shivaji Surathkal 2, 2024). In 2022 he received an honorary doctorate from Rani Channamma University, Belagavi, for his contribution to cinema.",
   },
   {
     question: "What books has Dr Ramesh Aravind written?",
@@ -46,7 +46,7 @@ const faqs = [
   {
     question: "What are Dr Ramesh Aravind's most popular films?",
     answer:
-      "Some of Dr Ramesh Aravind's most celebrated films include America America, Amrutha Varshini, O Mallige, Hoomale, Pushpaka Vimana, Mumbai Xpress, Rama Shama Bhama (2005), 100 (2019), Shivaji Surathkal (2020), and Bhairadevi (2024).",
+      "Some of Dr Ramesh Aravind's most celebrated films include America America, Amrutha Varshini, O Mallige, Hoomale, Pushpaka Vimana, Mumbai Xpress, Rama Shama Bhama (2005), 100 (2021), Shivaji Surathkal (2020), and Bhairadevi (2024).",
   },
   {
     question: "What brands has Dr Ramesh Aravind endorsed?",

@@ -22,7 +22,7 @@ const films = [
   { title: "Uttama Villain", year: "2015", language: "Tamil", role: "Director", image: "/filmography/uttama-villain.jpg" },
   { title: "Sundaranga Jaana", year: "2016", language: "Kannada", role: "Director", image: "/filmography/sundaranga-jaana.png" },
   { title: "Pushpaka Vimana", year: "2017", language: "Kannada", role: "Actor", image: "/filmography/pushpaka-vimana.jpg" },
-  { title: "100", year: "2019", language: "Kannada", role: "Director/Actor", image: "/filmography/100.png" },
+  { title: "100", year: "2021", language: "Kannada", role: "Director/Actor", image: "/filmography/100.png" },
   { title: "Shivaji Surathkal", year: "2020", language: "Kannada", role: "Lead", image: "/filmography/shivaji-surathkal.jpg" },
   { title: "Maha Sharanya Haralya", year: "2023", language: "Kannada", role: "Actor", image: "/filmography/maha-sharanya-haralya.jpg" },
   { title: "Shivaji Surathkal 2", year: "2023", language: "Kannada", role: "Lead", image: "/filmography/shivaji-surathkal-2.jpg" },

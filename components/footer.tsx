@@ -1,9 +1,15 @@
 import { Instagram, Twitter, Facebook, Youtube } from "lucide-react"
+import { infoPages } from "@/lib/site-facts"
 
 export function Footer() {
   return (
     <footer className="py-3 border-t border-border/50 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
+        <nav aria-label="Explore" className="flex flex-wrap justify-center gap-x-5 gap-y-2 py-4 text-sm text-[#0e2a3f] font-[var(--font-inter)]">
+          {infoPages.map((p) => (
+            <a key={p.href} href={p.href} className="hover:text-[#8a5d24] underline-offset-4 hover:underline">{p.label}</a>
+          ))}
+        </nav>
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <img loading="lazy"

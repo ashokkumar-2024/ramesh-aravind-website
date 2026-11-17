@@ -4,6 +4,7 @@ import { AboutSection } from "@/components/about-section"
 const TimelineSection = dynamic(() => import("@/components/timeline-section").then(mod => ({ default: mod.TimelineSection })))
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { faqSchema, booksSchema, breadcrumbSchema } from "@/lib/home-schema"
 
 const CareerHighlights = dynamic(() => import("@/components/career-highlights").then(mod => ({ default: mod.CareerHighlights })))
 const FilmographySection = dynamic(() => import("@/components/filmography-section").then(mod => ({ default: mod.FilmographySection })))
@@ -22,6 +23,9 @@ const FAQSection = dynamic(() => import("@/components/faq-section").then(mod => 
 export default function Home() {
   return (
     <main className="bg-background">
+      {[faqSchema, booksSchema, breadcrumbSchema].map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <Navigation />
       <HeroSection />
       <UpcomingMovies />
