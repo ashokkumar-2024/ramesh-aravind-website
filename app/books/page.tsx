@@ -31,11 +31,19 @@ const booksSchema = {
   })),
 }
 
+const FAQS = [
+  { q: "What books has Ramesh Aravind written?", a: "Ramesh Aravind has written four books: Preetiyinda Ramesh and Art of Success in Kannada, It's No Fun Without U in English, and Anbudan Ramesh, the 2024 Tamil edition of Preetiyinda Ramesh." },
+  { q: "What is Preetiyinda Ramesh?", a: "Preetiyinda Ramesh is Ramesh Aravind's best-known Kannada book, a bestseller that went through five editions in five months. A Tamil edition, Anbudan Ramesh, was published in 2024." },
+  { q: "Has Ramesh Aravind written a book in English?", a: "Yes. It's No Fun Without U is his English book of inspirational stories and life lessons." },
+  { q: "Does Ramesh Aravind have an audiobook?", a: "Yes. He wrote and narrated the Kannada audiobook MasadaMaatu with Ramesh, available on Storytel." },
+]
+
 export default function BooksPage() {
   return (
     <InfoPage
       path={PATH}
       title="Books by Dr Ramesh Aravind"
+      faqs={FAQS}
       schema={[booksSchema]}
       intro={
         <p>

@@ -30,11 +30,20 @@ const listSchema = {
   })),
 }
 
+const FAQS = [
+  { q: "How many films has Ramesh Aravind acted in?", a: "Ramesh Aravind has acted in more than 140 films in Kannada, Tamil, Telugu and Hindi since his debut in Sundara Swapnagalu (1986)." },
+  { q: "What are Ramesh Aravind's best movies?", a: "His most celebrated films include America America, Amrutha Varshini (1997), O Mallige (1997), Hoomale (1998), Rama Shama Bhama (2005), Pushpaka Vimana (2017), Shivaji Surathkal (2020) and 100 (2021)." },
+  { q: "Which films has Ramesh Aravind directed?", a: "Ramesh Aravind has directed Rama Shama Bhama (2005), Sathyavan Savithri (2007), Accident (2008), Venkata in Sankata (2009), Nammanna Don (2012), Uttama Villain (2015, Tamil), Sundaranga Jaana (2016) and 100 (2021)." },
+  { q: "Did Ramesh Aravind direct Uttama Villain?", a: "Yes. Ramesh Aravind directed Uttama Villain, a 2015 Tamil film starring Kamal Haasan." },
+  { q: "What languages has Ramesh Aravind acted in?", a: "He has acted in Kannada, Tamil, Telugu and Hindi films. Most of his work is in Kannada cinema." },
+]
+
 export default function MoviesPage() {
   return (
     <InfoPage
       path={PATH}
       title="Ramesh Aravind Movies & Filmography"
+      faqs={FAQS}
       schema={[listSchema]}
       intro={
         <p>

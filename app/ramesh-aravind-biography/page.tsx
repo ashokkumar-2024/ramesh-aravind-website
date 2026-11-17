@@ -23,14 +23,24 @@ const profileSchema = {
   inLanguage: "en",
   isPartOf: { "@id": `${BASE_URL}/#website` },
   mainEntity: { "@id": PERSON_ID },
+  speakable: { "@type": "SpeakableSpecification", cssSelector: [".answer-summary"] },
   dateModified: "2026-11-17",
 }
+
+const FAQS = [
+  { q: "Who is Dr Ramesh Aravind?", a: "Dr Ramesh Aravind is an Indian actor, film director, television host, author and motivational speaker. He has acted in more than 140 films in Kannada, Tamil, Telugu and Hindi since 1986, directed eight feature films, and hosted five seasons of the Kannada talk show Weekend With Ramesh on Zee Kannada." },
+  { q: "When and where was Ramesh Aravind born?", a: "Ramesh Aravind was born on 10 September 1964 in Kumbakonam, Tamil Nadu, India. He lives and works in Bengaluru, Karnataka." },
+  { q: "Why is Ramesh Aravind called Dr Ramesh Aravind?", a: "In 2022 Rani Channamma University in Belagavi awarded Ramesh Aravind an honorary doctorate for his contribution to cinema, which is why he is known as Dr Ramesh Aravind." },
+  { q: "What was Ramesh Aravind's first film?", a: "His first film was the Kannada film Sundara Swapnagalu (1986). His Tamil debut was Manathil Uruthi Vendum (1987) and his Telugu debut was Rudraveena (1988)." },
+  { q: "How can I contact Dr Ramesh Aravind?", a: "For speaking engagements, events, brand collaborations and media requests, email his team at enquiry@ramesharavind.com or use the contact form on the official website, www.ramesharavind.com." },
+]
 
 export default function BiographyPage() {
   return (
     <InfoPage
       path={PATH}
       title="Dr Ramesh Aravind – Biography"
+      faqs={FAQS}
       schema={[profileSchema]}
       intro={
         <p>

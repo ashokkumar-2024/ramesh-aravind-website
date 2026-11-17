@@ -30,11 +30,20 @@ const tvSchema = {
   })),
 }
 
+const FAQS = [
+  { q: "What is Weekend With Ramesh?", a: "Weekend With Ramesh is a Kannada celebrity talk show on Zee Kannada hosted by Dr Ramesh Aravind. Each episode revisits the life journey of an achiever from cinema, sport, business or public life. It has run for five seasons." },
+  { q: "How many seasons of Weekend With Ramesh are there?", a: "Weekend With Ramesh has had five seasons on Zee Kannada, all hosted by Dr Ramesh Aravind." },
+  { q: "Did Ramesh Aravind host Kannadada Kotyadhipati?", a: "Yes. Ramesh Aravind hosted Season 3 of Kannadada Kotyadhipati, the Kannada version of Who Wants to Be a Millionaire." },
+  { q: "What is Ramesh Aravind's role in Mahanati?", a: "Ramesh Aravind was a judge (Maha Guru) on Mahanati, an acting talent show on Zee Kannada in 2024." },
+  { q: "Which TV serials has Ramesh Aravind produced?", a: "As a producer, Ramesh Aravind's TV serials include Supernatural Fiction and Sundari on Udaya TV, and Neenadena and Aase on Star Suvarna." },
+]
+
 export default function TelevisionShowsPage() {
   return (
     <InfoPage
       path={PATH}
       title="Ramesh Aravind TV Shows"
+      faqs={FAQS}
       schema={[tvSchema]}
       intro={
         <p>

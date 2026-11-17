@@ -29,11 +29,19 @@ const awardsSchema = {
   },
 }
 
+const FAQS = [
+  { q: "What awards has Ramesh Aravind won?", a: "Ramesh Aravind has won the Karnataka State Film Award for Best Actor (America America), two Filmfare Awards South for Best Actor – Kannada (Amrutha Varshini, 1997; Hoomale, 1998), the Udaya Film Award for Best Actor (O Mallige, 1997) and the Udaya Film Award for Best Debut Director (Rama Shama Bhama, 2006)." },
+  { q: "Has Ramesh Aravind won a Filmfare Award?", a: "Yes. He won the Filmfare Award South for Best Actor – Kannada twice: for Amrutha Varshini in 1997 and Hoomale in 1998." },
+  { q: "Has Ramesh Aravind won an award as a director?", a: "Yes. He won the Udaya Film Award for Best Debut Director in 2006 for Rama Shama Bhama, the first film he directed." },
+  { q: "Does Ramesh Aravind have a doctorate?", a: "Yes. Rani Channamma University, Belagavi, awarded him an honorary doctorate in 2022 for his contribution to cinema." },
+]
+
 export default function AwardsPage() {
   return (
     <InfoPage
       path={PATH}
       title="Ramesh Aravind Awards & Honours"
+      faqs={FAQS}
       schema={[awardsSchema]}
       intro={
         <p>

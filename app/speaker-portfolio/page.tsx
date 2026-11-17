@@ -4,6 +4,19 @@ import { useEffect, useRef, useState } from "react"
 import { Play } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 
+const SPEAKER_FAQS = [
+  { q: "How can I book Dr Ramesh Aravind for a motivational speech?", a: "Email his team at enquiry@ramesharavind.com with the event name, date, city, audience size and preferred language. You can also use the contact form on the homepage of www.ramesharavind.com." },
+  { q: "What topics does Ramesh Aravind speak on?", a: "He speaks on personal growth, leadership and excellence, success mindset and overcoming failure, innovation and creative thinking, cultural pride, and the power of storytelling." },
+  { q: "In which languages does Ramesh Aravind give talks?", a: "He gives talks in English, Kannada and Tamil." },
+  { q: "What kinds of events does Ramesh Aravind speak at?", a: "He speaks at corporate events and leadership meetings, colleges and schools, literature festivals, conferences and community gatherings across India." },
+]
+
+const speakerFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: SPEAKER_FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+}
+
 const speeches = [
   {
     title: "ನಿಮ್ಮ ಹವ್ಯಾಸಗಳು ನಿಮಗೆ ಶಾಪವಾಗಬಹುದು!",
@@ -169,6 +182,23 @@ export default function SpeakerPortfolio() {
           })}
         </div>
       </div>
+
+      {/* Booking questions and answers */}
+      <section className="container mx-auto px-8 pt-8 max-w-3xl">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakerFaqSchema) }} />
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">Booking Dr Ramesh Aravind</h2>
+        <div className="space-y-6">
+          {SPEAKER_FAQS.map((f) => (
+            <div key={f.q}>
+              <h3 className="text-lg font-semibold text-gray-900 mb-1">{f.q}</h3>
+              <p className="text-gray-700 leading-relaxed">{f.a}</p>
+            </div>
+          ))}
+        </div>
+        <a href="mailto:enquiry@ramesharavind.com" className="inline-block mt-8 px-6 py-3 rounded-full bg-[#0e2a3f] text-white hover:bg-[#8a5d24] transition-colors">
+          Email enquiry@ramesharavind.com
+        </a>
+      </section>
 
       {/* Closing */}
       <div className="container mx-auto px-8 py-16">

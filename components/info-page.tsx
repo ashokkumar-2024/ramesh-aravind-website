@@ -8,11 +8,12 @@ type InfoPageProps = {
   title: string
   intro: React.ReactNode
   schema?: object[]
+  faqs?: { q: string; a: string }[]
   children: React.ReactNode
 }
 
 // Shared shell for the dedicated, crawlable info pages (biography, movies, books, TV, awards)
-export function InfoPage({ path, title, intro, schema = [], children }: InfoPageProps) {
+export function InfoPage({ path, title, intro, schema = [], faqs = [], children }: InfoPageProps) {
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -22,9 +23,18 @@ export function InfoPage({ path, title, intro, schema = [], children }: InfoPage
     ],
   }
 
+  // Visible Q&A plus matching FAQPage markup, written as direct answers for AI assistants
+  const faqSchema = faqs.length
+    ? [{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+      }]
+    : []
+
   return (
     <main className="bg-background min-h-screen">
-      {[breadcrumb, ...schema].map((s, i) => (
+      {[breadcrumb, ...schema, ...faqSchema].map((s, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
       <Navigation />
@@ -37,9 +47,23 @@ export function InfoPage({ path, title, intro, schema = [], children }: InfoPage
         </nav>
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5 leading-tight">{title}</h1>
-        <div className="text-base sm:text-lg leading-relaxed mb-10 max-w-3xl font-[var(--font-body)]">{intro}</div>
+        <div className="answer-summary text-base sm:text-lg leading-relaxed mb-10 max-w-3xl font-[var(--font-body)]">{intro}</div>
 
         <div className="space-y-10 font-[var(--font-body)] leading-relaxed">{children}</div>
+
+        {faqs.length > 0 && (
+          <section className="mt-14">
+            <h2 className="text-2xl font-bold mb-5">Questions and answers</h2>
+            <div className="space-y-6 font-[var(--font-body)]">
+              {faqs.map((f) => (
+                <div key={f.q}>
+                  <h3 className="text-lg font-bold mb-1">{f.q}</h3>
+                  <p className="leading-relaxed">{f.a}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section className="mt-14 border-t border-[#0e2a3f]/15 pt-8">
           <h2 className="text-xl font-bold mb-4">More about Dr Ramesh Aravind</h2>
