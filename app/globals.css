@@ -456,3 +456,17 @@ html::-webkit-scrollbar-thumb:hover {
   }
 }
 
+
+/* Blog article body (HTML rendered from Markdown) */
+.blog-body { font-size: 1.0625rem; line-height: 1.75; }
+.blog-body > * + * { margin-top: 1rem; }
+.blog-body h2 { font-size: 1.6rem; font-weight: 700; margin-top: 2.5rem; line-height: 1.25; }
+.blog-body h3 { font-size: 1.2rem; font-weight: 700; margin-top: 1.75rem; }
+.blog-body ul { list-style: disc; padding-left: 1.25rem; }
+.blog-body ol { list-style: decimal; padding-left: 1.25rem; }
+.blog-body li + li { margin-top: 0.35rem; }
+.blog-body a { text-decoration: underline; text-underline-offset: 2px; }
+.blog-body a:hover { color: #8a5d24; }
+.blog-body table { width: 100%; border-collapse: collapse; font-size: 0.95rem; display: block; overflow-x: auto; }
+.blog-body th, .blog-body td { border: 1px solid rgba(14, 42, 63, 0.18); padding: 0.5rem 0.75rem; text-align: left; vertical-align: top; }
+.blog-body th { background: #0e2a3f; color: #fff; }

@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { blogPosts, BLOG_PUBLISHED } from '@/lib/blog-posts'
 
 // Bump the date on a page when its content actually changes
 const pages: { path: string; lastModified: string; priority: number }[] = [
@@ -11,6 +12,8 @@ const pages: { path: string; lastModified: string; priority: number }[] = [
   { path: '/books', lastModified: '2026-11-17', priority: 0.8 },
   { path: '/awards', lastModified: '2026-11-17', priority: 0.8 },
   { path: '/contact', lastModified: '2026-11-17', priority: 0.8 },
+  { path: '/blog', lastModified: '2026-11-17', priority: 0.8 },
+  ...blogPosts.map((p) => ({ path: `/blog/${p.slug}`, lastModified: BLOG_PUBLISHED, priority: 0.7 })),
   { path: '/best-movies', lastModified: '2026-11-05', priority: 0.7 },
   { path: '/producer-portfolio', lastModified: '2026-11-05', priority: 0.7 },
 ]
